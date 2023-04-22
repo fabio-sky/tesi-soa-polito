@@ -7,6 +7,9 @@ using System.Threading;
 using static UnityEngine.Rendering.DebugUI.Table;
 using System.Collections;
 
+/// <summary>
+/// struct that contains position and rotation data
+/// </summary>
 struct InputData
 {
     public Vector3 position;
@@ -14,26 +17,17 @@ struct InputData
 }
 
 
+/// <summary>
+/// Modified version of the ActionBasedController class present in the XRToolkit package. 
+/// Allow to insert a delay during the update of rotation and position
+/// </summary>
 [AddComponentMenu("Custom XR Controller (Action-based) - Delayed")]
 public class CustomXRActionBasedController : ActionBasedController
 {
-
-
-    [Range(0, 10)]
-    [SerializeField] int delayInSeconds;
-
-    bool _checkedInputReferenceActions = false;
-    List<InputData> _inputBuffer = new();
-    int _readCounter;
-    int _writeCounter;
-    float _fps;
-    int _delayInFps;
-
-    private void Start()
-    {
-        _fps = 1.0f / Time.deltaTime;
-        _delayInFps = Mathf.RoundToInt(delayInSeconds * _fps);
-    }
+    private bool _checkedInputReferenceActions = false;
+    private List<InputData> _inputBuffer = new();
+    private int _readCounter;
+    private int _writeCounter;
 
     protected override void UpdateTrackingInput(XRControllerState controllerState)
     {   
@@ -98,7 +92,7 @@ public class CustomXRActionBasedController : ActionBasedController
             }
         }
 
-        InputData temp = new()
+        InputData actualInputData = new()
         {
             position = controllerState.position,
             rotation = controllerState.rotation
@@ -109,34 +103,31 @@ public class CustomXRActionBasedController : ActionBasedController
         if (hasPositionAction && (controllerState.inputTrackingState & InputTrackingState.Position) != 0)
         {
             Vector3 pos = posAction.ReadValue<Vector3>();
-            temp.position = pos;
+            actualInputData.position = pos;
         }
 
         // Update rotation
         if (hasRotationAction && (controllerState.inputTrackingState & InputTrackingState.Rotation) != 0)
         {
             Quaternion rot = rotAction.ReadValue<Quaternion>();
-            temp.rotation = rot;
+            actualInputData.rotation = rot;
         }
 
 
-
-        if (delayInSeconds > 0)
+        int delay = GameManager.Instance.WorldData.Delay;
+        if (delay > 0)
         {
-            //_fps = 1.0f / Time.deltaTime;
-            _delayInFps = Mathf.RoundToInt(delayInSeconds * _fps);
-
-            if (_inputBuffer.Count > _delayInFps)
+            if (_inputBuffer.Count > delay)
             {
                 _inputBuffer.Clear();
             }
 
-            if (_inputBuffer.Count < _delayInFps)
-                _inputBuffer.Add(temp);
+            if (_inputBuffer.Count < delay)
+                _inputBuffer.Add(actualInputData);
             else
             {
                 _readCounter++;
-                if (_readCounter >= _delayInFps)
+                if (_readCounter >= delay)
                     _readCounter = 0;
                 InputData readedData = _inputBuffer[_readCounter];
 
@@ -144,16 +135,16 @@ public class CustomXRActionBasedController : ActionBasedController
                 controllerState.rotation = readedData.rotation;
 
                 _writeCounter++;
-                if (_writeCounter >= _delayInFps)
+                if (_writeCounter >= delay)
                     _writeCounter = 0;
-                _inputBuffer[_writeCounter] = temp;
+                _inputBuffer[_writeCounter] = actualInputData;
             }
 
         }
         else
         {
-            controllerState.position = temp.position;
-            controllerState.rotation = temp.rotation;
+            controllerState.position = actualInputData.position;
+            controllerState.rotation = actualInputData.rotation;
         }
     }
 
