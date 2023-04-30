@@ -124,6 +124,55 @@ namespace RESTfulHTTPServer.src.invoker
 
             return response;
         }
+
+        public static Response SetCharacterMirror(Request request)
+        {
+            Response response = new();
+
+            bool done = false;
+            string json = request.GetPOSTData();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                //GameObject broadcaster = GameObject.FindWithTag("Server");
+
+                try
+                {
+                    UpdateBooleanProp data = JsonUtility.FromJson<UpdateBooleanProp>(json);
+
+                    if (GameManager.Instance != null)
+                    {
+
+                        GameManager.Instance.WorldData.CharacterMirror = data.value;
+
+                        response.SetContent("{\"value\":" + GameManager.Instance.WorldData.CharacterMirror.ToString() + "}");
+                        response.SetHTTPStatusCode((int)HttpStatusCode.OK);
+
+                       // GameManager.Instance.ManageCharacterMirror();
+                    }
+                    else
+                    {
+                        response.SetContent("{\"content\": \"error\"}");
+                        response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                    }
+                }
+                catch (Exception e)
+                {
+                    response.SetContent("{\"content\": \"Errore boh\"}");
+                    response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                }
+                finally { done = true; }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
     }
 
 }

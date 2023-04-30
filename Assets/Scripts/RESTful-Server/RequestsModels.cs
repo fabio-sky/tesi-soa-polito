@@ -7,6 +7,11 @@ public struct UpdateDelay
     public int delay;
 }
 
+public struct UpdateBooleanProp
+{
+    public bool value;
+}
+
 /*public struct ResponseData {
     public int 
 }*/

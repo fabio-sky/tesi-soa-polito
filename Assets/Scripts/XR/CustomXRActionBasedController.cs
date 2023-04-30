@@ -7,14 +7,7 @@ using System.Threading;
 using static UnityEngine.Rendering.DebugUI.Table;
 using System.Collections;
 
-/// <summary>
-/// struct that contains position and rotation data
-/// </summary>
-struct InputData
-{
-    public Vector3 position;
-    public Quaternion rotation;
-}
+
 
 
 /// <summary>
@@ -24,22 +17,38 @@ struct InputData
 [AddComponentMenu("Custom XR Controller (Action-based) - Delayed")]
 public class CustomXRActionBasedController : ActionBasedController
 {
+    /// <summary>
+    /// Position dell'altro controller, necessario per la gestione del CHARACTER MIRROR
+    /// </summary>
+    [SerializeField]
+    InputActionProperty _mirrorPositionAction;
+
+    [SerializeField]
+    InputBufferSO _inputBuffer;
+
+    [SerializeField]
+    InputBufferSO _otherHandInputBuffer;
+
     private bool _checkedInputReferenceActions = false;
-    private List<InputData> _inputBuffer = new();
-    private int _readCounter;
-    private int _writeCounter;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _inputBuffer.Init();
+    }
 
     protected override void UpdateTrackingInput(XRControllerState controllerState)
-    {   
-        //base.UpdateTrackingInput(controllerState);
-
+    {
         if (controllerState == null)
             return;
 
         var posAction = positionAction.action;
         var rotAction = rotationAction.action;
+        var mirrorPosAction = _mirrorPositionAction.action;
         var hasPositionAction = posAction != null;
         var hasRotationAction = rotAction != null;
+        var hasMirrorPosAction = mirrorPosAction != null;
+
 
         // Warn the user if using referenced actions and they are disabled
         if (!_checkedInputReferenceActions && (hasPositionAction || hasRotationAction))
@@ -114,38 +123,86 @@ public class CustomXRActionBasedController : ActionBasedController
         }
 
 
+        InputData calculatedPosRot = CalculatePosRot(actualInputData, hasMirrorPosAction);
+
+        controllerState.position = calculatedPosRot.position;
+        controllerState.rotation = calculatedPosRot.rotation;
+    }
+
+    /// <summary>
+    /// Calcolate the position and rotation applying DELAY + CHARACTER MIRROR + LOCAL MIRROR
+    /// </summary>
+    /// <param name="input">Input values readed in thi frame</param>
+    /// <param name="hasMirrorPosAction">if the mirror pos action is provided</param>
+    /// <returns></returns>
+    private InputData CalculatePosRot(InputData input, bool hasMirrorPosAction)
+    {
+
+        InputData retValue = new()
+        {
+            position = input.position,
+            rotation= input.rotation
+        };
+
+        Vector3 mirroredPos = _mirrorPositionAction.action.ReadValue<Vector3>();
+
         int delay = GameManager.Instance.WorldData.Delay;
+        bool localMirror = GameManager.Instance.WorldData.LocalMirror;
+        bool characterMirror = GameManager.Instance.WorldData.CharacterMirror;
+        bool rotationMirror = GameManager.Instance.WorldData.RotationMirror;
+
+        int localMirrorMultiplier = localMirror ? -1 : 1; //Gestione LOCAL MIRROR
+
+
         if (delay > 0)
         {
-            if (_inputBuffer.Count > delay)
+            
+            InputData readedData = _inputBuffer.ReadThenAddValue(input);
+
+            if (readedData.isEmpty)
             {
-                _inputBuffer.Clear();
+                return retValue;
             }
 
-            if (_inputBuffer.Count < delay)
-                _inputBuffer.Add(actualInputData);
+            if (hasMirrorPosAction && characterMirror)
+            {
+                //CHARACTER-MIRROR + LOCAL-MIRROR
+                //Specchio il valore solamente sull'asse Y. X e Y sono quelli originali
+
+                InputData otherHandValue = _otherHandInputBuffer.LastReadedValue;
+
+                retValue.position = new Vector3(readedData.position.x, localMirrorMultiplier * otherHandValue.position.y, readedData.position.z); //Considero anche il LOCAL-MIRROR
+                retValue.rotation = rotationMirror ? Quaternion.Inverse(otherHandValue.rotation) : otherHandValue.rotation;
+            }
             else
             {
-                _readCounter++;
-                if (_readCounter >= delay)
-                    _readCounter = 0;
-                InputData readedData = _inputBuffer[_readCounter];
-
-                controllerState.position = readedData.position;
-                controllerState.rotation = readedData.rotation;
-
-                _writeCounter++;
-                if (_writeCounter >= delay)
-                    _writeCounter = 0;
-                _inputBuffer[_writeCounter] = actualInputData;
+                //LOCAL-MIRROR
+                //Specchio il valore solamente sull'asse Y. X e Y sono quelli originali
+                retValue.position = new Vector3(readedData.position.x, localMirrorMultiplier * readedData.position.y, readedData.position.z);
+                retValue.rotation = rotationMirror ? Quaternion.Inverse(readedData.rotation) : readedData.rotation;
             }
-
         }
         else
         {
-            controllerState.position = actualInputData.position;
-            controllerState.rotation = actualInputData.rotation;
+
+            if (hasMirrorPosAction && characterMirror)
+            {
+                //CHARACTER-MIRROR + LOCAL-MIRROR
+                //Specchio il valore solamente sull'asse Y. X e Y sono quelli originali
+                retValue.position = new Vector3(input.position.x, localMirrorMultiplier * mirroredPos.y, input.position.z); //Considero anche il LOCAL-MIRROR
+            }
+            else
+            {
+                //LOCAL-MIRROR
+                //Specchio il valore solamente sull'asse Y. X e Y sono quelli originali
+                retValue.position = new Vector3(input.position.x, localMirrorMultiplier * input.position.y, input.position.z);
+            }
+
+
+            retValue.rotation = rotationMirror ? Quaternion.Inverse(input.rotation) : input.rotation;
         }
+
+        return retValue;
     }
 
 

@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [SerializeField] GameObject _leftHandController;
+    [SerializeField] GameObject _rightHandController;
+    [SerializeField] GameObject _invertedLeftHandController;
+    [SerializeField] GameObject _invertedRightHandController;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,5 +35,21 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("EVENTO RICEVUTO");
         _worldData.Delay += 10;
+    }
+
+    public void ManageCharacterMirror()
+    {
+        if (WorldData.CharacterMirror) {
+            _invertedLeftHandController.SetActive(true);
+            _invertedRightHandController.SetActive(true);
+            _leftHandController.SetActive(false);
+            _rightHandController.SetActive(false);
+        }
+        else {
+            _invertedLeftHandController.SetActive(false);
+            _invertedRightHandController.SetActive(false);
+            _leftHandController.SetActive(true);
+            _rightHandController.SetActive(true);
+        }
     }
 }

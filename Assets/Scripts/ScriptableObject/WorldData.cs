@@ -16,14 +16,60 @@ public class WorldData : ScriptableObject
         {
             return _delay;
         }
-        set {
+        set
+        {
             if (value >= 0) _delay = value;
             else _delay = 0;
+        }
+    }
+
+
+    [SerializeField] private bool _localMirror;
+    public bool LocalMirror
+    {
+        get
+        {
+            return _localMirror;
+        }
+        set
+        {
+            _localMirror = value;
+        }
+    }
+
+    [SerializeField] private bool _rotationMirror;
+    public bool RotationMirror
+    {
+        get
+        {
+            return _rotationMirror;
+        }
+        set
+        {
+            _rotationMirror = value;
+        }
+    }
+
+
+    [SerializeField] private bool _characterMirror;
+    public bool CharacterMirror
+    {
+        get
+        {
+            return _characterMirror;
+        }
+        set
+        {
+            _characterMirror = value;
         }
     }
 
     private void OnEnable()
     {
         _delay = 0;
+        _localMirror = false;
+        _rotationMirror = false;
+        _characterMirror = false;
     }
+
 }
