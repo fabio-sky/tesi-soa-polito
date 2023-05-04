@@ -17,8 +17,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject _leftHandController;
     [SerializeField] GameObject _rightHandController;
-    [SerializeField] GameObject _invertedLeftHandController;
-    [SerializeField] GameObject _invertedRightHandController;
+
+    /// <summary>
+    /// First Person Camera
+    /// </summary>
+    [SerializeField] GameObject _fpCamera;
+    /// <summary>
+    /// Third Person Camera
+    /// </summary>
+    [SerializeField] GameObject _tpCamera;
 
 
     private void Awake()
@@ -31,25 +38,35 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void ReceiveData()
+    private void Update()
     {
-        Debug.Log("EVENTO RICEVUTO");
-        _worldData.Delay += 10;
+        if(Input.GetKey(KeyCode.T))
+        {
+            _fpCamera.SetActive(false);
+            _tpCamera.SetActive(true);
+        }
+        else if(Input.GetKey(KeyCode.F)) {
+            _fpCamera.SetActive(true);
+            _tpCamera.SetActive(false);
+        }
     }
 
-    public void ManageCharacterMirror()
+    private void HandleThirdPerson()
     {
-        if (WorldData.CharacterMirror) {
-            _invertedLeftHandController.SetActive(true);
-            _invertedRightHandController.SetActive(true);
-            _leftHandController.SetActive(false);
-            _rightHandController.SetActive(false);
+        if (_worldData.ThirdPerson)
+        {
+            _fpCamera.SetActive(false);
+            _tpCamera.SetActive(true);
         }
-        else {
-            _invertedLeftHandController.SetActive(false);
-            _invertedRightHandController.SetActive(false);
-            _leftHandController.SetActive(true);
-            _rightHandController.SetActive(true);
+        else
+        {
+            _fpCamera.SetActive(true);
+            _tpCamera.SetActive(false);
         }
+    }
+
+    public void HandleChangeParameters()
+    {
+        HandleThirdPerson();
     }
 }
