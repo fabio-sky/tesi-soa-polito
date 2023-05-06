@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEditor;
 using UnityEngine;
+using static UnityEngine.Mesh;
 
 namespace RESTfulHTTPServer.src.invoker
 {
@@ -13,41 +14,7 @@ namespace RESTfulHTTPServer.src.invoker
         public static Response GetTest(Request request)
         {
             Response response = new();
-
-            bool done = false;
-
-
-            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
-
-            //TRIGGER EVENT
-            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
-
-                if (GameManager.Instance != null )
-                {
-                    //broadcaster.GetComponent<Broadcaster>().BroadcastEvent();
-
-                    response.SetContent("{\"content\": \"SERVER IS UP\"}");
-                    response.SetHTTPStatusCode((int)HttpStatusCode.OK);
-                }
-                else
-                {
-                    response.SetContent("{\"content\": \"GameManager non instanciated\"}");
-                    response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
-                }
-
-                done = true;
-                
-                
-            });
-
-            while (!done) ;
-
-            return response;
-        }
-
-        public static Response GetDelay(Request request)
-        {
-            Response response = new();
+            ResponseData respData = new();
 
             bool done = false;
 
@@ -59,16 +26,59 @@ namespace RESTfulHTTPServer.src.invoker
 
                 if (GameManager.Instance != null)
                 {
-                    response.SetContent("{\"delay\":"+ GameManager.Instance.WorldData.Delay.ToString() + "}");
-                    response.SetHTTPStatusCode((int)HttpStatusCode.OK);
+                    //broadcaster.GetComponent<Broadcaster>().BroadcastEvent();
+
+                    respData.result = true;
+                    respData.message = ServerMessages.TEST_OK;
                 }
                 else
                 {
-                    response.SetContent("{\"content\": \"error\"}");
-                    response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                    respData.result = false;
+                    respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
                 }
 
+                response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                response.SetContent(respData.ToString());
                 done = true;
+
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
+
+        public static Response GetDelay(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                if (GameManager.Instance != null)
+                {
+                    respData.result = true;
+                    respData.message = GameManager.Instance.WorldData.Delay.ToString();
+                }
+                else
+                {
+                    respData.result = false;
+                    respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                }
+
+
+                response.SetContent(respData.ToString());
+                response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                done = true;
+
 
 
             });
@@ -81,6 +91,7 @@ namespace RESTfulHTTPServer.src.invoker
         public static Response SetDelay(Request request)
         {
             Response response = new();
+            ResponseData respData = new();
 
             bool done = false;
             string json = request.GetPOSTData();
@@ -101,21 +112,26 @@ namespace RESTfulHTTPServer.src.invoker
 
                         GameManager.Instance.WorldData.Delay = data.delay;
 
-                        response.SetContent("{\"delay\":" + GameManager.Instance.WorldData.Delay.ToString() + "}");
-                        response.SetHTTPStatusCode((int)HttpStatusCode.OK);
+                        respData.result = true;
+                        respData.message = GameManager.Instance.WorldData.Delay.ToString();
                     }
                     else
                     {
-                        response.SetContent("{\"content\": \"error\"}");
-                        response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
-                    response.SetContent("{\"content\": \"Errore boh\"}");
-                    response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                    respData.result = false;
+                    respData.message = e.Message;
                 }
-                finally { done = true; }
+                finally
+                {
+                    response.SetContent(respData.ToString());
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
 
 
             });
@@ -128,6 +144,7 @@ namespace RESTfulHTTPServer.src.invoker
         public static Response SetCharacterMirror(Request request)
         {
             Response response = new();
+            ResponseData respData = new();
 
             bool done = false;
             string json = request.GetPOSTData();
@@ -148,23 +165,82 @@ namespace RESTfulHTTPServer.src.invoker
 
                         GameManager.Instance.WorldData.CharacterMirror = data.value;
 
-                        response.SetContent("{\"value\":" + GameManager.Instance.WorldData.CharacterMirror.ToString() + "}");
-                        response.SetHTTPStatusCode((int)HttpStatusCode.OK);
-
-                       // GameManager.Instance.ManageCharacterMirror();
+                        respData.result = true;
+                        respData.message = GameManager.Instance.WorldData.CharacterMirror.ToString();
                     }
                     else
                     {
-                        response.SetContent("{\"content\": \"error\"}");
-                        response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
                     }
                 }
                 catch (Exception e)
                 {
-                    response.SetContent("{\"content\": \"Errore boh\"}");
+                    respData.result = false;
+                    respData.message = e.Message;
+                }
+                finally
+                {
+                    response.SetContent(respData.ToString());
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
+
+        public static Response SetAllParameter(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            string json = request.GetPOSTData();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                try
+                {
+                    UpdateParametersProp data = JsonUtility.FromJson<UpdateParametersProp>(json);
+
+                    if (GameManager.Instance != null)
+                    {
+
+                        GameManager.Instance.WorldData.CharacterMirror = data.characterMirror;
+                        GameManager.Instance.WorldData.LocalMirror = data.localMirror;
+                        GameManager.Instance.WorldData.Delay = data.delay;
+                        GameManager.Instance.WorldData.ThirdPerson = data.thirdPerson;
+
+                        GameManager.Instance.HandleChangeParameters();
+
+                        respData.result = true;
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
                     response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
                 }
-                finally { done = true; }
+                finally
+                {
+                    response.SetContent(respData.ToString());
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
 
 
             });

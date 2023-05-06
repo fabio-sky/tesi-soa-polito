@@ -64,12 +64,26 @@ public class WorldData : ScriptableObject
         }
     }
 
+    [SerializeField] private bool _thirdPerson;
+    public bool ThirdPerson
+    {
+        get
+        {
+            return _thirdPerson;
+        }
+        set
+        {
+            _thirdPerson = value;
+        }
+    }
+
     private void OnEnable()
     {
         _delay = 0;
         _localMirror = false;
         _rotationMirror = false;
         _characterMirror = false;
+        _thirdPerson = false;
     }
 
 }
