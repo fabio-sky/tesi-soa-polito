@@ -32,6 +32,7 @@ public class AvatarController : MonoBehaviour
 
     private void LateUpdate()
     {
+        //transform.position = new Vector3(transform.position.x, IKHead.position.y + headBodyOffset.y, transform.position.z);
         transform.position = IKHead.position + headBodyOffset;
         transform.forward = Vector3.Lerp(transform.forward, Vector3.ProjectOnPlane(IKHead.forward, Vector3.up).normalized, Time.deltaTime * turnSmoothness); ;
         head.MapVRAvatar();

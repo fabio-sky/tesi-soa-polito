@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: WorldDataSO
   m_EditorClassIdentifier: 
   _delay: 0
-  _localMirror: 0
+  _localMirror: 1
   _rotationMirror: 0
   _characterMirror: 0
+  _thirdPerson: 0
+  _tableHeight: 80
