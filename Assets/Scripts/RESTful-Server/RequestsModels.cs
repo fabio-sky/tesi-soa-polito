@@ -6,6 +6,7 @@ public static class ServerMessages
 {
     public const string GAMEMANAGER_NULL_ERR = "GameManager is NOT instanciated";
     public const string TEST_OK = "Server is up";
+    public const string BROADCASTER_NOT_FOUND = "Server broadcaster not found";
 }
 
 public struct UpdateDelay
@@ -16,6 +17,11 @@ public struct UpdateDelay
 public struct UpdateBooleanProp
 {
     public bool value;
+}
+
+public struct UpdateIntProp
+{
+    public int value;
 }
 
 public struct UpdateParametersProp

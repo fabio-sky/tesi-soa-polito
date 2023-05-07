@@ -249,6 +249,75 @@ namespace RESTfulHTTPServer.src.invoker
 
             return response;
         }
+
+        public static Response SetTableHeight(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            string json = request.GetPOSTData();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                //GameObject broadcaster = GameObject.FindWithTag("Server");
+
+                try
+                {
+                    UpdateIntProp data = JsonUtility.FromJson<UpdateIntProp>(json);
+
+                    if (GameManager.Instance != null)
+                    {
+
+                        GameManager.Instance.WorldData.TableHeight = data.value;
+
+                        GameObject broadcaster = GameObject.FindWithTag("Server");
+
+
+                        if (broadcaster != null)
+                        {
+                            broadcaster.GetComponent<Broadcaster>().BroadcastEvent();
+
+                            respData.result = true;
+                            respData.message = GameManager.Instance.WorldData.TableHeight.ToString();
+                        }
+                        else
+                        {
+                            respData.result = false;
+                            respData.message = ServerMessages.BROADCASTER_NOT_FOUND;
+                        }
+
+                        
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
+                }
+                finally
+                {
+                    response.SetContent(respData.ToString());
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
+
     }
 
 }

@@ -77,6 +77,23 @@ public class WorldData : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Height of the table in centimeters
+    /// </summary>
+    [SerializeField] private int _tableHeight;
+    public int TableHeight
+    {
+        get
+        {
+            return _tableHeight;
+        }
+        set
+        {
+            if(value < 0 || value > 80) _tableHeight = 80;
+            else _tableHeight = value;
+        }
+    }
+
     private void OnEnable()
     {
         _delay = 0;
@@ -84,6 +101,7 @@ public class WorldData : ScriptableObject
         _rotationMirror = false;
         _characterMirror = false;
         _thirdPerson = false;
+        _tableHeight = 80;
     }
 
 }

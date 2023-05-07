@@ -57,6 +57,7 @@ public class ServerInit : MonoBehaviour
         routingManager.AddRoute(new Route(Route.Type.POST, "/delay", "ServerInvoke.SetDelay"));
         routingManager.AddRoute(new Route(Route.Type.POST, "/mirror/character", "ServerInvoke.SetCharacterMirror"));
         routingManager.AddRoute(new Route(Route.Type.POST, "/world/all", "ServerInvoke.SetAllParameter"));
+        routingManager.AddRoute(new Route(Route.Type.POST, "/objects/table", "ServerInvoke.SetTableHeight"));
         //routingManager.AddRoute(new Route(Route.Type.POST, "/color/{objname}", "MaterialInvoke.SetColor"));
         //routingManager.AddRoute(new Route(Route.Type.DELETE, "/color/{objname}", "MaterialInvoke.DeleteColor"));
 
