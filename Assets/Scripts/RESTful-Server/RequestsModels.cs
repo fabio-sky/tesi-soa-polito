@@ -37,6 +37,4 @@ public struct ResponseData
 {
     public bool result;
     public string message;
-
-    public new string ToString() { return "{\"result\":" + this.result + ", \"message\":\"" + this.message + "\"}"; }
 }

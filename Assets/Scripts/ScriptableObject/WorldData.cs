@@ -9,6 +9,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "WorldData")]
 public class WorldData : ScriptableObject
 {
+
+    public const int FPS = 71;
+
     [SerializeField] private int _delay;
     public int Delay
     {
@@ -18,7 +21,7 @@ public class WorldData : ScriptableObject
         }
         set
         {
-            if (value >= 0) _delay = value;
+            if (value >= 0) _delay = value * FPS;
             else _delay = 0;
         }
     }

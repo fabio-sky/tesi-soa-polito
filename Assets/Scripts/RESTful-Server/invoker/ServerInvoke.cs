@@ -38,7 +38,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
 
                 response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
-                response.SetContent(respData.ToString());
+                response.SetContent(JsonUtility.ToJson(respData));
                 done = true;
 
 
@@ -75,7 +75,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
 
 
-                response.SetContent(respData.ToString());
+                response.SetContent(JsonUtility.ToJson(respData));
                 response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                 done = true;
 
@@ -95,6 +95,8 @@ namespace RESTfulHTTPServer.src.invoker
 
             bool done = false;
             string json = request.GetPOSTData();
+
+            Debug.Log(json);
 
             response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
 
@@ -128,7 +130,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
                 finally
                 {
-                    response.SetContent(respData.ToString());
+                    response.SetContent(JsonUtility.ToJson(respData));
                     response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                     done = true;
                 }
@@ -181,7 +183,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
                 finally
                 {
-                    response.SetContent(respData.ToString());
+                    response.SetContent(JsonUtility.ToJson(respData));
                     response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                     done = true;
                 }
@@ -237,7 +239,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
                 finally
                 {
-                    response.SetContent(respData.ToString());
+                    response.SetContent(JsonUtility.ToJson(respData));
                     response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                     done = true;
                 }
@@ -305,7 +307,7 @@ namespace RESTfulHTTPServer.src.invoker
                 }
                 finally
                 {
-                    response.SetContent(respData.ToString());
+                    response.SetContent(JsonUtility.ToJson(respData));
                     response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                     done = true;
                 }
