@@ -252,6 +252,62 @@ namespace RESTfulHTTPServer.src.invoker
             return response;
         }
 
+        public static Response SetAllBooleanParameter(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            string json = request.GetPOSTData();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                try
+                {
+                    UpdateBooleanParametersProp data = JsonUtility.FromJson<UpdateBooleanParametersProp>(json);
+
+                    if (GameManager.Instance != null)
+                    {
+
+                        GameManager.Instance.WorldData.CharacterMirror = data.characterMirror;
+                        GameManager.Instance.WorldData.LocalMirror = data.localMirror;
+                        GameManager.Instance.WorldData.RotationMirror = data.rotationMirror;
+                        GameManager.Instance.WorldData.ThirdPerson = data.thirdPerson;
+
+                        GameManager.Instance.HandleChangeParameters();
+
+                        respData.result = true;
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
+                    response.SetHTTPStatusCode((int)HttpStatusCode.InternalServerError);
+                }
+                finally
+                {
+                    response.SetContent(JsonUtility.ToJson(respData));
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
+
         public static Response SetTableHeight(Request request)
         {
             Response response = new();

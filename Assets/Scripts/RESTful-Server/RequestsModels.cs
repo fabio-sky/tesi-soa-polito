@@ -33,6 +33,14 @@ public struct UpdateParametersProp
     public bool thirdPerson;
 }
 
+public struct UpdateBooleanParametersProp
+{
+    public bool localMirror;
+    public bool characterMirror;
+    public bool rotationMirror;
+    public bool thirdPerson;
+}
+
 public struct ResponseData
 {
     public bool result;
