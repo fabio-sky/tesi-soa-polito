@@ -385,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -1461,6 +1461,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: avatar_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 4479512517808523495, guid: c02e15e5979c9134c9759361e62b56da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5472882121049733426, guid: c02e15e5979c9134c9759361e62b56da,
         type: 3}
       propertyPath: m_Layer
@@ -1625,11 +1630,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3303183717352129568, guid: 8f987f0c39596394aad79cbbf71f5f67,
-        type: 3}
-      propertyPath: m_TrackingType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7180280921529665265, guid: 8f987f0c39596394aad79cbbf71f5f67,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1663,7 +1663,7 @@ PrefabInstance:
     - target: {fileID: 7180280923053133716, guid: 8f987f0c39596394aad79cbbf71f5f67,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.475
+      value: 1.554
       objectReference: {fileID: 0}
     - target: {fileID: 7180280923053133716, guid: 8f987f0c39596394aad79cbbf71f5f67,
         type: 3}
@@ -1709,21 +1709,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7180280923053133719, guid: 8f987f0c39596394aad79cbbf71f5f67,
-        type: 3}
-      propertyPath: m_CameraYOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7180280923053133719, guid: 8f987f0c39596394aad79cbbf71f5f67,
-        type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7180280923334983530, guid: 8f987f0c39596394aad79cbbf71f5f67,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f987f0c39596394aad79cbbf71f5f67, type: 3}
