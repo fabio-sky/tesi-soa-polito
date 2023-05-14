@@ -16,3 +16,5 @@ MonoBehaviour:
   _localMirror: 0
   _rotationMirror: 0
   _characterMirror: 0
+  _thirdPerson: 0
+  _tableHeight: 80

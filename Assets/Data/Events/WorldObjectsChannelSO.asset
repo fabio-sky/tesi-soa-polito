@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b39fe29f7c6223e438f5743da30853ed, type: 3}
-  m_Name: ServerChannelSO
+  m_Name: WorldObjectsChannelSO
   m_EditorClassIdentifier: 
   listeners: []
