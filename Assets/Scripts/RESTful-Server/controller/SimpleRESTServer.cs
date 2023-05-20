@@ -239,16 +239,26 @@ namespace RESTfulHTTPServer.src.controller
 				} 
 				else 
 				{
+					ResponseData respNotFound = new()
+					{
+						result = false,
+						message = "404 - Endpoint not found"
+					};
 					// 404 Page - Not found
 					context.Response.StatusCode = (int) HttpStatusCode.NotFound;
-					httpResult = "<html><head><title>Simple REST Server</title></head><body>404</body></html>";
+					httpResult = JsonUtility.ToJson(respNotFound);
 				}
 			} 
 			else 
 			{
-				// 401 Page - Unauthorized
-				context.Response.StatusCode = (int) HttpStatusCode.Unauthorized;
-				httpResult = "<html><head><title>Simple REST Server</title></head><body>401</body></html>";
+                ResponseData respNotAuth = new()
+                {
+                    result = false,
+                    message = "401 - Unauthorized"
+                };
+                // 401 Page - Unauthorized
+                context.Response.StatusCode = (int) HttpStatusCode.Unauthorized;
+				httpResult = JsonUtility.ToJson(respNotAuth);
 			}
 
 			// Output the generated data

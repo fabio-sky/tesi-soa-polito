@@ -807,6 +807,7 @@ GameObject:
   - component: {fileID: 3782354404786439177}
   - component: {fileID: 5624155957614068106}
   - component: {fileID: 5068066086561624851}
+  - component: {fileID: 8091921415575937469}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -879,6 +880,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8091921415575937469
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894130046960610555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1453043773871479701, guid: 7ad215cd30f734341ad26d723ad387ef, type: 3}
 --- !u!1001 &340079072620873201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1009,12 +1024,12 @@ PrefabInstance:
     - target: {fileID: 3104969048679892113, guid: e08d1e9079dc150428489d995f38f75a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3390096
+      value: 1.124
       objectReference: {fileID: 0}
     - target: {fileID: 3104969048679892113, guid: e08d1e9079dc150428489d995f38f75a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81901455
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3104969048679892113, guid: e08d1e9079dc150428489d995f38f75a,
         type: 3}
@@ -1058,6 +1073,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08d1e9079dc150428489d995f38f75a, type: 3}
+--- !u!1 &2878042978829570512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2331950134278331947, guid: e08d1e9079dc150428489d995f38f75a,
+    type: 3}
+  m_PrefabInstance: {fileID: 552848317091155963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5220683273416602412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878042978829570512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9372a4f01d9ce3743b97f129823ad2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: fda15bed0853bff41845421c33e4e080, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5220683273416602413}
+        m_TargetAssemblyTypeName: TableController, Assembly-CSharp
+        m_MethodName: SetHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5220683273416602413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878042978829570512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811e2f06c4508144695bca1ce7c5adc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3223183683481619306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3104969048679892113, guid: e08d1e9079dc150428489d995f38f75a,
@@ -1094,7 +1155,7 @@ PrefabInstance:
     - target: {fileID: 3106562133538446381, guid: f5577fd342c29594b9b8037a3c6a6fdd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.958
+      value: 1.598
       objectReference: {fileID: 0}
     - target: {fileID: 3106562133538446381, guid: f5577fd342c29594b9b8037a3c6a6fdd,
         type: 3}

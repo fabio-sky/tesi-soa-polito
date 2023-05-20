@@ -9,7 +9,7 @@ public class DisplayFPS : MonoBehaviour
 
     public float updateInteval = 0.5f;
 
-    private TextMeshProUGUI textOutput = null;
+    [SerializeField] private TextMeshProUGUI textOutput = null;
 
     private float deltaTime = 0.0f;
     private float milliseconds = 0.0f;
@@ -17,7 +17,6 @@ public class DisplayFPS : MonoBehaviour
 
     private void Awake()
     {
-        textOutput = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void Start()
@@ -41,7 +40,7 @@ public class DisplayFPS : MonoBehaviour
     {
         while (true)
         {
-            if (framesPerSecond >= goodFpsThreshold)
+            /*if (framesPerSecond >= goodFpsThreshold)
             {
                 textOutput.color = Color.green;
             }
@@ -52,9 +51,9 @@ public class DisplayFPS : MonoBehaviour
             else
             {
                 textOutput.color = Color.red;
-            }
+            }*/
 
-            textOutput.text = "FPS:" + framesPerSecond + "\n" + "MS:" + milliseconds.ToString(".0");
+            textOutput.text = "FPS:" + framesPerSecond + " | " + "MS:" + milliseconds.ToString(".0");
             yield return new WaitForSeconds(updateInteval);
         }
     }

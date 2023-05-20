@@ -140,6 +140,9 @@ namespace RESTfulHTTPServer.src.invoker
 
             while (!done) ;
 
+            GameObject broadcaster = GameObject.FindWithTag("Server");
+            if (broadcaster != null) broadcaster.GetComponent<Broadcaster>().BroadcastAudioEvent();
+
             return response;
         }
 
@@ -192,6 +195,9 @@ namespace RESTfulHTTPServer.src.invoker
             });
 
             while (!done) ;
+
+            GameObject broadcaster = GameObject.FindWithTag("Server");
+            if (broadcaster != null) broadcaster.GetComponent<Broadcaster>().BroadcastAudioEvent();
 
             return response;
         }
@@ -249,6 +255,9 @@ namespace RESTfulHTTPServer.src.invoker
 
             while (!done) ;
 
+            GameObject broadcaster = GameObject.FindWithTag("Server");
+            if (broadcaster != null) broadcaster.GetComponent<Broadcaster>().BroadcastAudioEvent();
+
             return response;
         }
 
@@ -304,6 +313,9 @@ namespace RESTfulHTTPServer.src.invoker
             });
 
             while (!done) ;
+
+            GameObject broadcaster = GameObject.FindWithTag("Server");
+            if (broadcaster != null) broadcaster.GetComponent<Broadcaster>().BroadcastAudioEvent();
 
             return response;
         }

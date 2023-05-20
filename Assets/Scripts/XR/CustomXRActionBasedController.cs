@@ -171,14 +171,14 @@ public class CustomXRActionBasedController : ActionBasedController
 
                 InputData otherHandValue = _otherHandInputBuffer.LastReadedValue;
 
-                retValue.position = new Vector3(readedData.position.x, otherHandValue.position.y, localMirrorMultiplier * otherHandValue.position.z); //Considero anche il LOCAL-MIRROR
+                retValue.position = new Vector3(readedData.position.x, localMirrorMultiplier * otherHandValue.position.y, otherHandValue.position.z); //Considero anche il LOCAL-MIRROR
                 retValue.rotation = rotationMirror ? Quaternion.Inverse(otherHandValue.rotation) : otherHandValue.rotation;
             }
             else
             {
                 //LOCAL-MIRROR
                 //Specchio il valore solamente sull'asse X. Y e Z sono quelli originali
-                retValue.position = new Vector3(readedData.position.x, readedData.position.y, localMirrorMultiplier * readedData.position.z);
+                retValue.position = new Vector3(readedData.position.x, localMirrorMultiplier * readedData.position.y, readedData.position.z);
                 retValue.rotation = rotationMirror ? Quaternion.Inverse(readedData.rotation) : readedData.rotation;
             }
         }
@@ -189,13 +189,13 @@ public class CustomXRActionBasedController : ActionBasedController
             {
                 //CHARACTER-MIRROR + LOCAL-MIRROR
                 //Specchio il valore solamente sull'asse Y. X e Z sono quelli originali
-                retValue.position = new Vector3(input.position.x,mirroredPos.y, localMirrorMultiplier * input.position.z); //Considero anche il LOCAL-MIRROR
+                retValue.position = new Vector3(input.position.x, localMirrorMultiplier * mirroredPos.y, input.position.z); //Considero anche il LOCAL-MIRROR
             }
             else
             {
                 //LOCAL-MIRROR
                 //Specchio il valore solamente sull'asse X. Y e Z sono quelli originali
-                retValue.position = new Vector3(input.position.x, input.position.y, localMirrorMultiplier * input.position.z);
+                retValue.position = new Vector3(input.position.x, localMirrorMultiplier * input.position.y, input.position.z);
             }
 
 
