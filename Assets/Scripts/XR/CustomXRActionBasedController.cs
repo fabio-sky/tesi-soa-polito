@@ -6,10 +6,9 @@ using System.Collections.Generic;
 using System.Threading;
 using static UnityEngine.Rendering.DebugUI.Table;
 using System.Collections;
+using System;
 
-
-
-
+[Obsolete("CustomXRActionBasedController is deprecated", true)]
 /// <summary>
 /// Modified version of the ActionBasedController class present in the XRToolkit package. 
 /// Allow to insert a delay during the update of rotation and position
@@ -31,10 +30,29 @@ public class CustomXRActionBasedController : ActionBasedController
 
     private bool _checkedInputReferenceActions = false;
 
+    private InputData _actualInputData;
+    private InputData _old;
+    private InputData _new;
+
+
+    static bool IsDisabledReferenceAction(InputActionProperty property) =>
+            property.reference != null && property.reference.action != null && !property.reference.action.enabled;
+
     protected override void OnEnable()
     {
         base.OnEnable();
-        _inputBuffer.Init();
+        //_inputBuffer.Init();
+
+        _old = new()
+        {
+            isEmpty = true,
+        };
+        _new = new()
+        {
+            isEmpty = true,
+        };
+
+        StartCoroutine(DiscreteBufferManager());
     }
 
     protected override void UpdateTrackingInput(XRControllerState controllerState)
@@ -101,7 +119,7 @@ public class CustomXRActionBasedController : ActionBasedController
             }
         }
 
-        InputData actualInputData = new()
+        _actualInputData = new()
         {
             position = controllerState.position,
             rotation = controllerState.rotation
@@ -112,21 +130,23 @@ public class CustomXRActionBasedController : ActionBasedController
         if (hasPositionAction && (controllerState.inputTrackingState & InputTrackingState.Position) != 0)
         {
             Vector3 pos = posAction.ReadValue<Vector3>();
-            actualInputData.position = pos;
+            _actualInputData.position = pos;
         }
 
         // Update rotation
         if (hasRotationAction && (controllerState.inputTrackingState & InputTrackingState.Rotation) != 0)
         {
             Quaternion rot = rotAction.ReadValue<Quaternion>();
-            actualInputData.rotation = rot;
+            _actualInputData.rotation = rot;
         }
 
+        controllerState.position = _actualInputData.position;
+        controllerState.rotation = _actualInputData.rotation;
 
-        InputData calculatedPosRot = CalculatePosRot(actualInputData, hasMirrorPosAction);
+        InputData calculatedPosRot = CalculatePosRot(_actualInputData, hasMirrorPosAction);
 
-        controllerState.position = calculatedPosRot.position;
-        controllerState.rotation = calculatedPosRot.rotation;
+        //controllerState.position = calculatedPosRot.position;
+        //controllerState.rotation = calculatedPosRot.rotation;
     }
 
     /// <summary>
@@ -205,7 +225,21 @@ public class CustomXRActionBasedController : ActionBasedController
         return retValue;
     }
 
+    IEnumerator DiscreteBufferManager()
+    {
+        while (true)
+        {
+            _new = new() { isEmpty = false, position = new Vector3(_actualInputData.position.x, _actualInputData.position.y, _actualInputData.position.z) };
 
-    static bool IsDisabledReferenceAction(InputActionProperty property) =>
-            property.reference != null && property.reference.action != null && !property.reference.action.enabled;
+            if (!_old.isEmpty && !_new.isEmpty)
+            {
+                //Debug.Log(JsonUtility.ToJson(_handMovement.movement));
+            }
+
+            _old = new() { isEmpty=false, position=new Vector3(_new.position.x, _new.position.y, _new.position.z) };
+
+            yield return new WaitForSeconds(0.03f);
+        }
+    }
+    
 }
