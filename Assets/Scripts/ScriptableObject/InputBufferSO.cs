@@ -5,10 +5,38 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "InputBuffer")]
 public class InputBufferSO : ScriptableObject
 {
+    #region Buffer
     private List<InputData> _buffer;
     public int _readCounter;
     public int _writeCounter;
     private InputData _emptyValue;
+    #endregion
+
+    /// <summary>
+    /// Discrete Data readed from the buffer
+    /// </summary>
+    #region Discrete input data
+    private Vector3 _lastMovement;
+    public Vector3 LastMovement
+    {
+        get
+        {
+            return _lastMovement;
+        }
+        set { _lastMovement = value; }
+    }
+
+    private Quaternion _lastRotation;
+    public Quaternion LastRotation
+    {
+        get
+        {
+            return _lastRotation;
+        }
+        set { _lastRotation = value; }
+    }
+    #endregion
+
 
     [SerializeField] WorldData _worldData;
 
@@ -21,6 +49,7 @@ public class InputBufferSO : ScriptableObject
             return _lastReadedValue;
         }
     }
+
 
     private void Clear() { _buffer.Clear(); }
 
@@ -36,16 +65,17 @@ public class InputBufferSO : ScriptableObject
         };
     }
 
-    public InputData GetValue()
-    {
-        InputData readedData = _buffer[_readCounter];
-        return readedData;
-    }
 
     public InputData ReadThenAddValue(InputData input)
     {
 
         int delay = _worldData.Delay;
+
+        if(delay == 0)
+        {
+            _lastReadedValue = input;
+            return input;
+        }
 
         if (_buffer.Count > delay)
         {
@@ -75,4 +105,5 @@ public class InputBufferSO : ScriptableObject
         return readedData;
 
     }
+
 }
