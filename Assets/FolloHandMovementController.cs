@@ -58,6 +58,8 @@ public class FolloHandMovementController : MonoBehaviour
         bool characterMirror = GameManager.Instance.WorldData.CharacterMirror;
         bool rotationMirror = GameManager.Instance.WorldData.RotationMirror;
 
+        float timeDelta = GameManager.Instance.SettingsData.PositionSampleSeconds;
+
         if (localMirror || characterMirror)
         {
             float localMirroMultiplier = localMirror ? -1.0f : 1.0f;
@@ -65,12 +67,12 @@ public class FolloHandMovementController : MonoBehaviour
             if (characterMirror)
             {
                 transform.localRotation = rotationMirror ? Quaternion.Inverse(_otherInputHandBuffer.LastRotation) : _otherInputHandBuffer.LastRotation;
-                transform.Translate(_otherInputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_otherInputHandBuffer.LastMovement.magnitude / 0.03f)) * localMirroMultiplier, Space.World);
+                transform.Translate(_otherInputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_otherInputHandBuffer.LastMovement.magnitude / timeDelta)) * localMirroMultiplier, Space.World);
             }
             else
             {
                 transform.localRotation = rotationMirror ? Quaternion.Inverse(_inputHandBuffer.LastRotation) : _inputHandBuffer.LastRotation;
-                transform.Translate(_inputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_inputHandBuffer.LastMovement.magnitude / 0.03f)) * localMirroMultiplier, Space.World);
+                transform.Translate(_inputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_inputHandBuffer.LastMovement.magnitude / timeDelta)) * localMirroMultiplier, Space.World);
             }
             
         }
@@ -101,7 +103,6 @@ public class FolloHandMovementController : MonoBehaviour
     /// <returns></returns>
     IEnumerator DiscreteBufferManager()
     {
-
         InputData newPosition;
         InputData oldPosition = new()
         {
@@ -110,7 +111,6 @@ public class FolloHandMovementController : MonoBehaviour
 
         while (true)
         {
-
             newPosition = new() { isEmpty = false, position = new Vector3(_readedBufferData.position.x, _readedBufferData.position.y, _readedBufferData.position.z), rotation = _readedBufferData.rotation };
 
             if (!oldPosition.isEmpty)
@@ -121,7 +121,7 @@ public class FolloHandMovementController : MonoBehaviour
 
             oldPosition = new() { isEmpty = false, position = new Vector3(newPosition.position.x, newPosition.position.y, newPosition.position.z), rotation = newPosition.rotation };
 
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(GameManager.Instance.SettingsData.PositionSampleSeconds);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public static class ServerMessages
     public const string GAMEMANAGER_NULL_ERR = "GameManager is NOT instanciated";
     public const string TEST_OK = "Server is up";
     public const string BROADCASTER_NOT_FOUND = "Server broadcaster not found";
+    public const string MISSING_PARAMS = "Missing params";
+    public const string FOLDER_NOT_FOUND = "Folder not found";
 }
 
 public struct UpdateDelay
@@ -38,11 +41,38 @@ public struct UpdateBooleanParametersProp
     public bool localMirror;
     public bool characterMirror;
     public bool rotationMirror;
-    public bool thirdPerson;
+}
+
+public struct UpdateCameraViewProp
+{
+    public string camera;
+}
+
+public struct ResponseDataWithLPayload<T>
+{
+    public bool result;
+    public string message;
+    public List<T> data;
 }
 
 public struct ResponseData
 {
     public bool result;
     public string message;
+}
+
+public struct StartSessionData
+{
+    public string  Name;
+    public string Description;
+    public string Identifier;
+    public string CreatedAt;
+}
+
+public struct SessionData
+{
+    public string Name;
+    public string Description;
+    public string Identifier;
+    public DateTime CreatedAt;
 }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e9f5129e9ef9447955400c4992a5b6, type: 3}
   m_Name: WorldDataSO
   m_EditorClassIdentifier: 
-  _delay: 0
-  _localMirror: 1
+  _delay: 71
+  _localMirror: 0
   _rotationMirror: 0
   _characterMirror: 0
-  _thirdPerson: 0
+  _cameraView: 0
   _tableHeight: 80
