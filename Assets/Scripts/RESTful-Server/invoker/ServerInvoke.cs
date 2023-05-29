@@ -765,5 +765,83 @@ namespace RESTfulHTTPServer.src.invoker
 
             return response;
         }
+
+        public static Response DownloadSessionData(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            string sessionId = request.GetQuery("sessionId");
+            string sendTo = request.GetQuery("sendTo");
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                try
+                {
+                    if (GameManager.Instance != null)
+                    {
+
+                        if (!string.IsNullOrEmpty(sessionId) && !string.IsNullOrEmpty(sendTo))
+                        {
+
+                            bool folderFound = GameManager.Instance.SessionLogger.ZipFolderSession(sessionId);
+
+                            if(folderFound)
+                            {
+                                bool fileSent = GameManager.Instance.SessionLogger.SendFileZipped(sessionId, sendTo);
+
+                                if(fileSent)
+                                {
+                                    respData.result = true;
+                                }
+                                else
+                                {
+                                    respData.result = false;
+                                    respData.message = ServerMessages.SEND_FILE_ERR;
+                                }
+                            }
+                            else
+                            {
+                                respData.result = false;
+                                respData.message = ServerMessages.FOLDER_NOT_FOUND;
+                            }
+                            
+                        }
+                        else
+                        {
+                            respData.result = false;
+                            respData.message = ServerMessages.MISSING_PARAMS;
+                        }
+
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
+                }
+                finally
+                {
+                    response.SetContent(JsonUtility.ToJson(respData));
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
     }
 }

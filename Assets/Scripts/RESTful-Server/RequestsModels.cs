@@ -10,6 +10,7 @@ public static class ServerMessages
     public const string BROADCASTER_NOT_FOUND = "Server broadcaster not found";
     public const string MISSING_PARAMS = "Missing params";
     public const string FOLDER_NOT_FOUND = "Folder not found";
+    public const string SEND_FILE_ERR = "Error sending zipped data";
 }
 
 public struct UpdateDelay

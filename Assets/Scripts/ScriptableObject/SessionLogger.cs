@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
+using System.Net.Sockets;
 using UnityEngine;
 
 
@@ -266,7 +268,6 @@ public class SessionLogger
         {
             if(string.Compare(dirName, Path.Combine(mainPath, sessionId)) == 0)
             {
-                Debug.Log("TROVATA");
                 found = true;
                 File.Delete(Path.Combine(mainPath, sessionId, GENERAL_LOG_FILE));
                 File.Delete(Path.Combine(mainPath, sessionId, WORLD_LOG_FILE));
@@ -280,6 +281,78 @@ public class SessionLogger
         return found;
     }
 
+    public bool ZipFolderSession(string sessionId)
+    {
+        try
+        {
+            string folderToZip  = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId);
+            string zippedContent = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId + "_DATA.zip");
+
+            if(File.Exists(zippedContent))
+            {
+                File.Delete(zippedContent);
+            }
+
+            ZipFile.CreateFromDirectory(folderToZip, zippedContent, System.IO.Compression.CompressionLevel.Optimal, true);
+
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+        
+    }
+
+    /// <summary>
+    /// Send session DATA through a TCP channel
+    /// </summary>
+    /// <param name="sessionId"></param>
+    /// <param name="sendTo"></param>
+    /// <returns></returns>
+    public bool SendFileZipped(string sessionId, string sendTo)
+    {
+
+        Debug.Log("Send file to: " + sendTo);
+
+        bool fileSent = false;
+        try
+        {
+            string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId + "_DATA.zip");
+
+            FileInfo info = new(filePath);
+
+
+            TcpClient client = new(sendTo, 5050);
+            StreamWriter streamInfo = new(client.GetStream());
+
+            streamInfo.WriteLine(info.Length);
+            streamInfo.Flush();
+            streamInfo.Close();
+
+            client.Close();
+
+            client = new(sendTo, 5055);
+
+            Stream streamFile = client.GetStream();
+
+            byte[] fileBytes = File.ReadAllBytes(filePath);
+
+            streamFile.Write(fileBytes, 0, fileBytes.Length);
+            streamFile.Close();
+            client.Close();
+
+            File.Delete(filePath);
+
+            fileSent = true;
+        }
+        catch(Exception e)
+        {
+            Debug.LogException(e);
+        }
+
+        return fileSent;
+    }
 
     #endregion
 
