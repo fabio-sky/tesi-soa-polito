@@ -67,16 +67,16 @@ public class WorldData : ScriptableObject
         }
     }
 
-    [SerializeField] private bool _thirdPerson;
-    public bool ThirdPerson
+    [SerializeField] private CameraViewType _cameraView;
+    public CameraViewType CameraView
     {
         get
         {
-            return _thirdPerson;
+            return _cameraView;
         }
         set
         {
-            _thirdPerson = value;
+            _cameraView = value;
         }
     }
 
@@ -103,8 +103,19 @@ public class WorldData : ScriptableObject
         _localMirror = false;
         _rotationMirror = false;
         _characterMirror = false;
-        _thirdPerson = false;
+        _cameraView = CameraViewType.FIRST;
         _tableHeight = 80;
     }
 
+    public string Log()
+    {
+        return JsonUtility.ToJson(this);
+    }
+
+    public enum CameraViewType
+    {
+        FIRST,
+        THIRD,
+        FRONT
+    }
 }

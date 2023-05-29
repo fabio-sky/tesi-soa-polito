@@ -50,6 +50,15 @@ public class InputBufferSO : ScriptableObject
         }
     }
 
+    private InputData _lastInputValue;
+    public InputData LastInputValue
+    {
+        get
+        {
+            return _lastInputValue;
+        }
+    }
+
 
     private void Clear() { _buffer.Clear(); }
 
@@ -70,6 +79,7 @@ public class InputBufferSO : ScriptableObject
     {
 
         int delay = _worldData.Delay;
+        _lastInputValue = input;
 
         if(delay == 0)
         {

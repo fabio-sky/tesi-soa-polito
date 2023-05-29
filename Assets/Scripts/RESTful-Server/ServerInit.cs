@@ -59,8 +59,15 @@ public class ServerInit : MonoBehaviour
         routingManager.AddRoute(new Route(Route.Type.POST, "/world/all", "ServerInvoke.SetAllParameter"));
         routingManager.AddRoute(new Route(Route.Type.POST, "/world/boolean", "ServerInvoke.SetAllBooleanParameter"));
         routingManager.AddRoute(new Route(Route.Type.POST, "/objects/table", "ServerInvoke.SetTableHeight"));
-        //routingManager.AddRoute(new Route(Route.Type.POST, "/color/{objname}", "MaterialInvoke.SetColor"));
-        //routingManager.AddRoute(new Route(Route.Type.DELETE, "/color/{objname}", "MaterialInvoke.DeleteColor"));
+        routingManager.AddRoute(new Route(Route.Type.POST, "/session", "ServerInvoke.StartSession"));
+        routingManager.AddRoute(new Route(Route.Type.GET, "/sessions-list", "ServerInvoke.GetSessions"));
+        routingManager.AddRoute(new Route(Route.Type.POST, "/session/end", "ServerInvoke.EndSession"));
+        routingManager.AddRoute(new Route(Route.Type.DELETE, "/session", "ServerInvoke.DeleteSession"));
+        routingManager.AddRoute(new Route(Route.Type.POST, "/world/camera/view", "ServerInvoke.SetCameraView"));
+
+        routingManager.AddRoute(new Route(Route.Type.PUT, "/log/hand/start", "ServerInvoke.StartHandLog"));
+        routingManager.AddRoute(new Route(Route.Type.PUT, "/log/hand/stop", "ServerInvoke.StopHandLog"));
+        routingManager.AddRoute(new Route(Route.Type.GET, "/session/log", "ServerInvoke.DownloadSessionData"));
 
         // Starts the Simple REST Server
         // With or without basic authorisation flag
