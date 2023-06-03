@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7180280921972567964
 Transform:
   m_ObjectHideFlags: 0
@@ -184,8 +184,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 4746716156149362950, guid: 3c9e34c6b6a11694fb014c71f7462c2f,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -476,7 +475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7180280922220059779
 Transform:
   m_ObjectHideFlags: 0
@@ -507,8 +506,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 6031008837887211455, guid: 6e2908f3ef421cc4f9c90c79f5c4256b,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1170,10 +1168,25 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4719652241541204707, guid: 876e0b193be526d439e6208c86f0f9d5,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719652241541204707, guid: 876e0b193be526d439e6208c86f0f9d5,
+        type: 3}
+      propertyPath: m_AudioClipForOnHoverEntered
+      value: 
+      objectReference: {fileID: 8300000, guid: 354c37cd61ec24bbcbbc7921d0a71bc1, type: 3}
     - target: {fileID: 4719652241541204719, guid: 876e0b193be526d439e6208c86f0f9d5,
         type: 3}
       propertyPath: m_Name
       value: LeftHand Controller Delayed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719652241541204719, guid: 876e0b193be526d439e6208c86f0f9d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 876e0b193be526d439e6208c86f0f9d5, type: 3}
@@ -1195,10 +1208,20 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1243852894128085400, guid: 41acbb04344d3054d947079d4db4cb74,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1243852894128085404, guid: 41acbb04344d3054d947079d4db4cb74,
         type: 3}
       propertyPath: m_Name
       value: RightHand Controller Dealyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243852894128085404, guid: 41acbb04344d3054d947079d4db4cb74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1243852894128085407, guid: 41acbb04344d3054d947079d4db4cb74,
         type: 3}

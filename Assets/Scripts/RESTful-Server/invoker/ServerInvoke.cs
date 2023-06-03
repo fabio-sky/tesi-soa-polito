@@ -843,5 +843,65 @@ namespace RESTfulHTTPServer.src.invoker
 
             return response;
         }
+
+
+        public static Response MoveCamera(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            //string json = request.GetPOSTData();
+            string movement = request.GetQuery("movement");
+            //Dictionary<string, string> requestaParams = request.GetParameters();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                try
+                {
+                    if (GameManager.Instance != null)
+                    {
+
+                        if (!string.IsNullOrEmpty(movement))
+                        {
+
+                            GameManager.Instance.MoveCamera(movement);
+                            respData.result = true;
+                        }
+                        else
+                        {
+                            respData.result = false;
+                            respData.message = ServerMessages.MISSING_PARAMS;
+                        }
+
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
+                }
+                finally
+                {
+                    response.SetContent(JsonUtility.ToJson(respData));
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
     }
 }

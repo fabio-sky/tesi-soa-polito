@@ -46,6 +46,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _worldData: {fileID: 11400000, guid: c3fe936f4fe12f24b8b92fd4d526fb27, type: 2}
+  _settingsData: {fileID: 11400000, guid: be3d09613be3b1c488550a68ebb9f3fc, type: 2}
+  _rightHandReal: {fileID: 0}
+  _rightHandFollow: {fileID: 0}
+  _leftHandReal: {fileID: 0}
+  _leftHandFollow: {fileID: 0}
+  _fpCamera: {fileID: 0}
+  _tpCamera: {fileID: 0}
+  _frontCamera: {fileID: 0}
+  _skyboxWaitingMaterial: {fileID: 2100000, guid: 326ff7e3afced874480edb9c383bd0ed,
+    type: 2}
+  _skyboxRoomMaterial: {fileID: 2100000, guid: 3fac5efd19f9b9d4790a540121b69446, type: 2}
+  _sceneLoader: {fileID: 0}
 --- !u!114 &7916062570167961955
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -239,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &347025625842570981
 Transform:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4029818160486613503}
   - component: {fileID: 8374169815201575091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1637,7 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8579927370100972333}
   - component: {fileID: 5010631569246241209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2342,7 +2342,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5319148189570237123}
   - {fileID: 4029818160486613503}
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   head:
     vrTarget: {fileID: 0}
     IKTarget: {fileID: 6928760359085373519}
-    trackingPositionOffset: {x: 0, y: -0.08, z: 0}
+    trackingPositionOffset: {x: 0, y: -0.08, z: -0.05}
     trackingRotationOffset: {x: 0, y: 0, z: 0}
   leftHand:
     vrTarget: {fileID: 0}
@@ -3001,7 +3001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3145083515582560942}
   - component: {fileID: 102636079471695415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3367,7 +3367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6358250275449146926
 Transform:
   m_ObjectHideFlags: 0
@@ -3638,8 +3638,8 @@ Transform:
   m_GameObject: {fileID: 6448690131283759251}
   m_LocalRotation: {x: 0.04622671, y: -0.038718835, z: 0.018517537, w: 0.99800855}
   m_LocalPosition: {x: -3.72529e-10, y: 0.002519723, z: -0.0000000049049413}
-  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8765364423435338003}
   - {fileID: 7100463829343219775}
@@ -4430,8 +4430,8 @@ Transform:
   m_GameObject: {fileID: 8133610729402205802}
   m_LocalRotation: {x: 0.046229884, y: 0.038714528, z: -0.018517438, w: 0.99800855}
   m_LocalPosition: {x: -9.49949e-10, y: 0.0025197165, z: 5.319816e-10}
-  m_LocalScale: {x: 0.99999976, y: 0.9999999, z: 0.99999964}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7422537409854368104}
   - {fileID: 5947674397656878525}
@@ -5034,7 +5034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4766583572039402453}
   - component: {fileID: 1268282876942513478}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5265,7 +5265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307243286383823111}
   - component: {fileID: 2635987589711056827}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D_Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
