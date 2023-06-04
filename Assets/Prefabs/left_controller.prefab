@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6031008837887211455}
   - component: {fileID: 7214107999299516442}
   - component: {fileID: 4898049738300837072}
+  - component: {fileID: 1006444752}
   m_Layer: 0
   m_Name: left_controller
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1006444752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411333910255529221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd532d4b442e44aae0e090d6df8b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trackedHand: {fileID: 0}
+  _inputHandBuffer: {fileID: 11400000, guid: e6cb281c8f30d2f47bcc1ad95654ae2e, type: 2}
+  _otherInputHandBuffer: {fileID: 11400000, guid: 67b612746f23b6c4691a8caa650ea8ee,
+    type: 2}

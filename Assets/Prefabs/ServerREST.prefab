@@ -74,3 +74,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onServerEvent: {fileID: 11400000, guid: fda15bed0853bff41845421c33e4e080, type: 2}
+  onAudioEvent: {fileID: 11400000, guid: 0771e59be9773c14dad9e25267c49741, type: 2}

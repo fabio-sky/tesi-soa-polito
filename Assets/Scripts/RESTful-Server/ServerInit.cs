@@ -69,6 +69,8 @@ public class ServerInit : MonoBehaviour
         routingManager.AddRoute(new Route(Route.Type.PUT, "/log/hand/stop", "ServerInvoke.StopHandLog"));
         routingManager.AddRoute(new Route(Route.Type.GET, "/session/log", "ServerInvoke.DownloadSessionData"));
 
+        routingManager.AddRoute(new Route(Route.Type.PUT, "/camera", "ServerInvoke.MoveCamera"));
+
         // Starts the Simple REST Server
         // With or without basic authorisation flag
         if (!username.Equals("") && !password.Equals("")) 

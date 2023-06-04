@@ -189,15 +189,38 @@ public class GameManager : MonoBehaviour
         _sessionLogger.StopHandLog();
     }
 
+    public void MoveCamera(string movement)
+    {
+        if(movement == "UP")
+        {
+            _fpCamera.transform.Translate(new Vector3(0, 0.01f, 0));
+            return;
+        }
+
+        if (movement == "DOWN")
+        {
+            _fpCamera.transform.Translate(new Vector3(0, -0.01f, 0));
+            return;
+        }
+
+        if (movement == "RIGHT")
+        {
+            _fpCamera.transform.Translate(new Vector3(0.01f, 0, 0));
+            return;
+        }
+
+        if (movement == "LEFT")
+        {
+            _fpCamera.transform.Translate(new Vector3(-0.01f, 0, 0));
+            return;
+        }
+
+    }
 
     //CO-ROUTINES
 
     IEnumerator LoadAsyncScene(GameScene sceneToLoad)
     {
-        // The Application loads the Scene in the background as the current Scene runs.
-        // This is particularly good for creating loading screens.
-        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
-        // a sceneBuildIndex of 1 as shown in Build Settings.
 
         _sceneLoader.StartLoading();
 
