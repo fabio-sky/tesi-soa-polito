@@ -11,12 +11,12 @@ using UnityEngine;
 
 public class SessionLogger
 {
-    const string GENERAL_LOG_HEADER = "delta - action";
+    const string GENERAL_LOG_HEADER = "delta [ms] - action";
     const string GENERAL_LOG_FILE = "general.log";
-    const string WORLD_LOG_HEADER = "delta - action - localMirror - characterMirror - rotationMirror - delay - camera";
+    const string WORLD_LOG_HEADER = "delta [ms] - action - localMirror - characterMirror - rotationMirror - delay - camera";
     const string WORLD_LOG_FILE = "world.log";
 
-    const string HAND_LOG_HEADER = "delta - realPosition (x,y,z) - userPosition (x,y,z)";
+    const string HAND_LOG_HEADER = "delta [ms] - realPosition (x,y,z) - userPosition (x,y,z)";
     const string RIGHT_HAND_LOG_FILE = "rightHand.log";
     const string LEFT_HAND_LOG_FILE = "leftHand.log";
 
@@ -43,6 +43,16 @@ public class SessionLogger
     private string GenerateSessionEndLog()
     {
         return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, SessionAction.SESSION_END);
+    }
+
+    private string GenerateRecordinStartLog()
+    {
+        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, SessionAction.SESSION_START_RECORDING);
+    }
+
+    private string GenerateRecordinEndLog()
+    {
+        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, SessionAction.SESSION_STOP_RECORDING);
     }
 
     private void CreateSessionJsonFile(string dirPath)
@@ -78,7 +88,7 @@ public class SessionLogger
     {
         WorldData world = GameManager.Instance.WorldData;
 
-        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, LOG_DELIMITER, SessionAction.WORLD_UPDATE, LOG_DELIMITER, world.LocalMirror, LOG_DELIMITER, world.CharacterMirror, LOG_DELIMITER,world.RotationMirror, LOG_DELIMITER, world.Delay, LOG_DELIMITER, world.CameraView);
+        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, SessionAction.WORLD_UPDATE, LOG_DELIMITER, world.LocalMirror, LOG_DELIMITER, world.CharacterMirror, LOG_DELIMITER,world.RotationMirror, LOG_DELIMITER, world.Delay, LOG_DELIMITER, world.CameraView);
     }
 
     private string GenerateHandLog(DateTime time, Vector3 real, Vector3 user)
@@ -182,13 +192,38 @@ public class SessionLogger
 
     }
 
+    public void LogHandRecordingStartEnd(bool isStart)
+    {
+        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
+
+        if (string.IsNullOrEmpty(sessionId))
+        {
+            Debug.LogError("No SESSION IN PROGRESS found");
+            return;
+        }
+
+        string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, GENERAL_LOG_FILE);
+
+        if (File.Exists(filePath))
+        {
+            using (StreamWriter outputFile = new StreamWriter(filePath, true))
+            {
+                if(isStart)
+                {
+                    outputFile.WriteLine(GenerateRecordinStartLog());
+                }
+                else outputFile.WriteLine(GenerateRecordinEndLog());
+            }
+        }
+
+    }
+
 
 
     // HAND POSITION LOG
 
     public void StartHandLog()
     {
-
         string sessionId = GameManager.Instance.SessionInProgress.Identifier;
         bool fileExist;
 
@@ -213,6 +248,8 @@ public class SessionLogger
             _leftHandWriter.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT), "\n", "## SESSION ID: " + sessionId, "\n", "## LEFT HAND ", "\n\n", HAND_LOG_HEADER));
         }
 
+        LogHandRecordingStartEnd(true);
+
     }
 
     public void StopHandLog()
@@ -222,6 +259,9 @@ public class SessionLogger
 
        // _rightHandWriter?.Flush();
         _rightHandWriter?.Close();
+
+        LogHandRecordingStartEnd(false);
+
     }
 
     public void LogHandPosition(Vector3 leftReal, Vector3 leftUser, Vector3 rightReal, Vector3 rightUser)

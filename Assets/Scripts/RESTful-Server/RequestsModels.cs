@@ -11,6 +11,7 @@ public static class ServerMessages
     public const string MISSING_PARAMS = "Missing params";
     public const string FOLDER_NOT_FOUND = "Folder not found";
     public const string SEND_FILE_ERR = "Error sending zipped data";
+    public const string HANDS_LOG_ALREADY_STARTED = "Hands logging already started";
 }
 
 public struct UpdateDelay

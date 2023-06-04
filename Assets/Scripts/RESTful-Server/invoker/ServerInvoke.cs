@@ -588,8 +588,11 @@ namespace RESTfulHTTPServer.src.invoker
                 {
                     if (GameManager.Instance != null)
                     {
+                        bool isLogging = GameManager.Instance.SettingsData.LogsHand;
+
                         GameManager.Instance.StartHandLogging();
-                        respData.result = true;
+                        respData.result = isLogging ? false : true;
+                        respData.message = isLogging ? ServerMessages.HANDS_LOG_ALREADY_STARTED : "";
                     }
                     else
                     {
@@ -636,7 +639,7 @@ namespace RESTfulHTTPServer.src.invoker
                 {
                     if (GameManager.Instance != null)
                     {
-                        GameManager.Instance.StopHandLogging();
+                        if(GameManager.Instance.SettingsData.LogsHand) GameManager.Instance.StopHandLogging();
                         respData.result = true;
                     }
                     else

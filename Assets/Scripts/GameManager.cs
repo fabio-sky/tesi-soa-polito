@@ -112,6 +112,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
 
+    private void ResetCamerView()
+    {
+        WorldData.CameraView = WorldData.CameraViewType.FIRST;
+        UpdateCameraView();
+    }
+
     private void UpdateSkybox(SkyboxType type) { 
         switch(type)
         {
@@ -129,6 +135,8 @@ public class GameManager : MonoBehaviour
     }
 
     // PUBLIC METHODS
+
+
     public void UpdateCameraView()
     {
         if(WorldData.CameraView == WorldData.CameraViewType.FIRST)
@@ -171,13 +179,17 @@ public class GameManager : MonoBehaviour
 
     public void EndSession()
     {
+        _sessionLogger.StopHandLog();
         _sessionLogger.LogEndSession();
         _sessionInProgress = null;
+
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
 
     public void StartHandLogging()
     {
+        //Check if already logging data
+        if (_settingsData.LogsHand) return;
         _settingsData.LogsHand = true;
         _sessionLogger.StartHandLog();
         StartCoroutine(ReadInputValueCR());
@@ -263,6 +275,8 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+
+        ResetCamerView();
 
         _sceneLoader.EndLoading();
         yield return new WaitForSeconds(1f);
