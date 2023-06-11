@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField] SettingsData _settingsData;
+
+
+    [SerializeField] TextMeshProUGUI _textLogger;
+
     public SettingsData SettingsData
     {
         get
@@ -169,12 +174,11 @@ public class GameManager : MonoBehaviour
         _sessionLogger.LogWorldUpdate();
     }
 
-    public void StartNewSession(StartSessionData data) {
-        
-        _sessionInProgress = new() { Description = data.Description, Identifier = data.Identifier, Name = data.Name, CreatedAt = DateTime.Parse(data.CreatedAt) };
-        _sessionLogger.LogInitSession();
-
-        StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
+    public void StartNewSession(StartSessionData data) 
+    {
+            _sessionInProgress = new() { Description = data.Description, Identifier = data.Identifier, Name = data.Name, CreatedAt = DateTime.Parse(data.CreatedAt) };
+            _sessionLogger.LogInitSession();
+            StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
     }
 
     public void EndSession()
@@ -197,7 +201,7 @@ public class GameManager : MonoBehaviour
 
     public void StopHandLogging()
     {
-        _settingsData.LogsHand = false;
+        //_settingsData.LogsHand = false;
         _sessionLogger.StopHandLog();
     }
 
@@ -291,4 +295,12 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(_settingsData.LogHandSamplSeconds);
         }
     }
+
+    //DEBUG
+    public void DEBUG_AddToLog(string message)
+    {
+
+        _textLogger.text += "\n" + message;
+    }
+
 }

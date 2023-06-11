@@ -12,6 +12,6 @@ public class FrontCameraController : MonoBehaviour
     void Update()
     {
         Vector3 localRotation = cameraRotationListener.rotation.eulerAngles;
-        transform.localRotation = Quaternion.Euler(new Vector3(localRotation.x, -1 * localRotation.y + 90, localRotation.z));
+        transform.localRotation = Quaternion.Euler(new Vector3(localRotation.x, localRotation.y + 90, localRotation.z));
     }
 }

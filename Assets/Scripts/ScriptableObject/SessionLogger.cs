@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 
@@ -72,7 +73,7 @@ public class SessionLogger
         string mainDirPath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER);
         string sessionDirPath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId);
 
-        if(!Directory.Exists(mainDirPath))
+        if (!Directory.Exists(mainDirPath))
         {
             Directory.CreateDirectory(mainDirPath);
         }
@@ -112,12 +113,9 @@ public class SessionLogger
 
         _referenceTime = DateTime.Now;
 
+        
+
         string dirPath = CreateSessionFolder();
-
-        Debug.Log(dirPath);
-        Debug.Log(GENERAL_LOG_HEADER);
-        Debug.Log(GenerateSessionStartLog());
-
         CreateSessionJsonFile(dirPath);
 
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(dirPath, GENERAL_LOG_FILE), true))
@@ -208,11 +206,13 @@ public class SessionLogger
         {
             using (StreamWriter outputFile = new StreamWriter(filePath, true))
             {
-                if(isStart)
+                if (isStart)
                 {
                     outputFile.WriteLine(GenerateRecordinStartLog());
                 }
-                else outputFile.WriteLine(GenerateRecordinEndLog());
+                else {
+                    outputFile.WriteLine(GenerateRecordinEndLog());
+                } 
             }
         }
 
@@ -260,7 +260,12 @@ public class SessionLogger
        // _rightHandWriter?.Flush();
         _rightHandWriter?.Close();
 
-        LogHandRecordingStartEnd(false);
+        if (GameManager.Instance.SettingsData.LogsHand)
+        {
+            GameManager.Instance.SettingsData.LogsHand = false;
+            LogHandRecordingStartEnd(false);
+        }
+        
 
     }
 
@@ -361,9 +366,10 @@ public class SessionLogger
             string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId + "_DATA.zip");
 
             FileInfo info = new(filePath);
-
-
-            TcpClient client = new(sendTo, 5050);
+      
+            TcpClient client = new();
+            client.Connect(IPAddress.Parse(sendTo), 5050);
+            //TcpClient client = new(sendTo, 5050);
             StreamWriter streamInfo = new(client.GetStream());
 
             streamInfo.WriteLine(info.Length);
@@ -372,7 +378,10 @@ public class SessionLogger
 
             client.Close();
 
-            client = new(sendTo, 5055);
+            client = new();
+            client.Connect(IPAddress.Parse(sendTo), 5055);
+            //client = new(sendTo, 5055);
+            //client = new TcpClient(ipEndPoint2);
 
             Stream streamFile = client.GetStream();
 
