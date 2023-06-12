@@ -92,7 +92,7 @@ public class WorldData : ScriptableObject
         }
         set
         {
-            if(value < 0 || value > 80) _tableHeight = 80;
+            if(value < 0 || value > 100) _tableHeight = 100;
             else _tableHeight = value;
         }
     }

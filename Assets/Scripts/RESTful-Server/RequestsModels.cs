@@ -78,3 +78,9 @@ public struct SessionData
     public string Identifier;
     public DateTime CreatedAt;
 }
+
+public struct UpdateSamplingProp
+{
+    public int position;
+    public int log;
+}

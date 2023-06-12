@@ -906,5 +906,63 @@ namespace RESTfulHTTPServer.src.invoker
 
             return response;
         }
+
+        public static Response SetSampling(Request request)
+        {
+            Response response = new();
+            ResponseData respData = new();
+
+            bool done = false;
+            string json = request.GetPOSTData();
+
+            response.SetMimeType(Response.MIME_CONTENT_TYPE_JSON);
+
+            //TRIGGER EVENT
+            UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
+
+                //GameObject broadcaster = GameObject.FindWithTag("Server");
+
+                try
+                {
+                    UpdateSamplingProp data = JsonUtility.FromJson<UpdateSamplingProp>(json);
+
+                    if (GameManager.Instance != null)
+                    {
+
+                        GameManager.Instance.SettingsData.PositionSampleMilliseconds = data.position;
+                        GameManager.Instance.SettingsData.LogHandSampleMilliseconds = data.log;
+
+                        GameObject broadcaster = GameObject.FindWithTag("Server");
+
+
+                        respData.result = true;
+
+
+                    }
+                    else
+                    {
+                        respData.result = false;
+                        respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
+                    }
+                }
+                catch (Exception e)
+                {
+                    respData.result = false;
+                    respData.message = e.Message;
+                }
+                finally
+                {
+                    response.SetContent(JsonUtility.ToJson(respData));
+                    response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
+                    done = true;
+                }
+
+
+            });
+
+            while (!done) ;
+
+            return response;
+        }
     }
 }
