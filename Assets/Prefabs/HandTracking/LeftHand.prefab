@@ -887,7 +887,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7130922011630160454}
-  - component: {fileID: 6208141486212646202}
+  - component: {fileID: 5662126641429277928}
+  - component: {fileID: 4183503963861312956}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -912,19 +913,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &6208141486212646202
-SphereCollider:
+--- !u!114 &5662126641429277928
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7619474178529988860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193b81c3cfeef9f45a5631a43e02bda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handType: 1
+  righthandTag: RightHandFollow
+  lefthandTag: LeftHandFollow
+  _inputHandBuffer: {fileID: 11400000, guid: 348f7db3136c1ba439eea67a8e8739c7, type: 2}
+--- !u!114 &4183503963861312956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619474178529988860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29898298091a5204ba11285a74d0b9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrist: {fileID: 3642975294634759163}
+  indexMetacarpal: {fileID: 8582133374000895132}
+  indexProximal: {fileID: 7464333780892896221}
+  indexIntermediate: {fileID: 6180329530756213049}
+  indexDistal: {fileID: 5328454309963801371}
+  indexTip: {fileID: 694212371833478430}
+  littleMetacarpal: {fileID: 1668741855979057}
+  littleProximal: {fileID: 6312020821434512286}
+  littleIntermediate: {fileID: 3741296242611268225}
+  littleDistal: {fileID: 2384332128657382031}
+  littleTip: {fileID: 3957610531346942833}
+  middleMetacarpal: {fileID: 3269543787137278048}
+  middleProximal: {fileID: 6745220543859846304}
+  middleIntermediate: {fileID: 2161249444861929031}
+  middleDistal: {fileID: 7643609158327426194}
+  middleTip: {fileID: 3864028413478278368}
+  palm: {fileID: 5110863153117315970}
+  ringMetacarpal: {fileID: 5811153844556976124}
+  ringProximal: {fileID: 514346510998496495}
+  ringIntermediate: {fileID: 7383781121205663538}
+  ringDistal: {fileID: 7698162193978548346}
+  ringTip: {fileID: 2589208162503515723}
+  thumbMetacarpal: {fileID: 4283517609059324770}
+  thumbProximal: {fileID: 3110379021351694890}
+  thumbDistal: {fileID: 6653854920790801659}
+  thumbTip: {fileID: 5222565942049009709}
 --- !u!1 &8520260640889502430
 GameObject:
   m_ObjectHideFlags: 0

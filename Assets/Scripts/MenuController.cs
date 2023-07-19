@@ -42,14 +42,4 @@ public class MenuController : MonoBehaviour
         _menuIsOpen = false;
         Debug.Log("CLOSE MENU");
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        OpenMenu();
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        CloseMenu();
-    }
 }

@@ -951,7 +951,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637639666853561709}
-  - component: {fileID: 5881842823672979935}
+  - component: {fileID: -444438473876241480}
+  - component: {fileID: 3942068896453088605}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -976,16 +977,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5881842823672979935
-SphereCollider:
+--- !u!114 &-444438473876241480
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8977045353737035735}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193b81c3cfeef9f45a5631a43e02bda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handType: 0
+  righthandTag: RightHandFollow
+  lefthandTag: LeftHandFollow
+  _inputHandBuffer: {fileID: 11400000, guid: 32dd1c68c7705c94cb9bd73aab5051e0, type: 2}
+--- !u!114 &3942068896453088605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977045353737035735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29898298091a5204ba11285a74d0b9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrist: {fileID: 8478499157384239037}
+  indexMetacarpal: {fileID: 6999701579606789853}
+  indexProximal: {fileID: 8344661359329583974}
+  indexIntermediate: {fileID: 553372085446596353}
+  indexDistal: {fileID: 5328020510986851337}
+  indexTip: {fileID: 8812315231212284505}
+  littleMetacarpal: {fileID: 876878083910210663}
+  littleProximal: {fileID: 8418446342270752240}
+  littleIntermediate: {fileID: 3398699472663641103}
+  littleDistal: {fileID: 6273256299776599063}
+  littleTip: {fileID: 6470136108728772027}
+  middleMetacarpal: {fileID: 5408843285282497182}
+  middleProximal: {fileID: 419585497487820691}
+  middleIntermediate: {fileID: 7952547995161908679}
+  middleDistal: {fileID: 108198687225330592}
+  middleTip: {fileID: 3602362400567903204}
+  palm: {fileID: 8227464172154083782}
+  ringMetacarpal: {fileID: 2346875154839106949}
+  ringProximal: {fileID: 1853240150251070220}
+  ringIntermediate: {fileID: 4470236087469821632}
+  ringDistal: {fileID: 3790493911811637779}
+  ringTip: {fileID: 4754927787215386962}
+  thumbMetacarpal: {fileID: 8593094589778914730}
+  thumbProximal: {fileID: 5924022156762769042}
+  thumbDistal: {fileID: 6207521977136993208}
+  thumbTip: {fileID: 7994703047075509758}

@@ -271,8 +271,6 @@ struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26;
 struct CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860;
 // System.Globalization.CodePageDataItem
 struct CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2;
-// UnityEngine.Collider
-struct Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76;
 // UnityEngine.Component
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
 // System.Net.CookieCollection
@@ -327,6 +325,10 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6;
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // GetIP
 struct GetIP_tF79A573A5EFB63A6FF08169B76E0F941093681C6;
+// HandChildrenStore
+struct HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA;
+// HandTrackedController
+struct HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C;
 // System.Collections.Hashtable
 struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D;
 // System.Net.HttpConnection
@@ -706,6 +708,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral3781CFEEF925855A4B7284E1783A7D715A6333F6
 IL2CPP_EXTERN_C String_t* _stringLiteral39CB21871F9F9FE5AE18BA5E81ED4EC6DADB8E03;
 IL2CPP_EXTERN_C String_t* _stringLiteral3AA7D651D65AA63C2A2E1068F53E31BE2F44BC28;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B8F32E2DA10EE723138B9828A4258A5EF0FB069;
+IL2CPP_EXTERN_C String_t* _stringLiteral3DF90BA5C31A4C45C9D4D196E356557006D67E65;
 IL2CPP_EXTERN_C String_t* _stringLiteral3EC07EC0F30D68A99F2213AC400C4AD3BEDDCFE4;
 IL2CPP_EXTERN_C String_t* _stringLiteral42737D67B57D1AED1E18C475494BB867AD0AA192;
 IL2CPP_EXTERN_C String_t* _stringLiteral4349ED1A55A0F7C740BFDFBB69AFB99C1B6CB91C;
@@ -788,6 +791,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDB4D83D6871102EE8099E4F8AF38EB3DFE88EB6B
 IL2CPP_EXTERN_C String_t* _stringLiteralDD6065F6BEE8EC9D2DE042E63D3ABB71AA1D0A38;
 IL2CPP_EXTERN_C String_t* _stringLiteralE0691B88C792134FB65AF63E14979B1E924016D3;
 IL2CPP_EXTERN_C String_t* _stringLiteralE104B820F36CC91131E89538BD507305CD324F92;
+IL2CPP_EXTERN_C String_t* _stringLiteralE308FB917E7C8C5B91ADBFF7B110AE31F6B5C6B3;
 IL2CPP_EXTERN_C String_t* _stringLiteralE4A36950085C17525DD7D7D4A47CE7CC954EE41F;
 IL2CPP_EXTERN_C String_t* _stringLiteralE6171F11C604563E54011C10C3FE75DF5A8388D4;
 IL2CPP_EXTERN_C String_t* _stringLiteralE680957BD133638527043F9B98E07AEFB55F21E2;
@@ -810,6 +814,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m768E076F1E804CE4959F4E7
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Item_mB13DFB3E7499031847CF544977D4EFB1AC0157AB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisBroadcaster_tCDD5508AFBA91256B50E9D50D786732D4E8B9F14_m61570B992E6D0B726EC6A8383606D939745A2418_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InputAction_ReadValue_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mE5E9DB38576465AB81987CCC701100CC64849541_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InputAction_ReadValue_TisQuaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_mB8907F30D5351614BF14D336C4B20E292F66B844_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InputAction_ReadValue_TisVector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_m30270520598CDB38962B8367F8AA1B67B79174DE_RuntimeMethod_var;
@@ -4159,11 +4164,6 @@ struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t
 {
 };
 
-// UnityEngine.Collider
-struct Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
-{
-};
-
 // System.IO.DirectoryInfo
 struct DirectoryInfo_tEAEEC018EB49B4A71907FFEAFE935FAA8F9C1FE2  : public FileSystemInfo_tE3063B9229F46B05A5F6D018C8C4CA510104E8E9
 {
@@ -4749,6 +4749,84 @@ struct GetIP_tF79A573A5EFB63A6FF08169B76E0F941093681C6  : public MonoBehaviour_t
 {
 	// TMPro.TextMeshProUGUI GetIP::label
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___label_4;
+};
+
+// HandChildrenStore
+struct HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.Transform HandChildrenStore::wrist
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___wrist_4;
+	// UnityEngine.Transform HandChildrenStore::indexMetacarpal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indexMetacarpal_5;
+	// UnityEngine.Transform HandChildrenStore::indexProximal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indexProximal_6;
+	// UnityEngine.Transform HandChildrenStore::indexIntermediate
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indexIntermediate_7;
+	// UnityEngine.Transform HandChildrenStore::indexDistal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indexDistal_8;
+	// UnityEngine.Transform HandChildrenStore::indexTip
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___indexTip_9;
+	// UnityEngine.Transform HandChildrenStore::littleMetacarpal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___littleMetacarpal_10;
+	// UnityEngine.Transform HandChildrenStore::littleProximal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___littleProximal_11;
+	// UnityEngine.Transform HandChildrenStore::littleIntermediate
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___littleIntermediate_12;
+	// UnityEngine.Transform HandChildrenStore::littleDistal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___littleDistal_13;
+	// UnityEngine.Transform HandChildrenStore::littleTip
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___littleTip_14;
+	// UnityEngine.Transform HandChildrenStore::middleMetacarpal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___middleMetacarpal_15;
+	// UnityEngine.Transform HandChildrenStore::middleProximal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___middleProximal_16;
+	// UnityEngine.Transform HandChildrenStore::middleIntermediate
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___middleIntermediate_17;
+	// UnityEngine.Transform HandChildrenStore::middleDistal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___middleDistal_18;
+	// UnityEngine.Transform HandChildrenStore::middleTip
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___middleTip_19;
+	// UnityEngine.Transform HandChildrenStore::palm
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___palm_20;
+	// UnityEngine.Transform HandChildrenStore::ringMetacarpal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ringMetacarpal_21;
+	// UnityEngine.Transform HandChildrenStore::ringProximal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ringProximal_22;
+	// UnityEngine.Transform HandChildrenStore::ringIntermediate
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ringIntermediate_23;
+	// UnityEngine.Transform HandChildrenStore::ringDistal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ringDistal_24;
+	// UnityEngine.Transform HandChildrenStore::ringTip
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___ringTip_25;
+	// UnityEngine.Transform HandChildrenStore::thumbMetacarpal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___thumbMetacarpal_26;
+	// UnityEngine.Transform HandChildrenStore::thumbProximal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___thumbProximal_27;
+	// UnityEngine.Transform HandChildrenStore::thumbDistal
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___thumbDistal_28;
+	// UnityEngine.Transform HandChildrenStore::thumbTip
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___thumbTip_29;
+};
+
+// HandTrackedController
+struct HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// HandTrackedController/WhatHand HandTrackedController::handType
+	int32_t ___handType_4;
+	// System.String HandTrackedController::righthandTag
+	String_t* ___righthandTag_5;
+	// System.String HandTrackedController::lefthandTag
+	String_t* ___lefthandTag_6;
+	// InputBufferSO HandTrackedController::_inputHandBuffer
+	InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* ____inputHandBuffer_7;
+	// UnityEngine.GameObject HandTrackedController::_handToForceFollow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____handToForceFollow_8;
+	// HandChildrenStore HandTrackedController::_handToForceFollowTransforms
+	HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* ____handToForceFollowTransforms_9;
+	// HandChildrenStore HandTrackedController::_handTransforms
+	HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* ____handTransforms_10;
+	// InputData HandTrackedController::_readedBufferData
+	InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE ____readedBufferData_11;
 };
 
 // MenuController
@@ -6208,10 +6286,6 @@ struct Type_t_StaticFields
 
 // System.Action
 
-// UnityEngine.Collider
-
-// UnityEngine.Collider
-
 // System.IO.DirectoryInfo
 
 // System.IO.DirectoryInfo
@@ -6320,6 +6394,14 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields
 // GetIP
 
 // GetIP
+
+// HandChildrenStore
+
+// HandChildrenStore
+
+// HandTrackedController
+
+// HandTrackedController
 
 // MenuController
 
@@ -6676,6 +6758,8 @@ struct SessionDataU5BU5D_tE58AFFCC6558DF4C25F20B5FCFC81330B87C91D1  : public Run
 };
 
 
+// T UnityEngine.GameObject::GetComponent<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`2<System.Object,System.Object>::.ctor()
@@ -6742,8 +6826,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Dictionary_2_get_Item_m4AAAECB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Enqueue_m5CB8CF3906F1289F92036F0973EC5BE3450402EF_gshared (Queue_1_tE9EF546915795972C3BFD68FBB8FA859D3BAF3B5* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 // T UnityEngine.JsonUtility::FromJson<UpdateDelay>(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UpdateDelay_tE4E38D59939984BC64BF957DADB8EE1A7AB22738 JsonUtility_FromJson_TisUpdateDelay_tE4E38D59939984BC64BF957DADB8EE1A7AB22738_mD358BDC81304A19D3D2F751E043B1EC33141AA0A_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
-// T UnityEngine.GameObject::GetComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.JsonUtility::FromJson<UpdateBooleanProp>(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UpdateBooleanProp_tFFA025674A62EF5E90863ACDBCB365CF92108FC6 JsonUtility_FromJson_TisUpdateBooleanProp_tFFA025674A62EF5E90863ACDBCB365CF92108FC6_m649B546DF23BDD9A7C9BF5A4F77D268621375398_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
 // T UnityEngine.JsonUtility::FromJson<UpdateParametersProp>(System.String)
@@ -6779,6 +6861,35 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+// UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_FindGameObjectWithTag_mF0229BC2074CE9EEA72FAB1E5A4BC2AEC3D2CDBE (String_t* ___0_tag, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_exists, const RuntimeMethod* method) ;
+// T UnityEngine.GameObject::GetComponent<HandChildrenStore>()
+inline HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
+}
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+// System.Void InputBufferSO::Init()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputBufferSO_Init_mCDF92A6274694538CF70FF6E8165FE7FD183D052 (InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// InputData InputBufferSO::ReadThenAddValue(InputData)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE InputBufferSO_ReadThenAddValue_m0C6D1F84E70455A1666B080EFF1EC49C7C854E53 (InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* __this, InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE ___0_input, const RuntimeMethod* method) ;
+// System.Void HandTrackedController::ManageBuffer()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_ManageBuffer_m91719A3C05C1450961996958A92B2D867B42506F (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) ;
+// System.Void HandTrackedController::CloneTransform()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_CloneTransform_m2CBD7ED51CB6ECB7DE4155895E43FBF8059AA47C (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Transform::SetLocalPositionAndRotation(UnityEngine.Vector3,UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetLocalPositionAndRotation_m0FB0FCF462AB7CD21880042918BCC372A59E734D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_localPosition, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_localRotation, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.AudioSource>()
 inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -6816,8 +6927,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_forward_mA178B5CF4F0F6133F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MapTransform_MapVRAvatar_m5B62251DAE9777B5FC6A2102EB5A506C13B0DFDC (MapTransform_tC13454CDA7602FC94A63C3B293E40A1F6D90FA99* __this, const RuntimeMethod* method) ;
 // System.Void GameEventChannel::Raise()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameEventChannel_Raise_m233EFE51F4F7B9F2AEF74F5EBC7FDBA51C830A51 (GameEventChannel_t58AE55C9137875102C0AC48592D269E4DB507FBA* __this, const RuntimeMethod* method) ;
-// System.Void InputBufferSO::Init()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputBufferSO_Init_mCDF92A6274694538CF70FF6E8165FE7FD183D052 (InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* __this, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator FolloHandMovementController::DiscreteBufferManager()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FolloHandMovementController_DiscreteBufferManager_m3A356644CCE81BFA533A32877128C3A8CF9B36D5 (FolloHandMovementController_t8F84D4D42C0BEEFA8F448DB9C56D92A9B6CEEAC2* __this, const RuntimeMethod* method) ;
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
@@ -6826,8 +6935,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF87
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FolloHandMovementController_ManageBuffer_mE6DE1DA46C652AAF49683B29D92616E91D3C7B93 (FolloHandMovementController_t8F84D4D42C0BEEFA8F448DB9C56D92A9B6CEEAC2* __this, const RuntimeMethod* method) ;
 // System.Void FolloHandMovementController::HandleMovement()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FolloHandMovementController_HandleMovement_m9D58795B4076CEF6DAE1A56F0AACF279A935CF1B (FolloHandMovementController_t8F84D4D42C0BEEFA8F448DB9C56D92A9B6CEEAC2* __this, const RuntimeMethod* method) ;
-// InputData InputBufferSO::ReadThenAddValue(InputData)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE InputBufferSO_ReadThenAddValue_m0C6D1F84E70455A1666B080EFF1EC49C7C854E53 (InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* __this, InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE ___0_input, const RuntimeMethod* method) ;
 // GameManager GameManager::get_Instance()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline (const RuntimeMethod* method) ;
 // WorldData GameManager::get_WorldData()
@@ -7720,6 +7827,1144 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FrontCameraController_Update_mD422AEA16B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FrontCameraController__ctor_m0F2D8875D07C342D643F913FC9F10E7DC8066CC3 (FrontCameraController_t7D35A413165C49B3B16F3AF7501FE151BBB9EBCA* __this, const RuntimeMethod* method) 
 {
 	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void HandChildrenStore::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandChildrenStore__ctor_m464D05DBEB02F5C3BA9A18FB5A74745BA981D99E (HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void HandTrackedController::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_Start_mB14823F4C39C245EF0300078F5586DC7F578B5E0 (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (handType == WhatHand.RIGHT) _handToForceFollow = GameObject.FindGameObjectWithTag(righthandTag);
+		int32_t L_0 = __this->___handType_4;
+		if (L_0)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		// if (handType == WhatHand.RIGHT) _handToForceFollow = GameObject.FindGameObjectWithTag(righthandTag);
+		String_t* L_1 = __this->___righthandTag_5;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+		L_2 = GameObject_FindGameObjectWithTag_mF0229BC2074CE9EEA72FAB1E5A4BC2AEC3D2CDBE(L_1, NULL);
+		__this->____handToForceFollow_8 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____handToForceFollow_8), (void*)L_2);
+		goto IL_002c;
+	}
+
+IL_001b:
+	{
+		// else _handToForceFollow = GameObject.FindGameObjectWithTag(lefthandTag);
+		String_t* L_3 = __this->___lefthandTag_6;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
+		L_4 = GameObject_FindGameObjectWithTag_mF0229BC2074CE9EEA72FAB1E5A4BC2AEC3D2CDBE(L_3, NULL);
+		__this->____handToForceFollow_8 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____handToForceFollow_8), (void*)L_4);
+	}
+
+IL_002c:
+	{
+		// if (_handToForceFollow)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->____handToForceFollow_8;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_5, NULL);
+		if (!L_6)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		// _handToForceFollowTransforms = _handToForceFollow.GetComponent<HandChildrenStore>();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->____handToForceFollow_8;
+		NullCheck(L_7);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_8;
+		L_8 = GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D(L_7, GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D_RuntimeMethod_var);
+		__this->____handToForceFollowTransforms_9 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____handToForceFollowTransforms_9), (void*)L_8);
+	}
+
+IL_004a:
+	{
+		// _handTransforms = gameObject.GetComponent<HandChildrenStore>();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
+		L_9 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_9);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_10;
+		L_10 = GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D(L_9, GameObject_GetComponent_TisHandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA_m6CE1FB89A1F8F7EC4E82A2A1A5386807B29BEA2D_RuntimeMethod_var);
+		__this->____handTransforms_10 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____handTransforms_10), (void*)L_10);
+		// _inputHandBuffer.Init();
+		InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* L_11 = __this->____inputHandBuffer_7;
+		NullCheck(L_11);
+		InputBufferSO_Init_mCDF92A6274694538CF70FF6E8165FE7FD183D052(L_11, NULL);
+		// }
+		return;
+	}
+}
+// System.Void HandTrackedController::ManageBuffer()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_ManageBuffer_m91719A3C05C1450961996958A92B2D867B42506F (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) 
+{
+	InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		// InputData actualInputData = new()
+		// {
+		//     position = _handTransforms.wrist.transform.localPosition,
+		//     rotation = _handTransforms.wrist.transform.localRotation
+		// };
+		il2cpp_codegen_initobj((&V_1), sizeof(InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE));
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_0 = __this->____handTransforms_10;
+		NullCheck(L_0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = L_0->___wrist_4;
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_1, NULL);
+		NullCheck(L_2);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_2, NULL);
+		(&V_1)->___position_0 = L_3;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_4 = __this->____handTransforms_10;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = L_4->___wrist_4;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_5, NULL);
+		NullCheck(L_6);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7;
+		L_7 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_6, NULL);
+		(&V_1)->___rotation_1 = L_7;
+		InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE L_8 = V_1;
+		V_0 = L_8;
+		// _readedBufferData = _inputHandBuffer.ReadThenAddValue(actualInputData);
+		InputBufferSO_t2EB54162C790BEF0829230AF3601210A317D6759* L_9 = __this->____inputHandBuffer_7;
+		InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE L_10 = V_0;
+		NullCheck(L_9);
+		InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE L_11;
+		L_11 = InputBufferSO_ReadThenAddValue_m0C6D1F84E70455A1666B080EFF1EC49C7C854E53(L_9, L_10, NULL);
+		__this->____readedBufferData_11 = L_11;
+		// }
+		return;
+	}
+}
+// System.Void HandTrackedController::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_Update_m036B2266DCF8FD08A50458FD6B86010E75911703 (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) 
+{
+	{
+		// ManageBuffer();
+		HandTrackedController_ManageBuffer_m91719A3C05C1450961996958A92B2D867B42506F(__this, NULL);
+		// CloneTransform();
+		HandTrackedController_CloneTransform_m2CBD7ED51CB6ECB7DE4155895E43FBF8059AA47C(__this, NULL);
+		// }
+		return;
+	}
+}
+// System.Void HandTrackedController::CloneTransform()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController_CloneTransform_m2CBD7ED51CB6ECB7DE4155895E43FBF8059AA47C (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (_handToForceFollow == null || _handToForceFollowTransforms == null) return;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->____handToForceFollow_8;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_2 = __this->____handToForceFollowTransforms_9;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_001d;
+		}
+	}
+
+IL_001c:
+	{
+		// if (_handToForceFollow == null || _handToForceFollowTransforms == null) return;
+		return;
+	}
+
+IL_001d:
+	{
+		// _handToForceFollowTransforms.wrist.transform.SetLocalPositionAndRotation(_readedBufferData.position, _readedBufferData.rotation);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_4 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = L_4->___wrist_4;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_5, NULL);
+		InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE* L_7 = (&__this->____readedBufferData_11);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = L_7->___position_0;
+		InputData_t3AD2299AB1B153FDA065E2CDA0F0DCF34C03C7DE* L_9 = (&__this->____readedBufferData_11);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10 = L_9->___rotation_1;
+		NullCheck(L_6);
+		Transform_SetLocalPositionAndRotation_m0FB0FCF462AB7CD21880042918BCC372A59E734D(L_6, L_8, L_10, NULL);
+		// _handToForceFollowTransforms.indexMetacarpal.transform.localPosition = _handTransforms.indexMetacarpal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_11 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_11);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = L_11->___indexMetacarpal_5;
+		NullCheck(L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_12, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_14 = __this->____handTransforms_10;
+		NullCheck(L_14);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = L_14->___indexMetacarpal_5;
+		NullCheck(L_15);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_15, NULL);
+		NullCheck(L_16);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_16, NULL);
+		NullCheck(L_13);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_13, L_17, NULL);
+		// _handToForceFollowTransforms.indexMetacarpal.transform.localRotation = _handTransforms.indexMetacarpal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_18 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_18);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = L_18->___indexMetacarpal_5;
+		NullCheck(L_19);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_19, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_21 = __this->____handTransforms_10;
+		NullCheck(L_21);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22 = L_21->___indexMetacarpal_5;
+		NullCheck(L_22);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_22, NULL);
+		NullCheck(L_23);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24;
+		L_24 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_23, NULL);
+		NullCheck(L_20);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_20, L_24, NULL);
+		// _handToForceFollowTransforms.indexProximal.transform.localPosition = _handTransforms.indexProximal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_25 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_25);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = L_25->___indexProximal_6;
+		NullCheck(L_26);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
+		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_26, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_28 = __this->____handTransforms_10;
+		NullCheck(L_28);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29 = L_28->___indexProximal_6;
+		NullCheck(L_29);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
+		L_30 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_29, NULL);
+		NullCheck(L_30);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_30, NULL);
+		NullCheck(L_27);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_27, L_31, NULL);
+		// _handToForceFollowTransforms.indexProximal.transform.localRotation = _handTransforms.indexProximal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_32 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_32);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = L_32->___indexProximal_6;
+		NullCheck(L_33);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
+		L_34 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_33, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_35 = __this->____handTransforms_10;
+		NullCheck(L_35);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = L_35->___indexProximal_6;
+		NullCheck(L_36);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_37;
+		L_37 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_36, NULL);
+		NullCheck(L_37);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38;
+		L_38 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_37, NULL);
+		NullCheck(L_34);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_34, L_38, NULL);
+		// _handToForceFollowTransforms.indexIntermediate.transform.localPosition = _handTransforms.indexIntermediate.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_39 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_39);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_40 = L_39->___indexIntermediate_7;
+		NullCheck(L_40);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41;
+		L_41 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_40, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_42 = __this->____handTransforms_10;
+		NullCheck(L_42);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43 = L_42->___indexIntermediate_7;
+		NullCheck(L_43);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_44;
+		L_44 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_43, NULL);
+		NullCheck(L_44);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45;
+		L_45 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_44, NULL);
+		NullCheck(L_41);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_41, L_45, NULL);
+		// _handToForceFollowTransforms.indexIntermediate.transform.localRotation = _handTransforms.indexIntermediate.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_46 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_46);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_47 = L_46->___indexIntermediate_7;
+		NullCheck(L_47);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_48;
+		L_48 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_47, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_49 = __this->____handTransforms_10;
+		NullCheck(L_49);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_50 = L_49->___indexIntermediate_7;
+		NullCheck(L_50);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51;
+		L_51 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_50, NULL);
+		NullCheck(L_51);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_52;
+		L_52 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_51, NULL);
+		NullCheck(L_48);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_48, L_52, NULL);
+		// _handToForceFollowTransforms.indexDistal.transform.localPosition = _handTransforms.indexDistal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_53 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_53);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_54 = L_53->___indexDistal_8;
+		NullCheck(L_54);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_55;
+		L_55 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_54, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_56 = __this->____handTransforms_10;
+		NullCheck(L_56);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_57 = L_56->___indexDistal_8;
+		NullCheck(L_57);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_58;
+		L_58 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_57, NULL);
+		NullCheck(L_58);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59;
+		L_59 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_58, NULL);
+		NullCheck(L_55);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_55, L_59, NULL);
+		// _handToForceFollowTransforms.indexDistal.transform.localRotation = _handTransforms.indexDistal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_60 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_60);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_61 = L_60->___indexDistal_8;
+		NullCheck(L_61);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_62;
+		L_62 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_61, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_63 = __this->____handTransforms_10;
+		NullCheck(L_63);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_64 = L_63->___indexDistal_8;
+		NullCheck(L_64);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_65;
+		L_65 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_64, NULL);
+		NullCheck(L_65);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_66;
+		L_66 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_65, NULL);
+		NullCheck(L_62);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_62, L_66, NULL);
+		// _handToForceFollowTransforms.indexTip.transform.localPosition = _handTransforms.indexTip.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_67 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_67);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_68 = L_67->___indexTip_9;
+		NullCheck(L_68);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_69;
+		L_69 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_68, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_70 = __this->____handTransforms_10;
+		NullCheck(L_70);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_71 = L_70->___indexTip_9;
+		NullCheck(L_71);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_72;
+		L_72 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_71, NULL);
+		NullCheck(L_72);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_73;
+		L_73 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_72, NULL);
+		NullCheck(L_69);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_69, L_73, NULL);
+		// _handToForceFollowTransforms.indexTip.transform.localRotation = _handTransforms.indexTip.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_74 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_74);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_75 = L_74->___indexTip_9;
+		NullCheck(L_75);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_76;
+		L_76 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_75, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_77 = __this->____handTransforms_10;
+		NullCheck(L_77);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_78 = L_77->___indexTip_9;
+		NullCheck(L_78);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_79;
+		L_79 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_78, NULL);
+		NullCheck(L_79);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_80;
+		L_80 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_79, NULL);
+		NullCheck(L_76);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_76, L_80, NULL);
+		// _handToForceFollowTransforms.littleMetacarpal.transform.localPosition = _handTransforms.littleMetacarpal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_81 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_81);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_82 = L_81->___littleMetacarpal_10;
+		NullCheck(L_82);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_83;
+		L_83 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_82, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_84 = __this->____handTransforms_10;
+		NullCheck(L_84);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_85 = L_84->___littleMetacarpal_10;
+		NullCheck(L_85);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_86;
+		L_86 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_85, NULL);
+		NullCheck(L_86);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_87;
+		L_87 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_86, NULL);
+		NullCheck(L_83);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_83, L_87, NULL);
+		// _handToForceFollowTransforms.littleMetacarpal.transform.localRotation = _handTransforms.littleMetacarpal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_88 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_88);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_89 = L_88->___littleMetacarpal_10;
+		NullCheck(L_89);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_90;
+		L_90 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_89, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_91 = __this->____handTransforms_10;
+		NullCheck(L_91);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_92 = L_91->___littleMetacarpal_10;
+		NullCheck(L_92);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_93;
+		L_93 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_92, NULL);
+		NullCheck(L_93);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_94;
+		L_94 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_93, NULL);
+		NullCheck(L_90);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_90, L_94, NULL);
+		// _handToForceFollowTransforms.littleProximal.transform.localPosition = _handTransforms.littleProximal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_95 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_95);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_96 = L_95->___littleProximal_11;
+		NullCheck(L_96);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_97;
+		L_97 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_96, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_98 = __this->____handTransforms_10;
+		NullCheck(L_98);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_99 = L_98->___littleProximal_11;
+		NullCheck(L_99);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_100;
+		L_100 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_99, NULL);
+		NullCheck(L_100);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_101;
+		L_101 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_100, NULL);
+		NullCheck(L_97);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_97, L_101, NULL);
+		// _handToForceFollowTransforms.littleProximal.transform.localRotation = _handTransforms.littleProximal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_102 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_102);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_103 = L_102->___littleProximal_11;
+		NullCheck(L_103);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_104;
+		L_104 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_103, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_105 = __this->____handTransforms_10;
+		NullCheck(L_105);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_106 = L_105->___littleProximal_11;
+		NullCheck(L_106);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_107;
+		L_107 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_106, NULL);
+		NullCheck(L_107);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_108;
+		L_108 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_107, NULL);
+		NullCheck(L_104);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_104, L_108, NULL);
+		// _handToForceFollowTransforms.littleIntermediate.transform.localPosition = _handTransforms.littleIntermediate.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_109 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_109);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_110 = L_109->___littleIntermediate_12;
+		NullCheck(L_110);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_111;
+		L_111 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_110, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_112 = __this->____handTransforms_10;
+		NullCheck(L_112);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_113 = L_112->___littleIntermediate_12;
+		NullCheck(L_113);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_114;
+		L_114 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_113, NULL);
+		NullCheck(L_114);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_115;
+		L_115 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_114, NULL);
+		NullCheck(L_111);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_111, L_115, NULL);
+		// _handToForceFollowTransforms.littleIntermediate.transform.localRotation = _handTransforms.littleIntermediate.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_116 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_116);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_117 = L_116->___littleIntermediate_12;
+		NullCheck(L_117);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_118;
+		L_118 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_117, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_119 = __this->____handTransforms_10;
+		NullCheck(L_119);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_120 = L_119->___littleIntermediate_12;
+		NullCheck(L_120);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_121;
+		L_121 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_120, NULL);
+		NullCheck(L_121);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_122;
+		L_122 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_121, NULL);
+		NullCheck(L_118);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_118, L_122, NULL);
+		// _handToForceFollowTransforms.littleDistal.transform.localPosition = _handTransforms.littleDistal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_123 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_123);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_124 = L_123->___littleDistal_13;
+		NullCheck(L_124);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_125;
+		L_125 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_124, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_126 = __this->____handTransforms_10;
+		NullCheck(L_126);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_127 = L_126->___littleDistal_13;
+		NullCheck(L_127);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_128;
+		L_128 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_127, NULL);
+		NullCheck(L_128);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_129;
+		L_129 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_128, NULL);
+		NullCheck(L_125);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_125, L_129, NULL);
+		// _handToForceFollowTransforms.littleDistal.transform.localRotation = _handTransforms.littleDistal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_130 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_130);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_131 = L_130->___littleDistal_13;
+		NullCheck(L_131);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_132;
+		L_132 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_131, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_133 = __this->____handTransforms_10;
+		NullCheck(L_133);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_134 = L_133->___littleDistal_13;
+		NullCheck(L_134);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_135;
+		L_135 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_134, NULL);
+		NullCheck(L_135);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_136;
+		L_136 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_135, NULL);
+		NullCheck(L_132);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_132, L_136, NULL);
+		// _handToForceFollowTransforms.littleTip.transform.localPosition = _handTransforms.littleTip.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_137 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_137);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_138 = L_137->___littleTip_14;
+		NullCheck(L_138);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_139;
+		L_139 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_138, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_140 = __this->____handTransforms_10;
+		NullCheck(L_140);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_141 = L_140->___littleTip_14;
+		NullCheck(L_141);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_142;
+		L_142 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_141, NULL);
+		NullCheck(L_142);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_143;
+		L_143 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_142, NULL);
+		NullCheck(L_139);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_139, L_143, NULL);
+		// _handToForceFollowTransforms.littleTip.transform.localRotation = _handTransforms.littleTip.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_144 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_144);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_145 = L_144->___littleTip_14;
+		NullCheck(L_145);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_146;
+		L_146 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_145, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_147 = __this->____handTransforms_10;
+		NullCheck(L_147);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_148 = L_147->___littleTip_14;
+		NullCheck(L_148);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_149;
+		L_149 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_148, NULL);
+		NullCheck(L_149);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_150;
+		L_150 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_149, NULL);
+		NullCheck(L_146);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_146, L_150, NULL);
+		// _handToForceFollowTransforms.middleMetacarpal.transform.localPosition = _handTransforms.middleMetacarpal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_151 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_151);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_152 = L_151->___middleMetacarpal_15;
+		NullCheck(L_152);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_153;
+		L_153 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_152, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_154 = __this->____handTransforms_10;
+		NullCheck(L_154);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_155 = L_154->___middleMetacarpal_15;
+		NullCheck(L_155);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_156;
+		L_156 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_155, NULL);
+		NullCheck(L_156);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_157;
+		L_157 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_156, NULL);
+		NullCheck(L_153);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_153, L_157, NULL);
+		// _handToForceFollowTransforms.middleMetacarpal.transform.localRotation = _handTransforms.middleMetacarpal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_158 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_158);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_159 = L_158->___middleMetacarpal_15;
+		NullCheck(L_159);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_160;
+		L_160 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_159, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_161 = __this->____handTransforms_10;
+		NullCheck(L_161);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_162 = L_161->___middleMetacarpal_15;
+		NullCheck(L_162);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_163;
+		L_163 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_162, NULL);
+		NullCheck(L_163);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_164;
+		L_164 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_163, NULL);
+		NullCheck(L_160);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_160, L_164, NULL);
+		// _handToForceFollowTransforms.middleProximal.transform.localPosition = _handTransforms.middleProximal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_165 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_165);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_166 = L_165->___middleProximal_16;
+		NullCheck(L_166);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_167;
+		L_167 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_166, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_168 = __this->____handTransforms_10;
+		NullCheck(L_168);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_169 = L_168->___middleProximal_16;
+		NullCheck(L_169);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_170;
+		L_170 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_169, NULL);
+		NullCheck(L_170);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_171;
+		L_171 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_170, NULL);
+		NullCheck(L_167);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_167, L_171, NULL);
+		// _handToForceFollowTransforms.middleProximal.transform.localRotation = _handTransforms.middleProximal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_172 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_172);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_173 = L_172->___middleProximal_16;
+		NullCheck(L_173);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_174;
+		L_174 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_173, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_175 = __this->____handTransforms_10;
+		NullCheck(L_175);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_176 = L_175->___middleProximal_16;
+		NullCheck(L_176);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_177;
+		L_177 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_176, NULL);
+		NullCheck(L_177);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_178;
+		L_178 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_177, NULL);
+		NullCheck(L_174);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_174, L_178, NULL);
+		// _handToForceFollowTransforms.middleIntermediate.transform.localPosition = _handTransforms.middleIntermediate.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_179 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_179);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_180 = L_179->___middleIntermediate_17;
+		NullCheck(L_180);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_181;
+		L_181 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_180, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_182 = __this->____handTransforms_10;
+		NullCheck(L_182);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_183 = L_182->___middleIntermediate_17;
+		NullCheck(L_183);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_184;
+		L_184 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_183, NULL);
+		NullCheck(L_184);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_185;
+		L_185 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_184, NULL);
+		NullCheck(L_181);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_181, L_185, NULL);
+		// _handToForceFollowTransforms.middleIntermediate.transform.localRotation = _handTransforms.middleIntermediate.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_186 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_186);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_187 = L_186->___middleIntermediate_17;
+		NullCheck(L_187);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_188;
+		L_188 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_187, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_189 = __this->____handTransforms_10;
+		NullCheck(L_189);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_190 = L_189->___middleIntermediate_17;
+		NullCheck(L_190);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_191;
+		L_191 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_190, NULL);
+		NullCheck(L_191);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_192;
+		L_192 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_191, NULL);
+		NullCheck(L_188);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_188, L_192, NULL);
+		// _handToForceFollowTransforms.middleDistal.transform.localPosition = _handTransforms.middleDistal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_193 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_193);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_194 = L_193->___middleDistal_18;
+		NullCheck(L_194);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_195;
+		L_195 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_194, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_196 = __this->____handTransforms_10;
+		NullCheck(L_196);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_197 = L_196->___middleDistal_18;
+		NullCheck(L_197);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_198;
+		L_198 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_197, NULL);
+		NullCheck(L_198);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_199;
+		L_199 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_198, NULL);
+		NullCheck(L_195);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_195, L_199, NULL);
+		// _handToForceFollowTransforms.middleDistal.transform.localRotation = _handTransforms.middleDistal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_200 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_200);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_201 = L_200->___middleDistal_18;
+		NullCheck(L_201);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_202;
+		L_202 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_201, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_203 = __this->____handTransforms_10;
+		NullCheck(L_203);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_204 = L_203->___middleDistal_18;
+		NullCheck(L_204);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_205;
+		L_205 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_204, NULL);
+		NullCheck(L_205);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_206;
+		L_206 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_205, NULL);
+		NullCheck(L_202);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_202, L_206, NULL);
+		// _handToForceFollowTransforms.middleTip.transform.localPosition = _handTransforms.middleTip.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_207 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_207);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_208 = L_207->___middleTip_19;
+		NullCheck(L_208);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_209;
+		L_209 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_208, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_210 = __this->____handTransforms_10;
+		NullCheck(L_210);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_211 = L_210->___middleTip_19;
+		NullCheck(L_211);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_212;
+		L_212 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_211, NULL);
+		NullCheck(L_212);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_213;
+		L_213 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_212, NULL);
+		NullCheck(L_209);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_209, L_213, NULL);
+		// _handToForceFollowTransforms.middleTip.transform.localRotation = _handTransforms.middleTip.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_214 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_214);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_215 = L_214->___middleTip_19;
+		NullCheck(L_215);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_216;
+		L_216 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_215, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_217 = __this->____handTransforms_10;
+		NullCheck(L_217);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_218 = L_217->___middleTip_19;
+		NullCheck(L_218);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_219;
+		L_219 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_218, NULL);
+		NullCheck(L_219);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_220;
+		L_220 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_219, NULL);
+		NullCheck(L_216);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_216, L_220, NULL);
+		// _handToForceFollowTransforms.palm.transform.localPosition = _handTransforms.palm.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_221 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_221);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_222 = L_221->___palm_20;
+		NullCheck(L_222);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_223;
+		L_223 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_222, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_224 = __this->____handTransforms_10;
+		NullCheck(L_224);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_225 = L_224->___palm_20;
+		NullCheck(L_225);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_226;
+		L_226 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_225, NULL);
+		NullCheck(L_226);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_227;
+		L_227 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_226, NULL);
+		NullCheck(L_223);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_223, L_227, NULL);
+		// _handToForceFollowTransforms.palm.transform.localRotation = _handTransforms.palm.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_228 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_228);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_229 = L_228->___palm_20;
+		NullCheck(L_229);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_230;
+		L_230 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_229, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_231 = __this->____handTransforms_10;
+		NullCheck(L_231);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_232 = L_231->___palm_20;
+		NullCheck(L_232);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_233;
+		L_233 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_232, NULL);
+		NullCheck(L_233);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_234;
+		L_234 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_233, NULL);
+		NullCheck(L_230);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_230, L_234, NULL);
+		// _handToForceFollowTransforms.ringMetacarpal.transform.localPosition = _handTransforms.ringMetacarpal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_235 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_235);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_236 = L_235->___ringMetacarpal_21;
+		NullCheck(L_236);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_237;
+		L_237 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_236, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_238 = __this->____handTransforms_10;
+		NullCheck(L_238);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_239 = L_238->___ringMetacarpal_21;
+		NullCheck(L_239);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_240;
+		L_240 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_239, NULL);
+		NullCheck(L_240);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_241;
+		L_241 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_240, NULL);
+		NullCheck(L_237);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_237, L_241, NULL);
+		// _handToForceFollowTransforms.ringMetacarpal.transform.localRotation = _handTransforms.ringMetacarpal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_242 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_242);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_243 = L_242->___ringMetacarpal_21;
+		NullCheck(L_243);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_244;
+		L_244 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_243, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_245 = __this->____handTransforms_10;
+		NullCheck(L_245);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_246 = L_245->___ringMetacarpal_21;
+		NullCheck(L_246);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_247;
+		L_247 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_246, NULL);
+		NullCheck(L_247);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_248;
+		L_248 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_247, NULL);
+		NullCheck(L_244);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_244, L_248, NULL);
+		// _handToForceFollowTransforms.ringProximal.transform.localPosition = _handTransforms.ringProximal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_249 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_249);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_250 = L_249->___ringProximal_22;
+		NullCheck(L_250);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_251;
+		L_251 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_250, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_252 = __this->____handTransforms_10;
+		NullCheck(L_252);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_253 = L_252->___ringProximal_22;
+		NullCheck(L_253);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_254;
+		L_254 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_253, NULL);
+		NullCheck(L_254);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_255;
+		L_255 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_254, NULL);
+		NullCheck(L_251);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_251, L_255, NULL);
+		// _handToForceFollowTransforms.ringProximal.transform.localRotation = _handTransforms.ringProximal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_256 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_256);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_257 = L_256->___ringProximal_22;
+		NullCheck(L_257);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_258;
+		L_258 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_257, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_259 = __this->____handTransforms_10;
+		NullCheck(L_259);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_260 = L_259->___ringProximal_22;
+		NullCheck(L_260);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_261;
+		L_261 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_260, NULL);
+		NullCheck(L_261);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_262;
+		L_262 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_261, NULL);
+		NullCheck(L_258);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_258, L_262, NULL);
+		// _handToForceFollowTransforms.ringIntermediate.transform.localPosition = _handTransforms.ringIntermediate.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_263 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_263);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_264 = L_263->___ringIntermediate_23;
+		NullCheck(L_264);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_265;
+		L_265 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_264, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_266 = __this->____handTransforms_10;
+		NullCheck(L_266);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_267 = L_266->___ringIntermediate_23;
+		NullCheck(L_267);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_268;
+		L_268 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_267, NULL);
+		NullCheck(L_268);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_269;
+		L_269 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_268, NULL);
+		NullCheck(L_265);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_265, L_269, NULL);
+		// _handToForceFollowTransforms.ringIntermediate.transform.localRotation = _handTransforms.ringIntermediate.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_270 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_270);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_271 = L_270->___ringIntermediate_23;
+		NullCheck(L_271);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_272;
+		L_272 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_271, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_273 = __this->____handTransforms_10;
+		NullCheck(L_273);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_274 = L_273->___ringIntermediate_23;
+		NullCheck(L_274);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_275;
+		L_275 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_274, NULL);
+		NullCheck(L_275);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_276;
+		L_276 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_275, NULL);
+		NullCheck(L_272);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_272, L_276, NULL);
+		// _handToForceFollowTransforms.ringDistal.transform.localPosition = _handTransforms.ringDistal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_277 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_277);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_278 = L_277->___ringDistal_24;
+		NullCheck(L_278);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_279;
+		L_279 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_278, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_280 = __this->____handTransforms_10;
+		NullCheck(L_280);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_281 = L_280->___ringDistal_24;
+		NullCheck(L_281);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_282;
+		L_282 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_281, NULL);
+		NullCheck(L_282);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_283;
+		L_283 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_282, NULL);
+		NullCheck(L_279);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_279, L_283, NULL);
+		// _handToForceFollowTransforms.ringDistal.transform.localRotation = _handTransforms.ringDistal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_284 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_284);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_285 = L_284->___ringDistal_24;
+		NullCheck(L_285);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_286;
+		L_286 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_285, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_287 = __this->____handTransforms_10;
+		NullCheck(L_287);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_288 = L_287->___ringDistal_24;
+		NullCheck(L_288);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_289;
+		L_289 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_288, NULL);
+		NullCheck(L_289);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_290;
+		L_290 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_289, NULL);
+		NullCheck(L_286);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_286, L_290, NULL);
+		// _handToForceFollowTransforms.ringTip.transform.localPosition = _handTransforms.ringTip.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_291 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_291);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_292 = L_291->___ringTip_25;
+		NullCheck(L_292);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_293;
+		L_293 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_292, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_294 = __this->____handTransforms_10;
+		NullCheck(L_294);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_295 = L_294->___ringTip_25;
+		NullCheck(L_295);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_296;
+		L_296 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_295, NULL);
+		NullCheck(L_296);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_297;
+		L_297 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_296, NULL);
+		NullCheck(L_293);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_293, L_297, NULL);
+		// _handToForceFollowTransforms.ringTip.transform.localRotation = _handTransforms.ringTip.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_298 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_298);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_299 = L_298->___ringTip_25;
+		NullCheck(L_299);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_300;
+		L_300 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_299, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_301 = __this->____handTransforms_10;
+		NullCheck(L_301);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_302 = L_301->___ringTip_25;
+		NullCheck(L_302);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_303;
+		L_303 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_302, NULL);
+		NullCheck(L_303);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_304;
+		L_304 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_303, NULL);
+		NullCheck(L_300);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_300, L_304, NULL);
+		// _handToForceFollowTransforms.thumbMetacarpal.transform.localPosition = _handTransforms.thumbMetacarpal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_305 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_305);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_306 = L_305->___thumbMetacarpal_26;
+		NullCheck(L_306);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_307;
+		L_307 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_306, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_308 = __this->____handTransforms_10;
+		NullCheck(L_308);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_309 = L_308->___thumbMetacarpal_26;
+		NullCheck(L_309);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_310;
+		L_310 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_309, NULL);
+		NullCheck(L_310);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_311;
+		L_311 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_310, NULL);
+		NullCheck(L_307);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_307, L_311, NULL);
+		// _handToForceFollowTransforms.thumbMetacarpal.transform.localRotation = _handTransforms.thumbMetacarpal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_312 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_312);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_313 = L_312->___thumbMetacarpal_26;
+		NullCheck(L_313);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_314;
+		L_314 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_313, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_315 = __this->____handTransforms_10;
+		NullCheck(L_315);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_316 = L_315->___thumbMetacarpal_26;
+		NullCheck(L_316);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_317;
+		L_317 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_316, NULL);
+		NullCheck(L_317);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_318;
+		L_318 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_317, NULL);
+		NullCheck(L_314);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_314, L_318, NULL);
+		// _handToForceFollowTransforms.thumbProximal.transform.localPosition = _handTransforms.thumbProximal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_319 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_319);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_320 = L_319->___thumbProximal_27;
+		NullCheck(L_320);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_321;
+		L_321 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_320, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_322 = __this->____handTransforms_10;
+		NullCheck(L_322);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_323 = L_322->___thumbProximal_27;
+		NullCheck(L_323);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_324;
+		L_324 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_323, NULL);
+		NullCheck(L_324);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_325;
+		L_325 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_324, NULL);
+		NullCheck(L_321);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_321, L_325, NULL);
+		// _handToForceFollowTransforms.thumbProximal.transform.localRotation = _handTransforms.thumbProximal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_326 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_326);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_327 = L_326->___thumbProximal_27;
+		NullCheck(L_327);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_328;
+		L_328 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_327, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_329 = __this->____handTransforms_10;
+		NullCheck(L_329);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_330 = L_329->___thumbProximal_27;
+		NullCheck(L_330);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_331;
+		L_331 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_330, NULL);
+		NullCheck(L_331);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_332;
+		L_332 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_331, NULL);
+		NullCheck(L_328);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_328, L_332, NULL);
+		// _handToForceFollowTransforms.thumbDistal.transform.localPosition = _handTransforms.thumbDistal.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_333 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_333);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_334 = L_333->___thumbDistal_28;
+		NullCheck(L_334);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_335;
+		L_335 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_334, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_336 = __this->____handTransforms_10;
+		NullCheck(L_336);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_337 = L_336->___thumbDistal_28;
+		NullCheck(L_337);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_338;
+		L_338 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_337, NULL);
+		NullCheck(L_338);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_339;
+		L_339 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_338, NULL);
+		NullCheck(L_335);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_335, L_339, NULL);
+		// _handToForceFollowTransforms.thumbDistal.transform.localRotation = _handTransforms.thumbDistal.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_340 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_340);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_341 = L_340->___thumbDistal_28;
+		NullCheck(L_341);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_342;
+		L_342 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_341, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_343 = __this->____handTransforms_10;
+		NullCheck(L_343);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_344 = L_343->___thumbDistal_28;
+		NullCheck(L_344);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_345;
+		L_345 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_344, NULL);
+		NullCheck(L_345);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_346;
+		L_346 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_345, NULL);
+		NullCheck(L_342);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_342, L_346, NULL);
+		// _handToForceFollowTransforms.thumbTip.transform.localPosition = _handTransforms.thumbTip.transform.localPosition;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_347 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_347);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_348 = L_347->___thumbTip_29;
+		NullCheck(L_348);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_349;
+		L_349 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_348, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_350 = __this->____handTransforms_10;
+		NullCheck(L_350);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_351 = L_350->___thumbTip_29;
+		NullCheck(L_351);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_352;
+		L_352 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_351, NULL);
+		NullCheck(L_352);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_353;
+		L_353 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_352, NULL);
+		NullCheck(L_349);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_349, L_353, NULL);
+		// _handToForceFollowTransforms.thumbTip.transform.localRotation = _handTransforms.thumbTip.transform.localRotation;
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_354 = __this->____handToForceFollowTransforms_9;
+		NullCheck(L_354);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_355 = L_354->___thumbTip_29;
+		NullCheck(L_355);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_356;
+		L_356 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_355, NULL);
+		HandChildrenStore_t514C370BFDD747A2022F0E47B8A596FD312073AA* L_357 = __this->____handTransforms_10;
+		NullCheck(L_357);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_358 = L_357->___thumbTip_29;
+		NullCheck(L_358);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_359;
+		L_359 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_358, NULL);
+		NullCheck(L_359);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_360;
+		L_360 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_359, NULL);
+		NullCheck(L_356);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_356, L_360, NULL);
+		// }
+		return;
+	}
+}
+// System.Void HandTrackedController::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandTrackedController__ctor_mA2CEC8FD9C321AA83AF37DB7A4584E5B01EB9B03 (HandTrackedController_t3F4D9241BEDCB6A7CAD1D7FCD7B24CE93AD7D38C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DF90BA5C31A4C45C9D4D196E356557006D67E65);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE308FB917E7C8C5B91ADBFF7B110AE31F6B5C6B3);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// [SerializeField] string righthandTag = "RightHandFollow";
+		__this->___righthandTag_5 = _stringLiteralE308FB917E7C8C5B91ADBFF7B110AE31F6B5C6B3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___righthandTag_5), (void*)_stringLiteralE308FB917E7C8C5B91ADBFF7B110AE31F6B5C6B3);
+		// [SerializeField] string lefthandTag = "LeftHandFollow";
+		__this->___lefthandTag_6 = _stringLiteral3DF90BA5C31A4C45C9D4D196E356557006D67E65;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___lefthandTag_6), (void*)_stringLiteral3DF90BA5C31A4C45C9D4D196E356557006D67E65);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -10003,26 +11248,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_CloseMenu_m089A781F70D275
 		// Debug.Log("CLOSE MENU");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral507AD027E309BEDB3F756ECF95E8A4AD87AA833D, NULL);
-		// }
-		return;
-	}
-}
-// System.Void MenuController::OnTriggerEnter(UnityEngine.Collider)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_OnTriggerEnter_mF818B3C45F52926B6175ECCD42BEA95532BD84CE (MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
-{
-	{
-		// OpenMenu();
-		MenuController_OpenMenu_mEC1AB0591BE85B6D7BF67E2A66A1D371AD2F6839(__this, NULL);
-		// }
-		return;
-	}
-}
-// System.Void MenuController::OnTriggerExit(UnityEngine.Collider)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_OnTriggerExit_m5D91F69778B5C636FEA394513D2B5448269FE6FF (MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
-{
-	{
-		// CloseMenu();
-		MenuController_CloseMenu_m089A781F70D2752CE259B8E97C444EF9F22999DE(__this, NULL);
 		// }
 		return;
 	}
