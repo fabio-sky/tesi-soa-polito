@@ -212,8 +212,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06985539, y: 0.05, z: 0.074325055}
-  m_Center: {x: 0, y: 0.031, z: 0}
+  m_Size: {x: 0.06985539, y: 0.03, z: 0.074325055}
+  m_Center: {x: 0, y: 0.028, z: 0}
 --- !u!54 &1411254114715612414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,9 +240,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 01b893009c3c10948ae4522812ef753c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -339,38 +339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 963298777047110740}
-  onPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7326310585404553130}
-        m_TargetAssemblyTypeName: ButtonVR, Assembly-CSharp
-        m_MethodName: HandleOnPress
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onRelease:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7326310585404553130}
-        m_TargetAssemblyTypeName: ButtonVR, Assembly-CSharp
-        m_MethodName: HandleOnRelease
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  buttonPress: {fileID: 8300000, guid: 40839ba6b2308034f8cce1d73ba8a2fc, type: 3}
-  buttonRelease: {fileID: 8300000, guid: 5da25f8e4d7e1b34cb9d9bf29b827ea4, type: 3}
 --- !u!1 &7934591827355927330
 GameObject:
   m_ObjectHideFlags: 0

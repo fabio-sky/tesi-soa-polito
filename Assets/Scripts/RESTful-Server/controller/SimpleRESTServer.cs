@@ -127,6 +127,7 @@ namespace RESTfulHTTPServer.src.controller
 
 			// Verbose
 			Logger.Log(TAG, "Server is up and running on port " + _port);
+			GameManager.Instance.DEBUG_AddToLog("Server is up and running on port " + _port);
 
             while (true)
             {
@@ -137,6 +138,7 @@ namespace RESTfulHTTPServer.src.controller
                 } catch (Exception e)
                 {
 					Logger.Log(TAG, e.ToString());
+                    GameManager.Instance.DEBUG_AddToLog(e.ToString());
                 }
             }
         }
@@ -190,10 +192,12 @@ namespace RESTfulHTTPServer.src.controller
 
 			// Verbose information
 			Logger.Log(TAG, "Rquest Type: " + httpRequest.HttpMethod);
-			Logger.Log(TAG, "Requested URL: " + calledURL);
+            GameManager.Instance.DEBUG_AddToLog("Rquest Type: " + httpRequest.HttpMethod);
+            Logger.Log(TAG, "Requested URL: " + calledURL);
+            GameManager.Instance.DEBUG_AddToLog("Requested URL: " + calledURL);
 
-			// Let's check the basic auth first
-			bool hasAccess = false;
+            // Let's check the basic auth first
+            bool hasAccess = false;
 			if (_basicAuth == null) 
 			{
 				// Basic auth was diabled.
@@ -284,7 +288,8 @@ namespace RESTfulHTTPServer.src.controller
 			catch (Exception e)
 			{
 				Logger.Log(TAG, e.ToString());
-				context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
+                GameManager.Instance.DEBUG_AddToLog("ERR Process(): " + e.ToString());
+                context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
 			}
 			context.Response.OutputStream.Close();
         }

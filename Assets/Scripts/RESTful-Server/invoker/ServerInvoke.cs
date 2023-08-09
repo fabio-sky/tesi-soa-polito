@@ -24,6 +24,8 @@ namespace RESTfulHTTPServer.src.invoker
             //TRIGGER EVENT
             UnityInvoker.ExecuteOnMainThread.Enqueue(() => {
 
+                
+
                 if (GameManager.Instance != null)
                 {
                     //broadcaster.GetComponent<Broadcaster>().BroadcastEvent();
@@ -37,8 +39,11 @@ namespace RESTfulHTTPServer.src.invoker
                     respData.message = ServerMessages.GAMEMANAGER_NULL_ERR;
                 }
 
+                
+
                 response.SetHTTPStatusCode(respData.result ? (int)HttpStatusCode.OK : (int)HttpStatusCode.InternalServerError);
                 response.SetContent(JsonUtility.ToJson(respData));
+                GameManager.Instance.DEBUG_AddToLog("GET TEST - " + JsonUtility.ToJson(respData));
                 done = true;
 
 

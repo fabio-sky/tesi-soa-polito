@@ -171,14 +171,21 @@ public class GameManager : MonoBehaviour
 
     public void LogChangeParams()
     {
-        _sessionLogger.LogWorldUpdate();
+        //_sessionLogger.LogWorldUpdate();
     }
 
-    public void StartNewSession(StartSessionData data) 
+    public void StartNewSession(StartSessionData data)
     {
-            _sessionInProgress = new() { Description = data.Description, Identifier = data.Identifier, Name = data.Name, CreatedAt = DateTime.Parse(data.CreatedAt) };
-            _sessionLogger.LogInitSession();
-            StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
+        _sessionInProgress = new()
+        {
+            Description = data.Description,
+            Identifier = data.Identifier,
+            Name = data.Name,
+            CreatedAt = DateTime.Parse(data.CreatedAt),
+            SessionBlocksList = data.Blocks,
+        };
+        _sessionLogger.LogInitSession();
+        StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
     }
 
     public void EndSession()

@@ -69,6 +69,7 @@ public struct StartSessionData
     public string Description;
     public string Identifier;
     public string CreatedAt;
+    public List<SessionBlock> Blocks;
 }
 
 public struct SessionData

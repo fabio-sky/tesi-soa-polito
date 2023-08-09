@@ -12,628 +12,714 @@
 
 
 
-// 0x00000001 System.Void ButtonVR::Start()
+// 0x00000001 System.Void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor()
+extern void EmbeddedAttribute__ctor_m68CAD82666F0FF415043D7DC217986AA2D3133D1 (void);
+// 0x00000002 System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte)
+extern void NullableAttribute__ctor_m771BA0E8EFE1DD8AAAE9E2B867CCF4D3AE8834C7 (void);
+// 0x00000003 System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte[])
+extern void NullableAttribute__ctor_mA329224BEC75C65B8E9B5D81D7F5E769E22790E2 (void);
+// 0x00000004 System.Void System.Runtime.CompilerServices.NullableContextAttribute::.ctor(System.Byte)
+extern void NullableContextAttribute__ctor_m3F94BA00FB614574AC19D78E61DC0CA0AE15FCAC (void);
+// 0x00000005 System.Void ButtonVR::Start()
 extern void ButtonVR_Start_mC55A0FD15F5729D0674500BBD7BEF1248DD9117F (void);
-// 0x00000002 System.Void ButtonVR::OnTriggerEnter(UnityEngine.Collider)
+// 0x00000006 System.Void ButtonVR::OnTriggerEnter(UnityEngine.Collider)
 extern void ButtonVR_OnTriggerEnter_m892AAAFD8F55FCBA7E3DDE257A726C380FC16E22 (void);
-// 0x00000003 System.Void ButtonVR::OnTriggerExit(UnityEngine.Collider)
+// 0x00000007 System.Void ButtonVR::OnTriggerExit(UnityEngine.Collider)
 extern void ButtonVR_OnTriggerExit_m61C76A03D8D4A8F152AF44336653588A20F293FC (void);
-// 0x00000004 System.Void ButtonVR::HandleOnPress()
+// 0x00000008 System.Void ButtonVR::HandleOnPress()
 extern void ButtonVR_HandleOnPress_mDADDD28D7FFDC69B187E7B6EDE48264FB418DB0A (void);
-// 0x00000005 System.Void ButtonVR::HandleOnRelease()
+// 0x00000009 System.Void ButtonVR::HandleOnRelease()
 extern void ButtonVR_HandleOnRelease_m28C9484FD287D6E710E48306549F4D53328914C5 (void);
-// 0x00000006 System.Void ButtonVR::.ctor()
+// 0x0000000A System.Void ButtonVR::.ctor()
 extern void ButtonVR__ctor_m0A768C031E816B274D1BD5BB1758AB9FCF7E4FEE (void);
-// 0x00000007 System.Void FrontCameraController::Start()
+// 0x0000000B System.Void FrontCameraController::Start()
 extern void FrontCameraController_Start_mCD746C80BA14E4460825A72FF8995903450B8EB1 (void);
-// 0x00000008 System.Void FrontCameraController::Update()
+// 0x0000000C System.Void FrontCameraController::Update()
 extern void FrontCameraController_Update_mD422AEA16B12F39ABC8DB5D28EA355AF069437B3 (void);
-// 0x00000009 System.Void FrontCameraController::.ctor()
+// 0x0000000D System.Void FrontCameraController::.ctor()
 extern void FrontCameraController__ctor_m0F2D8875D07C342D643F913FC9F10E7DC8066CC3 (void);
-// 0x0000000A System.Void HandChildrenStore::.ctor()
+// 0x0000000E System.Void HandChildrenStore::.ctor()
 extern void HandChildrenStore__ctor_m464D05DBEB02F5C3BA9A18FB5A74745BA981D99E (void);
-// 0x0000000B System.Void HandTrackedController::Start()
+// 0x0000000F System.Void HandTrackedController::Start()
 extern void HandTrackedController_Start_mB14823F4C39C245EF0300078F5586DC7F578B5E0 (void);
-// 0x0000000C System.Void HandTrackedController::ManageBuffer()
+// 0x00000010 System.Void HandTrackedController::ManageBuffer()
 extern void HandTrackedController_ManageBuffer_m91719A3C05C1450961996958A92B2D867B42506F (void);
-// 0x0000000D System.Void HandTrackedController::Update()
+// 0x00000011 System.Void HandTrackedController::Update()
 extern void HandTrackedController_Update_m036B2266DCF8FD08A50458FD6B86010E75911703 (void);
-// 0x0000000E System.Void HandTrackedController::CloneTransform()
+// 0x00000012 System.Void HandTrackedController::CloneTransform()
 extern void HandTrackedController_CloneTransform_m2CBD7ED51CB6ECB7DE4155895E43FBF8059AA47C (void);
-// 0x0000000F System.Void HandTrackedController::.ctor()
+// 0x00000013 System.Void HandTrackedController::.ctor()
 extern void HandTrackedController__ctor_mA2CEC8FD9C321AA83AF37DB7A4584E5B01EB9B03 (void);
-// 0x00000010 System.Void AudioEffectsController::Start()
+// 0x00000014 System.Void AudioEffectsController::Start()
 extern void AudioEffectsController_Start_mF0BF2D74A12899FA2F101947FE586C1C5603BB8F (void);
-// 0x00000011 System.Void AudioEffectsController::Update()
+// 0x00000015 System.Void AudioEffectsController::Update()
 extern void AudioEffectsController_Update_m457BB5075A1375F514EB98BD0DF5C30E8495F51F (void);
-// 0x00000012 System.Void AudioEffectsController::ReproduceAudio()
+// 0x00000016 System.Void AudioEffectsController::ReproduceAudio()
 extern void AudioEffectsController_ReproduceAudio_m02484D38A1AEC79068CFBF359873C8A7AD95452F (void);
-// 0x00000013 System.Void AudioEffectsController::.ctor()
+// 0x00000017 System.Void AudioEffectsController::.ctor()
 extern void AudioEffectsController__ctor_mE2FC8D0F06BD544C5E6C1FFB181DA331BDEE8C8A (void);
-// 0x00000014 System.Void MapTransform::MapVRAvatar()
+// 0x00000018 System.Void MapTransform::MapVRAvatar()
 extern void MapTransform_MapVRAvatar_m5B62251DAE9777B5FC6A2102EB5A506C13B0DFDC (void);
-// 0x00000015 System.Void MapTransform::.ctor()
+// 0x00000019 System.Void MapTransform::.ctor()
 extern void MapTransform__ctor_m81E5BE628557412B2166691A4A7AFB4451FC27D6 (void);
-// 0x00000016 System.Void AvatarController::LateUpdate()
+// 0x0000001A System.Void AvatarController::LateUpdate()
 extern void AvatarController_LateUpdate_m5F09482CFE436368109F0DCDF2F9D6121244B831 (void);
-// 0x00000017 System.Void AvatarController::.ctor()
+// 0x0000001B System.Void AvatarController::.ctor()
 extern void AvatarController__ctor_m68C14ECE7F9855E5C399DF6E2EAFE191385A24E0 (void);
-// 0x00000018 System.Void Broadcaster::BroadcastEvent()
+// 0x0000001C System.Void Broadcaster::BroadcastEvent()
 extern void Broadcaster_BroadcastEvent_m4CABA452EAFE0A5E8E8CEE43E567C771C101C517 (void);
-// 0x00000019 System.Void Broadcaster::BroadcastAudioEvent()
+// 0x0000001D System.Void Broadcaster::BroadcastAudioEvent()
 extern void Broadcaster_BroadcastAudioEvent_m7FB263F0E5F3252036ADF2CE9B3BA29DF76D27E6 (void);
-// 0x0000001A System.Void Broadcaster::.ctor()
+// 0x0000001E System.Void Broadcaster::.ctor()
 extern void Broadcaster__ctor_mB44A440E906CB65E545DE58ED5E6CB68837FA078 (void);
-// 0x0000001B System.Void FolloHandMovementController::Start()
+// 0x0000001F System.Void FolloHandMovementController::Start()
 extern void FolloHandMovementController_Start_mDE2CF039B1610D14B1A9179DBA7EF3EF4FB50CF1 (void);
-// 0x0000001C System.Void FolloHandMovementController::Update()
+// 0x00000020 System.Void FolloHandMovementController::Update()
 extern void FolloHandMovementController_Update_m5F75F71A3BEA0C520ED03BE9B6621B06DF725EC3 (void);
-// 0x0000001D System.Void FolloHandMovementController::ManageBuffer()
+// 0x00000021 System.Void FolloHandMovementController::ManageBuffer()
 extern void FolloHandMovementController_ManageBuffer_mE6DE1DA46C652AAF49683B29D92616E91D3C7B93 (void);
-// 0x0000001E System.Void FolloHandMovementController::HandleMovement()
+// 0x00000022 System.Void FolloHandMovementController::HandleMovement()
 extern void FolloHandMovementController_HandleMovement_m9D58795B4076CEF6DAE1A56F0AACF279A935CF1B (void);
-// 0x0000001F InputData FolloHandMovementController::CalculatePosRot(System.Boolean)
+// 0x00000023 InputData FolloHandMovementController::CalculatePosRot(System.Boolean)
 extern void FolloHandMovementController_CalculatePosRot_mCE4697FB4C6CBFA6BCB27CE5C979B51875290C99 (void);
-// 0x00000020 System.Collections.IEnumerator FolloHandMovementController::DiscreteBufferManager()
+// 0x00000024 System.Collections.IEnumerator FolloHandMovementController::DiscreteBufferManager()
 extern void FolloHandMovementController_DiscreteBufferManager_m3A356644CCE81BFA533A32877128C3A8CF9B36D5 (void);
-// 0x00000021 System.Void FolloHandMovementController::.ctor()
+// 0x00000025 System.Void FolloHandMovementController::.ctor()
 extern void FolloHandMovementController__ctor_mF9F0A5A58F6AEBFA37E893F6DCFC696CB461E70D (void);
-// 0x00000022 System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::.ctor(System.Int32)
+// 0x00000026 System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::.ctor(System.Int32)
 extern void U3CDiscreteBufferManagerU3Ed__9__ctor_mF81CB908AFA80D547EA619E26F9EAA0D3018D633 (void);
-// 0x00000023 System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::System.IDisposable.Dispose()
+// 0x00000027 System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::System.IDisposable.Dispose()
 extern void U3CDiscreteBufferManagerU3Ed__9_System_IDisposable_Dispose_mBE02CD65FDF745DF7E615789D1AB6BA81A0B9AF0 (void);
-// 0x00000024 System.Boolean FolloHandMovementController/<DiscreteBufferManager>d__9::MoveNext()
+// 0x00000028 System.Boolean FolloHandMovementController/<DiscreteBufferManager>d__9::MoveNext()
 extern void U3CDiscreteBufferManagerU3Ed__9_MoveNext_mF9E1313DAB6EE3C4C71AD41C032A525E7A82F0BC (void);
-// 0x00000025 System.Object FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000029 System.Object FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDiscreteBufferManagerU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFA0E546307F70B100D32B967B0433BB55C04F9D7 (void);
-// 0x00000026 System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.IEnumerator.Reset()
+// 0x0000002A System.Void FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.IEnumerator.Reset()
 extern void U3CDiscreteBufferManagerU3Ed__9_System_Collections_IEnumerator_Reset_mD833A6BE7B3763BD294B8EE5D07CB6A296519766 (void);
-// 0x00000027 System.Object FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.IEnumerator.get_Current()
+// 0x0000002B System.Object FolloHandMovementController/<DiscreteBufferManager>d__9::System.Collections.IEnumerator.get_Current()
 extern void U3CDiscreteBufferManagerU3Ed__9_System_Collections_IEnumerator_get_Current_m3E660774B10D5F3D93E12F2F279D14779EB01CA0 (void);
-// 0x00000028 System.Void CustomGameEvent::.ctor()
+// 0x0000002C System.Void CustomGameEvent::.ctor()
 extern void CustomGameEvent__ctor_mBACB65FFC65FB10124BC0FB0859E6DA99A189B35 (void);
-// 0x00000029 System.Void GameEventListener::OnEnable()
+// 0x0000002D System.Void GameEventListener::OnEnable()
 extern void GameEventListener_OnEnable_mFA098E96AD83C72E9474CD5CC6A5E67CD53F58A9 (void);
-// 0x0000002A System.Void GameEventListener::OnDisable()
+// 0x0000002E System.Void GameEventListener::OnDisable()
 extern void GameEventListener_OnDisable_mBA6CF5CE6516AC9BD73F53AF34AFE37D2A1B0B40 (void);
-// 0x0000002B System.Void GameEventListener::OnEventRaised(UnityEngine.Component,System.Object)
+// 0x0000002F System.Void GameEventListener::OnEventRaised(UnityEngine.Component,System.Object)
 extern void GameEventListener_OnEventRaised_m3D5951963ACF239423AB3169793E5F5E31883804 (void);
-// 0x0000002C System.Void GameEventListener::.ctor()
+// 0x00000030 System.Void GameEventListener::.ctor()
 extern void GameEventListener__ctor_mC01EED675CE386CC492A3CAEDEA2C893CBAF80DD (void);
-// 0x0000002D GameManager GameManager::get_Instance()
+// 0x00000031 GameManager GameManager::get_Instance()
 extern void GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0 (void);
-// 0x0000002E System.Void GameManager::set_Instance(GameManager)
+// 0x00000032 System.Void GameManager::set_Instance(GameManager)
 extern void GameManager_set_Instance_mCFE1FA9223DC000B8D5535A9B6576264FA4405EF (void);
-// 0x0000002F WorldData GameManager::get_WorldData()
+// 0x00000033 WorldData GameManager::get_WorldData()
 extern void GameManager_get_WorldData_m41571F390609B8669D10BF0E29B311E6F128AC7E (void);
-// 0x00000030 SettingsData GameManager::get_SettingsData()
+// 0x00000034 SettingsData GameManager::get_SettingsData()
 extern void GameManager_get_SettingsData_mE69713414376B95E23D07A6E17431C1E4A2C31BC (void);
-// 0x00000031 SessionInfo GameManager::get_SessionInProgress()
+// 0x00000035 SessionInfo GameManager::get_SessionInProgress()
 extern void GameManager_get_SessionInProgress_m757B71B47691184EE6A9B8ED7B427D5767A86317 (void);
-// 0x00000032 SessionLogger GameManager::get_SessionLogger()
+// 0x00000036 SessionLogger GameManager::get_SessionLogger()
 extern void GameManager_get_SessionLogger_m1ADB117A23557E02BACF7B969E229E15BCD1F744 (void);
-// 0x00000033 System.Void GameManager::Awake()
+// 0x00000037 System.Void GameManager::Awake()
 extern void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F (void);
-// 0x00000034 System.Void GameManager::Update()
+// 0x00000038 System.Void GameManager::Update()
 extern void GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41 (void);
-// 0x00000035 System.Void GameManager::InitApplication()
+// 0x00000039 System.Void GameManager::InitApplication()
 extern void GameManager_InitApplication_m1A60F093C5B7598E2D60DDA72300733C480DCBCC (void);
-// 0x00000036 System.Void GameManager::ResetCamerView()
+// 0x0000003A System.Void GameManager::ResetCamerView()
 extern void GameManager_ResetCamerView_m9DF5481616C9231BAF090DF1B3FE6F3846CA9070 (void);
-// 0x00000037 System.Void GameManager::UpdateSkybox(SkyboxType)
+// 0x0000003B System.Void GameManager::UpdateSkybox(SkyboxType)
 extern void GameManager_UpdateSkybox_m1C6C41F9108105E55823A09FEC38F19000F4B119 (void);
-// 0x00000038 System.Void GameManager::UpdateCameraView()
+// 0x0000003C System.Void GameManager::UpdateCameraView()
 extern void GameManager_UpdateCameraView_m564E8949A066E03DDE82F6CDD88164C66C50527C (void);
-// 0x00000039 System.Void GameManager::LogChangeParams()
+// 0x0000003D System.Void GameManager::LogChangeParams()
 extern void GameManager_LogChangeParams_mE1D3A519B7AC65F559EE533EA401E3EBB0A04462 (void);
-// 0x0000003A System.Void GameManager::StartNewSession(StartSessionData)
+// 0x0000003E System.Void GameManager::StartNewSession(StartSessionData)
 extern void GameManager_StartNewSession_mEBB6D26A946A83E3984E94901911A302EB5EABDC (void);
-// 0x0000003B System.Void GameManager::EndSession()
+// 0x0000003F System.Void GameManager::EndSession()
 extern void GameManager_EndSession_mD0BAB9BCF429FD83890539123E934028FFE08667 (void);
-// 0x0000003C System.Void GameManager::StartHandLogging()
+// 0x00000040 System.Void GameManager::StartHandLogging()
 extern void GameManager_StartHandLogging_mA5C07FC9F54FD8A44E126EB334B5D7081DCC321C (void);
-// 0x0000003D System.Void GameManager::StopHandLogging()
+// 0x00000041 System.Void GameManager::StopHandLogging()
 extern void GameManager_StopHandLogging_mDD428904A966058CEDDFF588276DF88B47190D5A (void);
-// 0x0000003E System.Void GameManager::MoveCamera(System.String)
+// 0x00000042 System.Void GameManager::MoveCamera(System.String)
 extern void GameManager_MoveCamera_m77EA8C6D485BE16EB7329071D6C7EC9873B244F9 (void);
-// 0x0000003F System.Collections.IEnumerator GameManager::LoadAsyncScene(GameScene)
+// 0x00000043 System.Collections.IEnumerator GameManager::LoadAsyncScene(GameScene)
 extern void GameManager_LoadAsyncScene_mD5E11D62C8D08159541EBE750CFA72EE6113CAFA (void);
-// 0x00000040 System.Collections.IEnumerator GameManager::ReadInputValueCR()
+// 0x00000044 System.Collections.IEnumerator GameManager::ReadInputValueCR()
 extern void GameManager_ReadInputValueCR_m51EE4AF473F2BA86D21D166FE8A5E9541E58EDC2 (void);
-// 0x00000041 System.Void GameManager::DEBUG_AddToLog(System.String)
+// 0x00000045 System.Void GameManager::DEBUG_AddToLog(System.String)
 extern void GameManager_DEBUG_AddToLog_m3783A28EB89FC06BE2D6AE8E11C905A54E47D395 (void);
-// 0x00000042 System.Void GameManager::.ctor()
+// 0x00000046 System.Void GameManager::.ctor()
 extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
-// 0x00000043 System.Void GameManager/<LoadAsyncScene>d__39::.ctor(System.Int32)
+// 0x00000047 System.Void GameManager/<LoadAsyncScene>d__39::.ctor(System.Int32)
 extern void U3CLoadAsyncSceneU3Ed__39__ctor_mF51EC080707A687D89B712CDBFC617C4F0F337F9 (void);
-// 0x00000044 System.Void GameManager/<LoadAsyncScene>d__39::System.IDisposable.Dispose()
+// 0x00000048 System.Void GameManager/<LoadAsyncScene>d__39::System.IDisposable.Dispose()
 extern void U3CLoadAsyncSceneU3Ed__39_System_IDisposable_Dispose_m815BC6299B241B39D79CC053CE87E1225A44678F (void);
-// 0x00000045 System.Boolean GameManager/<LoadAsyncScene>d__39::MoveNext()
+// 0x00000049 System.Boolean GameManager/<LoadAsyncScene>d__39::MoveNext()
 extern void U3CLoadAsyncSceneU3Ed__39_MoveNext_mFFE64945A347E9C84395F560E658E92822C74B49 (void);
-// 0x00000046 System.Object GameManager/<LoadAsyncScene>d__39::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000004A System.Object GameManager/<LoadAsyncScene>d__39::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CLoadAsyncSceneU3Ed__39_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m420CF57BFF6DDCE20D71B3682C1427872F12A921 (void);
-// 0x00000047 System.Void GameManager/<LoadAsyncScene>d__39::System.Collections.IEnumerator.Reset()
+// 0x0000004B System.Void GameManager/<LoadAsyncScene>d__39::System.Collections.IEnumerator.Reset()
 extern void U3CLoadAsyncSceneU3Ed__39_System_Collections_IEnumerator_Reset_mE6DD6F51556E27B506A1ABB533A16E89B6BF3D28 (void);
-// 0x00000048 System.Object GameManager/<LoadAsyncScene>d__39::System.Collections.IEnumerator.get_Current()
+// 0x0000004C System.Object GameManager/<LoadAsyncScene>d__39::System.Collections.IEnumerator.get_Current()
 extern void U3CLoadAsyncSceneU3Ed__39_System_Collections_IEnumerator_get_Current_m1DA4DED5DD99D609B2DC51759D436C6CD1F977BF (void);
-// 0x00000049 System.Void GameManager/<ReadInputValueCR>d__40::.ctor(System.Int32)
+// 0x0000004D System.Void GameManager/<ReadInputValueCR>d__40::.ctor(System.Int32)
 extern void U3CReadInputValueCRU3Ed__40__ctor_m1C51D5555644BAEB71AF0AA7E1B7BB3BF493C1B7 (void);
-// 0x0000004A System.Void GameManager/<ReadInputValueCR>d__40::System.IDisposable.Dispose()
+// 0x0000004E System.Void GameManager/<ReadInputValueCR>d__40::System.IDisposable.Dispose()
 extern void U3CReadInputValueCRU3Ed__40_System_IDisposable_Dispose_m5DF325EB3860D970F49E6A7A34DDB83FD2BB44C3 (void);
-// 0x0000004B System.Boolean GameManager/<ReadInputValueCR>d__40::MoveNext()
+// 0x0000004F System.Boolean GameManager/<ReadInputValueCR>d__40::MoveNext()
 extern void U3CReadInputValueCRU3Ed__40_MoveNext_m0F7A455C5DB67549DBC3DE0F94A62F572CB46618 (void);
-// 0x0000004C System.Object GameManager/<ReadInputValueCR>d__40::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000050 System.Object GameManager/<ReadInputValueCR>d__40::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CReadInputValueCRU3Ed__40_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4D00D39832FC6CBCC8AE3D79458AB5898274D020 (void);
-// 0x0000004D System.Void GameManager/<ReadInputValueCR>d__40::System.Collections.IEnumerator.Reset()
+// 0x00000051 System.Void GameManager/<ReadInputValueCR>d__40::System.Collections.IEnumerator.Reset()
 extern void U3CReadInputValueCRU3Ed__40_System_Collections_IEnumerator_Reset_m8E49BBD60BAED7D823FE41AF6FEE9196310E89FD (void);
-// 0x0000004E System.Object GameManager/<ReadInputValueCR>d__40::System.Collections.IEnumerator.get_Current()
+// 0x00000052 System.Object GameManager/<ReadInputValueCR>d__40::System.Collections.IEnumerator.get_Current()
 extern void U3CReadInputValueCRU3Ed__40_System_Collections_IEnumerator_get_Current_m97330F8F093BC210962BB646664A25DE99DD0260 (void);
-// 0x0000004F System.Void MenuController::Start()
+// 0x00000053 System.Void MenuController::Start()
 extern void MenuController_Start_m88A8FAF8DB4765830F6CA0D4508D5E565B2F68D0 (void);
-// 0x00000050 System.Void MenuController::Update()
+// 0x00000054 System.Void MenuController::Update()
 extern void MenuController_Update_m15DD6714D46E0384A1F59B62B8A6323C108058D6 (void);
-// 0x00000051 System.Void MenuController::ManageMenu()
+// 0x00000055 System.Void MenuController::OnTriggerEnter(UnityEngine.Collider)
+extern void MenuController_OnTriggerEnter_mF818B3C45F52926B6175ECCD42BEA95532BD84CE (void);
+// 0x00000056 System.Void MenuController::OnTriggerExit(UnityEngine.Collider)
+extern void MenuController_OnTriggerExit_m5D91F69778B5C636FEA394513D2B5448269FE6FF (void);
+// 0x00000057 System.Void MenuController::ManageMenu()
 extern void MenuController_ManageMenu_m8BB27770B9C8F44FB803052A1C84A635C3B529F2 (void);
-// 0x00000052 System.Void MenuController::OpenMenu()
+// 0x00000058 System.Void MenuController::OpenMenu()
 extern void MenuController_OpenMenu_mEC1AB0591BE85B6D7BF67E2A66A1D371AD2F6839 (void);
-// 0x00000053 System.Void MenuController::CloseMenu()
+// 0x00000059 System.Void MenuController::CloseMenu()
 extern void MenuController_CloseMenu_m089A781F70D2752CE259B8E97C444EF9F22999DE (void);
-// 0x00000054 System.Void MenuController::.ctor()
+// 0x0000005A System.Void MenuController::.ctor()
 extern void MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1 (void);
-// 0x00000055 System.Void UnityInvoker::Start()
+// 0x0000005B System.Void UnityInvoker::Start()
 extern void UnityInvoker_Start_m4133DBFB083BEAAB5D192DF065B5D513848804B9 (void);
-// 0x00000056 System.Void UnityInvoker::Update()
+// 0x0000005C System.Void UnityInvoker::Update()
 extern void UnityInvoker_Update_mE6B5203F6ED11606421E7DF624EA1EC3AF7C961C (void);
-// 0x00000057 System.Void UnityInvoker::.ctor()
+// 0x0000005D System.Void UnityInvoker::.ctor()
 extern void UnityInvoker__ctor_mD43672A58B3B53C966C5C376F1662766DAE8623F (void);
-// 0x00000058 System.Void UnityInvoker::.cctor()
+// 0x0000005E System.Void UnityInvoker::.cctor()
 extern void UnityInvoker__cctor_m437486F53A457607DB4BEA6896F04D7ECEC82D5B (void);
-// 0x00000059 System.Void ServerInit::Start()
+// 0x0000005F System.Void ServerInit::Start()
 extern void ServerInit_Start_m2628110BC013EC39170FAA4B0886F2BAF19D6970 (void);
-// 0x0000005A System.Void ServerInit::OnDisable()
+// 0x00000060 System.Void ServerInit::OnDisable()
 extern void ServerInit_OnDisable_m0478EE911F8E593E5C6BA123EFBE0F5FBCFAD8F1 (void);
-// 0x0000005B System.Void ServerInit::.ctor()
+// 0x00000061 System.Void ServerInit::.ctor()
 extern void ServerInit__ctor_mFF4F662FF53EB393CA4EC92982CF1E05483866A6 (void);
-// 0x0000005C System.Void SceneLoaderController::StartLoading()
+// 0x00000062 System.Void SceneLoaderController::StartLoading()
 extern void SceneLoaderController_StartLoading_mEE4FC3E313F919939C32C524DA02C0DF5FBF0FCD (void);
-// 0x0000005D System.Void SceneLoaderController::EndLoading()
+// 0x00000063 System.Void SceneLoaderController::EndLoading()
 extern void SceneLoaderController_EndLoading_mC1F7858C0B42CB479EBA877B66BA48476E2C610E (void);
-// 0x0000005E System.Void SceneLoaderController::.ctor()
+// 0x00000064 System.Void SceneLoaderController::.ctor()
 extern void SceneLoaderController__ctor_m79F33554E8A5171206D59806EC1B2D27BA430F2C (void);
-// 0x0000005F System.Void GameEventChannel::Raise()
+// 0x00000065 System.Void GameEventChannel::Raise()
 extern void GameEventChannel_Raise_m233EFE51F4F7B9F2AEF74F5EBC7FDBA51C830A51 (void);
-// 0x00000060 System.Void GameEventChannel::Raise(System.Object)
+// 0x00000066 System.Void GameEventChannel::Raise(System.Object)
 extern void GameEventChannel_Raise_m3EB8507E9DDE5AAFEFFCAD8334DD49780B0F965C (void);
-// 0x00000061 System.Void GameEventChannel::Raise(UnityEngine.Component)
+// 0x00000067 System.Void GameEventChannel::Raise(UnityEngine.Component)
 extern void GameEventChannel_Raise_m484119CA0E756449550B5DB1B4E263748D51E27E (void);
-// 0x00000062 System.Void GameEventChannel::Raise(UnityEngine.Component,System.Object)
+// 0x00000068 System.Void GameEventChannel::Raise(UnityEngine.Component,System.Object)
 extern void GameEventChannel_Raise_mCC34570B9D26D1EC97C23E89AE12353E904BCEB5 (void);
-// 0x00000063 System.Void GameEventChannel::RegisterListener(GameEventListener)
+// 0x00000069 System.Void GameEventChannel::RegisterListener(GameEventListener)
 extern void GameEventChannel_RegisterListener_mEBB765AFEA6CF728DE3FC7781E6413389F49A120 (void);
-// 0x00000064 System.Void GameEventChannel::UnregisterListener(GameEventListener)
+// 0x0000006A System.Void GameEventChannel::UnregisterListener(GameEventListener)
 extern void GameEventChannel_UnregisterListener_m61D081C5E63D504BED88FAA9B36ED8B5A3AD235F (void);
-// 0x00000065 System.Void GameEventChannel::.ctor()
+// 0x0000006B System.Void GameEventChannel::.ctor()
 extern void GameEventChannel__ctor_m4B01E8E4025D9443FDC9183DE2B328C587F17755 (void);
-// 0x00000066 UnityEngine.Vector3 InputBufferSO::get_LastMovement()
+// 0x0000006C UnityEngine.Vector3 InputBufferSO::get_LastMovement()
 extern void InputBufferSO_get_LastMovement_mB0CF25AAAF0D0348F4766F320651984255EF1635 (void);
-// 0x00000067 System.Void InputBufferSO::set_LastMovement(UnityEngine.Vector3)
+// 0x0000006D System.Void InputBufferSO::set_LastMovement(UnityEngine.Vector3)
 extern void InputBufferSO_set_LastMovement_mEDE0E78B0E1E93073947359074C57985C272E8AB (void);
-// 0x00000068 UnityEngine.Quaternion InputBufferSO::get_LastRotation()
+// 0x0000006E UnityEngine.Quaternion InputBufferSO::get_LastRotation()
 extern void InputBufferSO_get_LastRotation_m9E064C4B8F85476AF7CC76B390D3AE6D1DB7CEEB (void);
-// 0x00000069 System.Void InputBufferSO::set_LastRotation(UnityEngine.Quaternion)
+// 0x0000006F System.Void InputBufferSO::set_LastRotation(UnityEngine.Quaternion)
 extern void InputBufferSO_set_LastRotation_m16B5007434BC02D3B43F90E6122E88646FC4BBFA (void);
-// 0x0000006A InputData InputBufferSO::get_LastReadedValue()
+// 0x00000070 InputData InputBufferSO::get_LastReadedValue()
 extern void InputBufferSO_get_LastReadedValue_m249E6E8A07133C3820E76CB6AF88BAB2CE495829 (void);
-// 0x0000006B InputData InputBufferSO::get_LastInputValue()
+// 0x00000071 InputData InputBufferSO::get_LastInputValue()
 extern void InputBufferSO_get_LastInputValue_mA79DA3A5F92CE57C7C192EBC53B8B4513AB22516 (void);
-// 0x0000006C System.Void InputBufferSO::Clear()
+// 0x00000072 System.Void InputBufferSO::Clear()
 extern void InputBufferSO_Clear_m71325031788B7384EE5A6F9A3C870816DFF0048E (void);
-// 0x0000006D System.Void InputBufferSO::Init()
+// 0x00000073 System.Void InputBufferSO::Init()
 extern void InputBufferSO_Init_mCDF92A6274694538CF70FF6E8165FE7FD183D052 (void);
-// 0x0000006E InputData InputBufferSO::ReadThenAddValue(InputData)
+// 0x00000074 InputData InputBufferSO::ReadThenAddValue(InputData)
 extern void InputBufferSO_ReadThenAddValue_m0C6D1F84E70455A1666B080EFF1EC49C7C854E53 (void);
-// 0x0000006F System.Void InputBufferSO::.ctor()
+// 0x00000075 System.Void InputBufferSO::.ctor()
 extern void InputBufferSO__ctor_m4374BB3E3F8D09B08307C4B3EE4919615437E943 (void);
-// 0x00000070 System.String SessionLogger::GenerateSessionStartLog()
+// 0x00000076 System.String SessionLogger::GenerateSessionStartLog()
 extern void SessionLogger_GenerateSessionStartLog_m3C88950CDFFF65C7B575A8479C6201AAB1038701 (void);
-// 0x00000071 System.String SessionLogger::GenerateSessionEndLog()
+// 0x00000077 System.String SessionLogger::GenerateSessionEndLog()
 extern void SessionLogger_GenerateSessionEndLog_mCAAF7459F0F6D1DDE68815339E79858C7182537A (void);
-// 0x00000072 System.String SessionLogger::GenerateRecordinStartLog()
+// 0x00000078 System.String SessionLogger::GenerateRecordinStartLog()
 extern void SessionLogger_GenerateRecordinStartLog_m24A5B5E483C9D73BFEA3D871916C36FD1CE69A7C (void);
-// 0x00000073 System.String SessionLogger::GenerateRecordinEndLog()
+// 0x00000079 System.String SessionLogger::GenerateRecordinEndLog()
 extern void SessionLogger_GenerateRecordinEndLog_m237D398F875132A7C8D18FAE504EBD7CC7C81602 (void);
-// 0x00000074 System.Void SessionLogger::CreateSessionJsonFile(System.String)
+// 0x0000007A System.Void SessionLogger::CreateSessionJsonFile(System.String)
 extern void SessionLogger_CreateSessionJsonFile_mE723DDD477E8FC2354361555687F1EFB2CAD0F7A (void);
-// 0x00000075 System.String SessionLogger::CreateSessionFolder()
+// 0x0000007B System.String SessionLogger::CreateSessionFolder()
 extern void SessionLogger_CreateSessionFolder_m9BD9BA1D59EA6554E9DB1E02FCD0ADC139ABE933 (void);
-// 0x00000076 System.String SessionLogger::GenerateWorldParamsLog()
-extern void SessionLogger_GenerateWorldParamsLog_m0496F8EED180D8485A8A851A6D429E28C622AB39 (void);
-// 0x00000077 System.String SessionLogger::GenerateHandLog(System.DateTime,UnityEngine.Vector3,UnityEngine.Vector3)
+// 0x0000007C System.String SessionLogger::GenerateWorldParamsLog(SessionLogger/SessionAction)
+extern void SessionLogger_GenerateWorldParamsLog_mC00EB8633F3EE819BD3B22DE653A0BD93E57F1E2 (void);
+// 0x0000007D System.String SessionLogger::GenerateHandLog(System.DateTime,UnityEngine.Vector3,UnityEngine.Vector3)
 extern void SessionLogger_GenerateHandLog_m74C4C5EE098276A909F1E875793382AABFCA455E (void);
-// 0x00000078 System.Void SessionLogger::LogInitSession()
+// 0x0000007E System.Void SessionLogger::LogInitSession()
 extern void SessionLogger_LogInitSession_mD25A73BCA5A39AD73229DA8BFD2AF0C40CE63175 (void);
-// 0x00000079 System.Void SessionLogger::LogEndSession()
+// 0x0000007F System.Void SessionLogger::LogEndSession()
 extern void SessionLogger_LogEndSession_m129B83FE1125F77A08A17FA0796A89D2C46D39F3 (void);
-// 0x0000007A System.Void SessionLogger::LogWorldUpdate()
-extern void SessionLogger_LogWorldUpdate_mDAA7D14C1FAE44C310682065A84778489FFB3F88 (void);
-// 0x0000007B System.Void SessionLogger::LogHandRecordingStartEnd(System.Boolean)
+// 0x00000080 System.Void SessionLogger::LogWorldUpdate(SessionLogger/SessionAction)
+extern void SessionLogger_LogWorldUpdate_m5C2CFAE111E2B448E41244730761499F1449FD10 (void);
+// 0x00000081 System.Void SessionLogger::LogHandRecordingStartEnd(System.Boolean)
 extern void SessionLogger_LogHandRecordingStartEnd_m864B6B6C3028DF08492FBE62B58371240813CAFC (void);
-// 0x0000007C System.Void SessionLogger::StartHandLog()
+// 0x00000082 System.Void SessionLogger::StartHandLog()
 extern void SessionLogger_StartHandLog_m93910CD2F3E01802952997CAE3E7857B3E5A4BFA (void);
-// 0x0000007D System.Void SessionLogger::StopHandLog()
+// 0x00000083 System.Void SessionLogger::StopHandLog()
 extern void SessionLogger_StopHandLog_m35CBCE1405CCC2FC676DE85B1585FC3376867A36 (void);
-// 0x0000007E System.Void SessionLogger::LogHandPosition(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)
+// 0x00000084 System.Void SessionLogger::LogHandPosition(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)
 extern void SessionLogger_LogHandPosition_mC3CF90625DDC3D2CAE3EB42F37B8EE6C04338E32 (void);
-// 0x0000007F System.Collections.Generic.List`1<SessionData> SessionLogger::GetSessionsDataSaved()
+// 0x00000085 System.Collections.Generic.List`1<SessionData> SessionLogger::GetSessionsDataSaved()
 extern void SessionLogger_GetSessionsDataSaved_mE01283373B4061B665E34E50BEB7671AC428C677 (void);
-// 0x00000080 System.Boolean SessionLogger::DeleteFolder(System.String)
+// 0x00000086 System.Boolean SessionLogger::DeleteFolder(System.String)
 extern void SessionLogger_DeleteFolder_m6FAE60AF4016E3B2512D14C99DA6F68ADB211784 (void);
-// 0x00000081 System.Boolean SessionLogger::ZipFolderSession(System.String)
+// 0x00000087 System.Boolean SessionLogger::ZipFolderSession(System.String)
 extern void SessionLogger_ZipFolderSession_mC223C94BC340E715361B7BDEE50CC97B01FCD7B8 (void);
-// 0x00000082 System.Boolean SessionLogger::SendFileZipped(System.String,System.String)
+// 0x00000088 System.Boolean SessionLogger::SendFileZipped(System.String,System.String)
 extern void SessionLogger_SendFileZipped_mA332B1CAEC60097F8BDEB5376CB46FE65B6D80AD (void);
-// 0x00000083 System.Void SessionLogger::.ctor()
+// 0x00000089 System.Void SessionLogger::.ctor()
 extern void SessionLogger__ctor_m811339589760D7B70C6ED15E8B0F1DD0F869C652 (void);
-// 0x00000084 System.Int32 SettingsData::get_PositionSampleMilliseconds()
+// 0x0000008A System.Int32 SettingsData::get_PositionSampleMilliseconds()
 extern void SettingsData_get_PositionSampleMilliseconds_mE843980C85B36E9595160219F98EDAA03E9B5BD0 (void);
-// 0x00000085 System.Void SettingsData::set_PositionSampleMilliseconds(System.Int32)
+// 0x0000008B System.Void SettingsData::set_PositionSampleMilliseconds(System.Int32)
 extern void SettingsData_set_PositionSampleMilliseconds_m036C52B1A17478C38907DAC1B3201AA5F4A5D6CA (void);
-// 0x00000086 System.Single SettingsData::get_PositionSampleSeconds()
+// 0x0000008C System.Single SettingsData::get_PositionSampleSeconds()
 extern void SettingsData_get_PositionSampleSeconds_mBE0E1897790D49BF16AABD21F836C9A2CABAAD52 (void);
-// 0x00000087 System.Int32 SettingsData::get_LogHandSampleMilliseconds()
+// 0x0000008D System.Int32 SettingsData::get_LogHandSampleMilliseconds()
 extern void SettingsData_get_LogHandSampleMilliseconds_m154A6A9EDE15F425457055339BE29C8E40BA0DEB (void);
-// 0x00000088 System.Void SettingsData::set_LogHandSampleMilliseconds(System.Int32)
+// 0x0000008E System.Void SettingsData::set_LogHandSampleMilliseconds(System.Int32)
 extern void SettingsData_set_LogHandSampleMilliseconds_mADFE4D723C2A2EC62CD33353A34B6C8FAF812E38 (void);
-// 0x00000089 System.Single SettingsData::get_LogHandSamplSeconds()
+// 0x0000008F System.Single SettingsData::get_LogHandSamplSeconds()
 extern void SettingsData_get_LogHandSamplSeconds_m2D9A9C84D3B13B9F42CAEA7F5AB8869E54B4E229 (void);
-// 0x0000008A System.Boolean SettingsData::get_LogsHand()
+// 0x00000090 System.Boolean SettingsData::get_LogsHand()
 extern void SettingsData_get_LogsHand_m1528F88E9C67EF3EC32912C6F811004B351B427F (void);
-// 0x0000008B System.Void SettingsData::set_LogsHand(System.Boolean)
+// 0x00000091 System.Void SettingsData::set_LogsHand(System.Boolean)
 extern void SettingsData_set_LogsHand_m20FB5F67703FF4725F7BC0EACB8AD76CF5894A6C (void);
-// 0x0000008C System.Void SettingsData::OnEnable()
+// 0x00000092 System.Void SettingsData::OnEnable()
 extern void SettingsData_OnEnable_m78362C2B4B2BC479FA5B8AE001431F277F496D6B (void);
-// 0x0000008D System.Void SettingsData::.ctor()
+// 0x00000093 System.Void SettingsData::.ctor()
 extern void SettingsData__ctor_m350A5DF3770E94659DF424BDF0BDD798E7909A78 (void);
-// 0x0000008E System.Int32 WorldData::get_Delay()
+// 0x00000094 System.Int32 WorldData::get_Delay()
 extern void WorldData_get_Delay_m5BA4EE83FF2913D56E5F3DFD462EFD6C5F370C18 (void);
-// 0x0000008F System.Void WorldData::set_Delay(System.Int32)
+// 0x00000095 System.Void WorldData::set_Delay(System.Int32)
 extern void WorldData_set_Delay_m41DA21A002A6364F79168A06C7F1F485B0C8FED6 (void);
-// 0x00000090 System.Boolean WorldData::get_LocalMirror()
+// 0x00000096 System.Boolean WorldData::get_LocalMirror()
 extern void WorldData_get_LocalMirror_m236D599C696C08E782D1E97DA7F4D6890FFB51F5 (void);
-// 0x00000091 System.Void WorldData::set_LocalMirror(System.Boolean)
+// 0x00000097 System.Void WorldData::set_LocalMirror(System.Boolean)
 extern void WorldData_set_LocalMirror_m0D336890E5F4C763400292A0700B2C8B42AC54F3 (void);
-// 0x00000092 System.Boolean WorldData::get_RotationMirror()
+// 0x00000098 System.Boolean WorldData::get_RotationMirror()
 extern void WorldData_get_RotationMirror_m153738377C018B0A3FAC0B50E19061784488934C (void);
-// 0x00000093 System.Void WorldData::set_RotationMirror(System.Boolean)
+// 0x00000099 System.Void WorldData::set_RotationMirror(System.Boolean)
 extern void WorldData_set_RotationMirror_mA5830B9A4481E54966E62DC19676C1F90F55CBBF (void);
-// 0x00000094 System.Boolean WorldData::get_CharacterMirror()
+// 0x0000009A System.Boolean WorldData::get_CharacterMirror()
 extern void WorldData_get_CharacterMirror_m9E9A49DDC1711B68C5A1D6A94D96B1E0F6CC31A5 (void);
-// 0x00000095 System.Void WorldData::set_CharacterMirror(System.Boolean)
+// 0x0000009B System.Void WorldData::set_CharacterMirror(System.Boolean)
 extern void WorldData_set_CharacterMirror_mA272C9E9D391E680082BEFA8BFAD3262E9CD7BE3 (void);
-// 0x00000096 WorldData/CameraViewType WorldData::get_CameraView()
+// 0x0000009C WorldData/CameraViewType WorldData::get_CameraView()
 extern void WorldData_get_CameraView_mC0D74BE8386609805EE97C4095391BF89C68CAE2 (void);
-// 0x00000097 System.Void WorldData::set_CameraView(WorldData/CameraViewType)
+// 0x0000009D System.Void WorldData::set_CameraView(WorldData/CameraViewType)
 extern void WorldData_set_CameraView_mA1B98827A297E42E0802FA9FD717D69C0E3CAB51 (void);
-// 0x00000098 System.Int32 WorldData::get_TableHeight()
+// 0x0000009E System.Int32 WorldData::get_TableHeight()
 extern void WorldData_get_TableHeight_m88C6AB64CF2EE73A2DF8814B92519302EA1D3771 (void);
-// 0x00000099 System.Void WorldData::set_TableHeight(System.Int32)
+// 0x0000009F System.Void WorldData::set_TableHeight(System.Int32)
 extern void WorldData_set_TableHeight_m6F4F1CF74F934A899610C838DA5BFB7C784EE495 (void);
-// 0x0000009A System.Void WorldData::OnEnable()
+// 0x000000A0 System.Void WorldData::OnEnable()
 extern void WorldData_OnEnable_mB8476DE4BAEBFB5A13017B62DCC0F64E5DECA21D (void);
-// 0x0000009B System.String WorldData::Log()
+// 0x000000A1 System.String WorldData::Log()
 extern void WorldData_Log_mDBE3E870E0A9A6C040A3729904EBEA830BB2FA6F (void);
-// 0x0000009C System.Void WorldData::.ctor()
+// 0x000000A2 System.Void WorldData::.ctor()
 extern void WorldData__ctor_m0D781988C57AEBAD893DDBF314396848901E8C15 (void);
-// 0x0000009D System.String SessionInfo::get_Name()
+// 0x000000A3 System.Type SessionBlock::get_EqualityContract()
+extern void SessionBlock_get_EqualityContract_m7C579E1EFDC33F6024363393820AA176301A992B (void);
+// 0x000000A4 System.String SessionBlock::ToString()
+extern void SessionBlock_ToString_m7754FFAD9A498738FD7BE29A657386696E144523 (void);
+// 0x000000A5 System.Boolean SessionBlock::PrintMembers(System.Text.StringBuilder)
+extern void SessionBlock_PrintMembers_m76D7C4322CE8AA1E6CCFCF70DB9757C0C86C726D (void);
+// 0x000000A6 System.Boolean SessionBlock::op_Inequality(SessionBlock,SessionBlock)
+extern void SessionBlock_op_Inequality_mE429C5F89F673ABA8A0164D002D65BB8520FA015 (void);
+// 0x000000A7 System.Boolean SessionBlock::op_Equality(SessionBlock,SessionBlock)
+extern void SessionBlock_op_Equality_m482A821EA755D1D4B9D1342AC40EFE1320D76390 (void);
+// 0x000000A8 System.Int32 SessionBlock::GetHashCode()
+extern void SessionBlock_GetHashCode_mF5C324491227F9051F04F84073521F8DCBD70921 (void);
+// 0x000000A9 System.Boolean SessionBlock::Equals(System.Object)
+extern void SessionBlock_Equals_mF03F54A6D76B22669B88CAAA023811EDAD9CE522 (void);
+// 0x000000AA System.Boolean SessionBlock::Equals(SessionBlock)
+extern void SessionBlock_Equals_mA1A610CB56EE0364837A6FE0524F0066DB91C9DA (void);
+// 0x000000AB SessionBlock SessionBlock::<Clone>$()
+extern void SessionBlock_U3CCloneU3EU24_mF2FFAE7C8A9C6ADFECDE655D347BFF9E82300C72 (void);
+// 0x000000AC System.Void SessionBlock::.ctor(SessionBlock)
+extern void SessionBlock__ctor_mB1DB654E3A55C66F3B77AA3FF1FBDDCAE0D7E3D2 (void);
+// 0x000000AD System.Void SessionBlock::.ctor()
+extern void SessionBlock__ctor_m83FD4170BB2A9609E6F0055955FD5469AC52A5DB (void);
+// 0x000000AE System.String SessionInfo::get_Name()
 extern void SessionInfo_get_Name_m8BFF9A183CB9D691C1292F687096BAE6CE6376FE (void);
-// 0x0000009E System.Void SessionInfo::set_Name(System.String)
+// 0x000000AF System.Void SessionInfo::set_Name(System.String)
 extern void SessionInfo_set_Name_m0DD57CFF614121C43B5F1A80DE843912802BD850 (void);
-// 0x0000009F System.String SessionInfo::get_Description()
+// 0x000000B0 System.String SessionInfo::get_Description()
 extern void SessionInfo_get_Description_m9FB6442256D7DA5823B1E7528886FDBDAA1DF004 (void);
-// 0x000000A0 System.Void SessionInfo::set_Description(System.String)
+// 0x000000B1 System.Void SessionInfo::set_Description(System.String)
 extern void SessionInfo_set_Description_m049038083154FE26CA6F77EE23BC498B9DFB1479 (void);
-// 0x000000A1 System.String SessionInfo::get_Identifier()
+// 0x000000B2 System.String SessionInfo::get_Identifier()
 extern void SessionInfo_get_Identifier_m9C498E2B028E89E6B74E9F5FC1705019140D975F (void);
-// 0x000000A2 System.Void SessionInfo::set_Identifier(System.String)
+// 0x000000B3 System.Void SessionInfo::set_Identifier(System.String)
 extern void SessionInfo_set_Identifier_m2CF0A824265743B8DBC9125D22A1C04F2B26F994 (void);
-// 0x000000A3 System.DateTime SessionInfo::get_CreatedAt()
+// 0x000000B4 System.DateTime SessionInfo::get_CreatedAt()
 extern void SessionInfo_get_CreatedAt_m758CD1682C3D7A1E2DF0944E24FB607CD94516D5 (void);
-// 0x000000A4 System.Void SessionInfo::set_CreatedAt(System.DateTime)
+// 0x000000B5 System.Void SessionInfo::set_CreatedAt(System.DateTime)
 extern void SessionInfo_set_CreatedAt_m715E48D269F9F4551D266AC796A3BBBAB83DBB57 (void);
-// 0x000000A5 System.Void SessionInfo::.ctor()
+// 0x000000B6 System.Void SessionInfo::.ctor()
 extern void SessionInfo__ctor_mDAFF5F90DAB205667CE34735A0B4791169F994FA (void);
-// 0x000000A6 System.String SessionInfo::ToString()
+// 0x000000B7 System.String SessionInfo::ToString()
 extern void SessionInfo_ToString_mB9815D9D56FD549827BE369A52D8A7F3903F65B3 (void);
-// 0x000000A7 System.Void TableController::Start()
+// 0x000000B8 SessionManager SessionManager::get_Instance()
+extern void SessionManager_get_Instance_m11F91560085478E23C387FE35F30DFED26DF0028 (void);
+// 0x000000B9 System.Void SessionManager::set_Instance(SessionManager)
+extern void SessionManager_set_Instance_m651CB90C5466A876B1E53BF9D4095D196C702B1C (void);
+// 0x000000BA System.Void SessionManager::.ctor()
+extern void SessionManager__ctor_m5ADED50506995345E4CF0495C3A5739272127417 (void);
+// 0x000000BB System.Void SessionManager::Awake()
+extern void SessionManager_Awake_m91C487F9B777B73054F2721CCFD2E178860CBB2F (void);
+// 0x000000BC System.Void SessionManager::set_SessionBlocks(SessionBlock[])
+extern void SessionManager_set_SessionBlocks_m507A9F3B29884F38D38155B7E78295E726628873 (void);
+// 0x000000BD SessionBlock[] SessionManager::get_SessionBlocks()
+extern void SessionManager_get_SessionBlocks_mD98269FF1290174D8B9A06031A269F058DAB268A (void);
+// 0x000000BE System.Int32 SessionManager::get_BlockIndexInProgress()
+extern void SessionManager_get_BlockIndexInProgress_m2562426FD2E818605D779587D87A62014D95C00A (void);
+// 0x000000BF System.Int32 SessionManager::get_TryInProgress()
+extern void SessionManager_get_TryInProgress_m93338DF13DDA9447199D4972C01D5A059D121313 (void);
+// 0x000000C0 System.Void SessionManager::Start()
+extern void SessionManager_Start_m5F59BF4A78C3F124B62E54ABCE4866D95A314A7F (void);
+// 0x000000C1 System.Void SessionManager::StartWait()
+extern void SessionManager_StartWait_m40385007B5CFD6BE178F2C2CAA887B5690135AED (void);
+// 0x000000C2 System.Void SessionManager::NextTry()
+extern void SessionManager_NextTry_m21D32B646B9E355645568B01F8A7BC90FCDD97CB (void);
+// 0x000000C3 System.Void SessionManager::NextBlock()
+extern void SessionManager_NextBlock_m83819F2A7C1CE376D01AE3D3B622B97F74519F29 (void);
+// 0x000000C4 System.Void SessionManager::ButtonPress()
+extern void SessionManager_ButtonPress_mC6394218C58167DCC8130EBEB63C5A4B9FED2043 (void);
+// 0x000000C5 System.Void SessionManager::ButtonRelease()
+extern void SessionManager_ButtonRelease_m63B829C647473C24C5EB0DBBCBF2E8BE68A9BA76 (void);
+// 0x000000C6 System.Void SessionManager::TargetReached()
+extern void SessionManager_TargetReached_m2BF9D416FE7188A1E9CDF9CD8F49030319F0BC46 (void);
+// 0x000000C7 System.Collections.IEnumerator SessionManager::WaitRestTime(System.Int32)
+extern void SessionManager_WaitRestTime_mA16E3EF5515066D73101F3106CB72F72477BFF42 (void);
+// 0x000000C8 System.Void SessionManager/<WaitRestTime>d__28::.ctor(System.Int32)
+extern void U3CWaitRestTimeU3Ed__28__ctor_mF27A1602CF0C32CAC650CB2A80D863ECF029B185 (void);
+// 0x000000C9 System.Void SessionManager/<WaitRestTime>d__28::System.IDisposable.Dispose()
+extern void U3CWaitRestTimeU3Ed__28_System_IDisposable_Dispose_m996E17C27D7DF0D713C8AFE0E10BB31EF3C32C69 (void);
+// 0x000000CA System.Boolean SessionManager/<WaitRestTime>d__28::MoveNext()
+extern void U3CWaitRestTimeU3Ed__28_MoveNext_m0821AB0CC31D6CA76D5469B9C33CD464C64E3381 (void);
+// 0x000000CB System.Object SessionManager/<WaitRestTime>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CWaitRestTimeU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7121D6CEE69DF3D3D52201D0BFA0E0C9BD8FBED0 (void);
+// 0x000000CC System.Void SessionManager/<WaitRestTime>d__28::System.Collections.IEnumerator.Reset()
+extern void U3CWaitRestTimeU3Ed__28_System_Collections_IEnumerator_Reset_m7A8BA89748B7960F3E8240CC1C1C9114ABEE3353 (void);
+// 0x000000CD System.Object SessionManager/<WaitRestTime>d__28::System.Collections.IEnumerator.get_Current()
+extern void U3CWaitRestTimeU3Ed__28_System_Collections_IEnumerator_get_Current_m459072D373DA1C933261DA9F3725BBCEAFD3B4EC (void);
+// 0x000000CE System.Void TableController::Start()
 extern void TableController_Start_m8C48DB8F70AC2E491C0645524D418C93E4D2AC41 (void);
-// 0x000000A8 System.Void TableController::Update()
+// 0x000000CF System.Void TableController::Update()
 extern void TableController_Update_m133576BCCB2E3896AC1F6BEFC4C24D0AFFB31AC8 (void);
-// 0x000000A9 System.Void TableController::SetHeight()
+// 0x000000D0 System.Void TableController::SetHeight()
 extern void TableController_SetHeight_mA66EC1FE5DDE99F99F8586D766DED9AF9B08BE92 (void);
-// 0x000000AA System.Void TableController::.ctor()
+// 0x000000D1 System.Void TableController::.ctor()
 extern void TableController__ctor_m6FB1F5B99126A4D0968DF278724CE9E06B3C2750 (void);
-// 0x000000AB System.Void DisplayFPS::Awake()
+// 0x000000D2 System.Void DisplayFPS::Awake()
 extern void DisplayFPS_Awake_m0ADFAD9AE5EAE5B8DCA0124AEF0890F75670C5C4 (void);
-// 0x000000AC System.Void DisplayFPS::Start()
+// 0x000000D3 System.Void DisplayFPS::Start()
 extern void DisplayFPS_Start_m09337BCF14392F6CB85C2C9F8A15B50E684C086B (void);
-// 0x000000AD System.Void DisplayFPS::Update()
+// 0x000000D4 System.Void DisplayFPS::Update()
 extern void DisplayFPS_Update_m4F218976FF34C68C391F478434E43D8E2FCABE7D (void);
-// 0x000000AE System.Void DisplayFPS::CalculateCurrentFPS()
+// 0x000000D5 System.Void DisplayFPS::CalculateCurrentFPS()
 extern void DisplayFPS_CalculateCurrentFPS_mB0DAE0A006C52E505E53AB6AD7B13FE711B421D4 (void);
-// 0x000000AF System.Collections.IEnumerator DisplayFPS::ShowFPS()
+// 0x000000D6 System.Collections.IEnumerator DisplayFPS::ShowFPS()
 extern void DisplayFPS_ShowFPS_mA02AC8E3F27617779F8DF673A9F477067BCBADD4 (void);
-// 0x000000B0 System.Void DisplayFPS::.ctor()
+// 0x000000D7 System.Void DisplayFPS::.ctor()
 extern void DisplayFPS__ctor_m7F12611998E32AD2F57B678C9B7DC16C4FE72170 (void);
-// 0x000000B1 System.Void DisplayFPS/<ShowFPS>d__11::.ctor(System.Int32)
+// 0x000000D8 System.Void DisplayFPS/<ShowFPS>d__11::.ctor(System.Int32)
 extern void U3CShowFPSU3Ed__11__ctor_mCB31E79FBF4BFFB4861F08E9FC144A9159C7829E (void);
-// 0x000000B2 System.Void DisplayFPS/<ShowFPS>d__11::System.IDisposable.Dispose()
+// 0x000000D9 System.Void DisplayFPS/<ShowFPS>d__11::System.IDisposable.Dispose()
 extern void U3CShowFPSU3Ed__11_System_IDisposable_Dispose_m66286264D9881E60863F984A267EAA5DAD7C8D77 (void);
-// 0x000000B3 System.Boolean DisplayFPS/<ShowFPS>d__11::MoveNext()
+// 0x000000DA System.Boolean DisplayFPS/<ShowFPS>d__11::MoveNext()
 extern void U3CShowFPSU3Ed__11_MoveNext_mF94473F492FFD9B46FBEF3B469901FECE2479AB0 (void);
-// 0x000000B4 System.Object DisplayFPS/<ShowFPS>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000000DB System.Object DisplayFPS/<ShowFPS>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CShowFPSU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6EDAC4435815D1A9487015755D9B73BE8BDB26CB (void);
-// 0x000000B5 System.Void DisplayFPS/<ShowFPS>d__11::System.Collections.IEnumerator.Reset()
+// 0x000000DC System.Void DisplayFPS/<ShowFPS>d__11::System.Collections.IEnumerator.Reset()
 extern void U3CShowFPSU3Ed__11_System_Collections_IEnumerator_Reset_m1E65B77CB5AFAF445C8E92C943451924C551F97E (void);
-// 0x000000B6 System.Object DisplayFPS/<ShowFPS>d__11::System.Collections.IEnumerator.get_Current()
+// 0x000000DD System.Object DisplayFPS/<ShowFPS>d__11::System.Collections.IEnumerator.get_Current()
 extern void U3CShowFPSU3Ed__11_System_Collections_IEnumerator_get_Current_m6F2CAD216B6B1E4C4884A09D2E33EBFCB747D58F (void);
-// 0x000000B7 System.Void GetIP::Awake()
+// 0x000000DE System.Void GetIP::Awake()
 extern void GetIP_Awake_m1D8FFC7A01A645472CA551ACE4945C9FBD6FEDD7 (void);
-// 0x000000B8 System.String GetIP::LocalIPAddress()
+// 0x000000DF System.String GetIP::LocalIPAddress()
 extern void GetIP_LocalIPAddress_m6EB9860BB7C8C8197C929843140D68415B401781 (void);
-// 0x000000B9 System.Void GetIP::.ctor()
+// 0x000000E0 System.Void GetIP::.ctor()
 extern void GetIP__ctor_mDE271675D953B510E6124565D0E3D5F08F79EBE8 (void);
-// 0x000000BA System.Boolean CustomXRActionBasedController::IsDisabledReferenceAction(UnityEngine.InputSystem.InputActionProperty)
+// 0x000000E1 System.Boolean CustomXRActionBasedController::IsDisabledReferenceAction(UnityEngine.InputSystem.InputActionProperty)
 extern void CustomXRActionBasedController_IsDisabledReferenceAction_mC14513E4D503BD1CD298BDD33476B455B13FA52B (void);
-// 0x000000BB System.Void CustomXRActionBasedController::OnEnable()
+// 0x000000E2 System.Void CustomXRActionBasedController::OnEnable()
 extern void CustomXRActionBasedController_OnEnable_mF4ABB253943196F94B9C062579CC0F1AE0677FEF (void);
-// 0x000000BC System.Void CustomXRActionBasedController::UpdateTrackingInput(UnityEngine.XR.Interaction.Toolkit.XRControllerState)
+// 0x000000E3 System.Void CustomXRActionBasedController::UpdateTrackingInput(UnityEngine.XR.Interaction.Toolkit.XRControllerState)
 extern void CustomXRActionBasedController_UpdateTrackingInput_m62F274CB54F84A68FE17DE8FBF893BEB1DC67D50 (void);
-// 0x000000BD InputData CustomXRActionBasedController::CalculatePosRot(InputData,System.Boolean)
+// 0x000000E4 InputData CustomXRActionBasedController::CalculatePosRot(InputData,System.Boolean)
 extern void CustomXRActionBasedController_CalculatePosRot_m42B63690A430835313EBE66F03AF88E48478A7FE (void);
-// 0x000000BE System.Collections.IEnumerator CustomXRActionBasedController::DiscreteBufferManager()
+// 0x000000E5 System.Collections.IEnumerator CustomXRActionBasedController::DiscreteBufferManager()
 extern void CustomXRActionBasedController_DiscreteBufferManager_m822EBE110276E2400FE2D7CA43AD06DDFC0C78DA (void);
-// 0x000000BF System.Void CustomXRActionBasedController::.ctor()
+// 0x000000E6 System.Void CustomXRActionBasedController::.ctor()
 extern void CustomXRActionBasedController__ctor_m5BC04D91DA8A2996EAE724389BF8B387E094A21F (void);
-// 0x000000C0 System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::.ctor(System.Int32)
+// 0x000000E7 System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::.ctor(System.Int32)
 extern void U3CDiscreteBufferManagerU3Ed__11__ctor_m5EF2168D5894BDFC887B0F5C9C268CF657BE215C (void);
-// 0x000000C1 System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.IDisposable.Dispose()
+// 0x000000E8 System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.IDisposable.Dispose()
 extern void U3CDiscreteBufferManagerU3Ed__11_System_IDisposable_Dispose_m38FEEDA9A7C1AA8C69A6BB8FFCEBA0F7F2DAE82F (void);
-// 0x000000C2 System.Boolean CustomXRActionBasedController/<DiscreteBufferManager>d__11::MoveNext()
+// 0x000000E9 System.Boolean CustomXRActionBasedController/<DiscreteBufferManager>d__11::MoveNext()
 extern void U3CDiscreteBufferManagerU3Ed__11_MoveNext_mC61EA364771B5958BAAEA3D8876E174E8120C772 (void);
-// 0x000000C3 System.Object CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000000EA System.Object CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDiscreteBufferManagerU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5BC4FBF4717C560F464506410B942383ADFC0653 (void);
-// 0x000000C4 System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.IEnumerator.Reset()
+// 0x000000EB System.Void CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.IEnumerator.Reset()
 extern void U3CDiscreteBufferManagerU3Ed__11_System_Collections_IEnumerator_Reset_mBD13186B3E93FC653A5DF08050B6F285C0B5769A (void);
-// 0x000000C5 System.Object CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.IEnumerator.get_Current()
+// 0x000000EC System.Object CustomXRActionBasedController/<DiscreteBufferManager>d__11::System.Collections.IEnumerator.get_Current()
 extern void U3CDiscreteBufferManagerU3Ed__11_System_Collections_IEnumerator_get_Current_m22ED2A393E7C9108FEF810B85A9A2D5FAA4AD66B (void);
-// 0x000000C6 System.Void Readme::.ctor()
+// 0x000000ED System.Void TargeController::OnTriggerEnter(UnityEngine.Collider)
+extern void TargeController_OnTriggerEnter_m597E005B198869FD66D71BAA2190F2336F4BAD23 (void);
+// 0x000000EE System.Void TargeController::.ctor()
+extern void TargeController__ctor_m9F1E42E71BCFD76A14AE56F3A2CD032251E138BE (void);
+// 0x000000EF System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x000000C7 System.Void Readme/Section::.ctor()
+// 0x000000F0 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x000000C8 System.Void RESTfulHTTPServer.src.models.BasicAuth::.ctor(System.String,System.String)
+// 0x000000F1 System.Void RESTfulHTTPServer.src.models.BasicAuth::.ctor(System.String,System.String)
 extern void BasicAuth__ctor_m9B694EE0A6B67D310CD820E0A8A6502D61124B76 (void);
-// 0x000000C9 System.String RESTfulHTTPServer.src.models.BasicAuth::GetUsername()
+// 0x000000F2 System.String RESTfulHTTPServer.src.models.BasicAuth::GetUsername()
 extern void BasicAuth_GetUsername_m6220454E25E28705B65D678492BDF0478F9C082F (void);
-// 0x000000CA System.String RESTfulHTTPServer.src.models.BasicAuth::GetPassword()
+// 0x000000F3 System.String RESTfulHTTPServer.src.models.BasicAuth::GetPassword()
 extern void BasicAuth_GetPassword_m1B1EB1E13055FE0A62978039EA7D7E1EDC529CF7 (void);
-// 0x000000CB System.Void RESTfulHTTPServer.src.models.Request::.ctor(RESTfulHTTPServer.src.models.Route)
+// 0x000000F4 System.Void RESTfulHTTPServer.src.models.Request::.ctor(RESTfulHTTPServer.src.models.Route)
 extern void Request__ctor_m0F95C7690BDFD2A76DCFBB8AA4361675EAFB5F6A (void);
-// 0x000000CC System.Void RESTfulHTTPServer.src.models.Request::.ctor()
+// 0x000000F5 System.Void RESTfulHTTPServer.src.models.Request::.ctor()
 extern void Request__ctor_mD7E8B768CA7FD47BA039A0BFCF3B0F7664B844AA (void);
-// 0x000000CD System.Void RESTfulHTTPServer.src.models.Request::SetRoute(RESTfulHTTPServer.src.models.Route)
+// 0x000000F6 System.Void RESTfulHTTPServer.src.models.Request::SetRoute(RESTfulHTTPServer.src.models.Route)
 extern void Request_SetRoute_mB296A7C4DBBBEE3EC06186082B8A366FE49A7908 (void);
-// 0x000000CE RESTfulHTTPServer.src.models.Route RESTfulHTTPServer.src.models.Request::GetRoute()
+// 0x000000F7 RESTfulHTTPServer.src.models.Route RESTfulHTTPServer.src.models.Request::GetRoute()
 extern void Request_GetRoute_m07AC0174893843EB8653598B37C4ACC3DD5D3831 (void);
-// 0x000000CF System.Void RESTfulHTTPServer.src.models.Request::SetPOSTData(System.String)
+// 0x000000F8 System.Void RESTfulHTTPServer.src.models.Request::SetPOSTData(System.String)
 extern void Request_SetPOSTData_m2CACE38200FDF26A74A41BC33980C71983FEC324 (void);
-// 0x000000D0 System.String RESTfulHTTPServer.src.models.Request::GetPOSTData()
+// 0x000000F9 System.String RESTfulHTTPServer.src.models.Request::GetPOSTData()
 extern void Request_GetPOSTData_mC8CCA4941ABCAEF7C44563DC43FB090FF37FD3A8 (void);
-// 0x000000D1 System.Boolean RESTfulHTTPServer.src.models.Request::HasPOSTData()
+// 0x000000FA System.Boolean RESTfulHTTPServer.src.models.Request::HasPOSTData()
 extern void Request_HasPOSTData_mCF00A43462FA892FD5668831CC911B79A73C3B27 (void);
-// 0x000000D2 System.Void RESTfulHTTPServer.src.models.Request::AddQuery(System.String,System.String)
+// 0x000000FB System.Void RESTfulHTTPServer.src.models.Request::AddQuery(System.String,System.String)
 extern void Request_AddQuery_m4438C82FF507059B2BD842866C462D6657CE82DF (void);
-// 0x000000D3 System.Void RESTfulHTTPServer.src.models.Request::AddParameter(System.String,System.String)
+// 0x000000FC System.Void RESTfulHTTPServer.src.models.Request::AddParameter(System.String,System.String)
 extern void Request_AddParameter_m1C970E5AAC4C3B5A1A5915784BE15555F037406D (void);
-// 0x000000D4 System.Collections.Generic.Dictionary`2<System.String,System.String> RESTfulHTTPServer.src.models.Request::GetQuerys()
+// 0x000000FD System.Collections.Generic.Dictionary`2<System.String,System.String> RESTfulHTTPServer.src.models.Request::GetQuerys()
 extern void Request_GetQuerys_mDE4CCBF9354E2F4C9451696F5AC84E04825213A3 (void);
-// 0x000000D5 System.Collections.Generic.Dictionary`2<System.String,System.String> RESTfulHTTPServer.src.models.Request::GetParameters()
+// 0x000000FE System.Collections.Generic.Dictionary`2<System.String,System.String> RESTfulHTTPServer.src.models.Request::GetParameters()
 extern void Request_GetParameters_m4D2B57BB37692F55FBF67EDF069EA178A5182CEF (void);
-// 0x000000D6 System.String RESTfulHTTPServer.src.models.Request::GetQuery(System.String)
+// 0x000000FF System.String RESTfulHTTPServer.src.models.Request::GetQuery(System.String)
 extern void Request_GetQuery_mA2D2595F700AC0B1F5BD41E9702F4328018DA946 (void);
-// 0x000000D7 System.String RESTfulHTTPServer.src.models.Request::GetParameter(System.String)
+// 0x00000100 System.String RESTfulHTTPServer.src.models.Request::GetParameter(System.String)
 extern void Request_GetParameter_m4440ACEB9BA65D5BDFA94290775CBD8AB9011D46 (void);
-// 0x000000D8 System.Void RESTfulHTTPServer.src.models.Response::.ctor()
+// 0x00000101 System.Void RESTfulHTTPServer.src.models.Response::.ctor()
 extern void Response__ctor_m5B6EB568EA72C38E5BCF59BF1A5001A8530E19F1 (void);
-// 0x000000D9 System.Void RESTfulHTTPServer.src.models.Response::.ctor(System.String,System.String,System.Int32)
+// 0x00000102 System.Void RESTfulHTTPServer.src.models.Response::.ctor(System.String,System.String,System.Int32)
 extern void Response__ctor_m8AEA98DC5953D13DC70F770B71C151345D9B0633 (void);
-// 0x000000DA System.String RESTfulHTTPServer.src.models.Response::GetMIMEType()
+// 0x00000103 System.String RESTfulHTTPServer.src.models.Response::GetMIMEType()
 extern void Response_GetMIMEType_mCA6CAB573B25F3520D42B15F3DC36F2C180039B8 (void);
-// 0x000000DB System.Void RESTfulHTTPServer.src.models.Response::SetMimeType(System.String)
+// 0x00000104 System.Void RESTfulHTTPServer.src.models.Response::SetMimeType(System.String)
 extern void Response_SetMimeType_m7ECB8E68D05AB38869FA1328932FF780A0520D4A (void);
-// 0x000000DC System.Void RESTfulHTTPServer.src.models.Response::SetContent(System.String)
+// 0x00000105 System.Void RESTfulHTTPServer.src.models.Response::SetContent(System.String)
 extern void Response_SetContent_m2985D4063C6E22749E87AA48E0D785D5C90C8CDE (void);
-// 0x000000DD System.String RESTfulHTTPServer.src.models.Response::GetContent()
+// 0x00000106 System.String RESTfulHTTPServer.src.models.Response::GetContent()
 extern void Response_GetContent_mA4D46FE1B312332A12F5951BBB0D9A90A788607A (void);
-// 0x000000DE System.Int32 RESTfulHTTPServer.src.models.Response::GetHTTPStatusCode()
+// 0x00000107 System.Int32 RESTfulHTTPServer.src.models.Response::GetHTTPStatusCode()
 extern void Response_GetHTTPStatusCode_m5862918DD5A088D6895BC0528D0767CE042EECB6 (void);
-// 0x000000DF System.Void RESTfulHTTPServer.src.models.Response::SetHTTPStatusCode(System.Int32)
+// 0x00000108 System.Void RESTfulHTTPServer.src.models.Response::SetHTTPStatusCode(System.Int32)
 extern void Response_SetHTTPStatusCode_m27A04CE61CB3C50D5E711DF39DEBA3B4FE5B4F7D (void);
-// 0x000000E0 System.Void RESTfulHTTPServer.src.models.Route::.ctor(RESTfulHTTPServer.src.models.Route/Type,System.String,System.String)
+// 0x00000109 System.Void RESTfulHTTPServer.src.models.Route::.ctor(RESTfulHTTPServer.src.models.Route/Type,System.String,System.String)
 extern void Route__ctor_m664C45BE17AA5FE26E45AE72A6E6BBC8D94E323E (void);
-// 0x000000E1 RESTfulHTTPServer.src.models.Route/Type RESTfulHTTPServer.src.models.Route::GetHTTPType()
+// 0x0000010A RESTfulHTTPServer.src.models.Route/Type RESTfulHTTPServer.src.models.Route::GetHTTPType()
 extern void Route_GetHTTPType_m401477366412F086471483EA36F5711E217B820D (void);
-// 0x000000E2 System.String RESTfulHTTPServer.src.models.Route::GetUrl()
+// 0x0000010B System.String RESTfulHTTPServer.src.models.Route::GetUrl()
 extern void Route_GetUrl_m4AED9941B1C34F6DF95A8DA5017E74E3E6894D93 (void);
-// 0x000000E3 System.String RESTfulHTTPServer.src.models.Route::GetInvokerClass()
+// 0x0000010C System.String RESTfulHTTPServer.src.models.Route::GetInvokerClass()
 extern void Route_GetInvokerClass_mB8D51F774F89B0614F2C69DD798A05868A4FE3A2 (void);
-// 0x000000E4 System.String RESTfulHTTPServer.src.models.Route::GetInvokerMethod()
+// 0x0000010D System.String RESTfulHTTPServer.src.models.Route::GetInvokerMethod()
 extern void Route_GetInvokerMethod_m2E8D33B1FEBCF4B6B25A0225274E80130E9F9184 (void);
-// 0x000000E5 System.Void RESTfulHTTPServer.src.models.Route::InitInvoker()
+// 0x0000010E System.Void RESTfulHTTPServer.src.models.Route::InitInvoker()
 extern void Route_InitInvoker_mC516879DED7ECBD9D01F0499DEF9AE72865E61BB (void);
-// 0x000000E6 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetTest(RESTfulHTTPServer.src.models.Request)
+// 0x0000010F RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetTest(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_GetTest_m057AA54F042E8E962E4FEFE725BF945C352FC4C7 (void);
-// 0x000000E7 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetDelay(RESTfulHTTPServer.src.models.Request)
+// 0x00000110 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetDelay(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_GetDelay_m2423C5FE1A361E08DCB20BD58B8D3737C3141A2F (void);
-// 0x000000E8 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetDelay(RESTfulHTTPServer.src.models.Request)
+// 0x00000111 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetDelay(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetDelay_mCF6ACB79209057A366855E7BB4F55BC663344432 (void);
-// 0x000000E9 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetCharacterMirror(RESTfulHTTPServer.src.models.Request)
+// 0x00000112 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetCharacterMirror(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetCharacterMirror_mF473A1BE98515A4100694843640E41BF5077C38F (void);
-// 0x000000EA RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetAllParameter(RESTfulHTTPServer.src.models.Request)
+// 0x00000113 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetAllParameter(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetAllParameter_m82CC52AFE2739846840C95296F1E33EF82BC42BA (void);
-// 0x000000EB RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetAllBooleanParameter(RESTfulHTTPServer.src.models.Request)
+// 0x00000114 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetAllBooleanParameter(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetAllBooleanParameter_m4FBD429F49C270D35872CCBD999056FFC0D74153 (void);
-// 0x000000EC RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetTableHeight(RESTfulHTTPServer.src.models.Request)
+// 0x00000115 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetTableHeight(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetTableHeight_mE273EB8928F8C3397EF07042CC74144C62B28D28 (void);
-// 0x000000ED RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StartSession(RESTfulHTTPServer.src.models.Request)
+// 0x00000116 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StartSession(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_StartSession_m06E9DF61630DAA0A83068B4927FD8FFC62D8A74E (void);
-// 0x000000EE RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::EndSession(RESTfulHTTPServer.src.models.Request)
+// 0x00000117 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::EndSession(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_EndSession_mEFAAC40DFD6F2A3EFC34FE8B02B7D00FDD4EBD7F (void);
-// 0x000000EF RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetCameraView(RESTfulHTTPServer.src.models.Request)
+// 0x00000118 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetCameraView(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetCameraView_m74A59449290225239CA10B18E35736C4407E1C1A (void);
-// 0x000000F0 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StartHandLog(RESTfulHTTPServer.src.models.Request)
+// 0x00000119 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StartHandLog(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_StartHandLog_mC097F97BCE456EEAE1CAA26F6FF6DC399B6EB02B (void);
-// 0x000000F1 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StopHandLog(RESTfulHTTPServer.src.models.Request)
+// 0x0000011A RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::StopHandLog(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_StopHandLog_m50E116CD8575E3FE0DA7F9884F6E3355C0A42B08 (void);
-// 0x000000F2 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetSessions(RESTfulHTTPServer.src.models.Request)
+// 0x0000011B RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::GetSessions(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_GetSessions_mE1BA640AB29C145BB6D502F314D802B9B86EB32A (void);
-// 0x000000F3 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::DeleteSession(RESTfulHTTPServer.src.models.Request)
+// 0x0000011C RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::DeleteSession(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_DeleteSession_m15D5F3B28A5BAE233861D1D1CCC7B4B9D10ACED6 (void);
-// 0x000000F4 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::DownloadSessionData(RESTfulHTTPServer.src.models.Request)
+// 0x0000011D RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::DownloadSessionData(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_DownloadSessionData_m535C51EC68F498C83C26540EA29000624E84FBD5 (void);
-// 0x000000F5 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::MoveCamera(RESTfulHTTPServer.src.models.Request)
+// 0x0000011E RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::MoveCamera(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_MoveCamera_m2898A7A66DA85C3DDEA827AE1696A8E8B73280F6 (void);
-// 0x000000F6 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetSampling(RESTfulHTTPServer.src.models.Request)
+// 0x0000011F RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.invoker.ServerInvoke::SetSampling(RESTfulHTTPServer.src.models.Request)
 extern void ServerInvoke_SetSampling_m4826AB52A1C917177F600B8F769A1760E9DEDD30 (void);
-// 0x000000F7 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke::.ctor()
+// 0x00000120 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke::.ctor()
 extern void ServerInvoke__ctor_mC681EF9B5B1C6FA6E1F2BEB2633046D015643538 (void);
-// 0x000000F8 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass0_0::.ctor()
+// 0x00000121 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass0_0::.ctor()
 extern void U3CU3Ec__DisplayClass0_0__ctor_m963F1F5CE0B86BDDA577DA3F52A7EC39CA914958 (void);
-// 0x000000F9 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass0_0::<GetTest>b__0()
+// 0x00000122 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass0_0::<GetTest>b__0()
 extern void U3CU3Ec__DisplayClass0_0_U3CGetTestU3Eb__0_m359809DF01594EC758BF866CBA005134CD99BBEE (void);
-// 0x000000FA System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass1_0::.ctor()
+// 0x00000123 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass1_0::.ctor()
 extern void U3CU3Ec__DisplayClass1_0__ctor_m4BE77AFB2A1A19FB413664280C0113C86E721DE1 (void);
-// 0x000000FB System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass1_0::<GetDelay>b__0()
+// 0x00000124 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass1_0::<GetDelay>b__0()
 extern void U3CU3Ec__DisplayClass1_0_U3CGetDelayU3Eb__0_m06BD4B6F82FDF705D900F7F792FACAD937B7D173 (void);
-// 0x000000FC System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass2_0::.ctor()
+// 0x00000125 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass2_0::.ctor()
 extern void U3CU3Ec__DisplayClass2_0__ctor_m1061657629638F62416949EE8915546355E81C93 (void);
-// 0x000000FD System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass2_0::<SetDelay>b__0()
+// 0x00000126 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass2_0::<SetDelay>b__0()
 extern void U3CU3Ec__DisplayClass2_0_U3CSetDelayU3Eb__0_mFF83538DE53E9E65CA059FAF2DA1F91194536F02 (void);
-// 0x000000FE System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass3_0::.ctor()
+// 0x00000127 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass3_0::.ctor()
 extern void U3CU3Ec__DisplayClass3_0__ctor_m3E6F268E414A7FF7AE5754422BB1D4F847AD38FC (void);
-// 0x000000FF System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass3_0::<SetCharacterMirror>b__0()
+// 0x00000128 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass3_0::<SetCharacterMirror>b__0()
 extern void U3CU3Ec__DisplayClass3_0_U3CSetCharacterMirrorU3Eb__0_mE54DD31918255CF345E07CD6F5F6B9AFB06B66DB (void);
-// 0x00000100 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass4_0::.ctor()
+// 0x00000129 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass4_0::.ctor()
 extern void U3CU3Ec__DisplayClass4_0__ctor_m9C2EBF53AC133A14291F28CAC0FFD1173D7B63F0 (void);
-// 0x00000101 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass4_0::<SetAllParameter>b__0()
+// 0x0000012A System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass4_0::<SetAllParameter>b__0()
 extern void U3CU3Ec__DisplayClass4_0_U3CSetAllParameterU3Eb__0_mF33368091A0C127E1EFA4266BC52B2F1BDC557FC (void);
-// 0x00000102 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass5_0::.ctor()
+// 0x0000012B System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass5_0::.ctor()
 extern void U3CU3Ec__DisplayClass5_0__ctor_m000EE08577314C121DA7F3128B3C69B334727C4F (void);
-// 0x00000103 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass5_0::<SetAllBooleanParameter>b__0()
+// 0x0000012C System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass5_0::<SetAllBooleanParameter>b__0()
 extern void U3CU3Ec__DisplayClass5_0_U3CSetAllBooleanParameterU3Eb__0_m5A80991B6811A1E096E614133EB1D3F7CD60DCD1 (void);
-// 0x00000104 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass6_0::.ctor()
+// 0x0000012D System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass6_0::.ctor()
 extern void U3CU3Ec__DisplayClass6_0__ctor_mEB5B0F6B7FA577E9461B6176D5F5122250D8DCD3 (void);
-// 0x00000105 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass6_0::<SetTableHeight>b__0()
+// 0x0000012E System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass6_0::<SetTableHeight>b__0()
 extern void U3CU3Ec__DisplayClass6_0_U3CSetTableHeightU3Eb__0_m5910D399D2D4FA9978E91747485DE0625450B60C (void);
-// 0x00000106 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass7_0::.ctor()
+// 0x0000012F System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass7_0::.ctor()
 extern void U3CU3Ec__DisplayClass7_0__ctor_m1EF15E64D6B7DC4190F37CFEA25A00EB8B22C0F3 (void);
-// 0x00000107 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass7_0::<StartSession>b__0()
+// 0x00000130 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass7_0::<StartSession>b__0()
 extern void U3CU3Ec__DisplayClass7_0_U3CStartSessionU3Eb__0_mD23AF92EC5BFC34C3FF2EAEBDE22B2523809EFD5 (void);
-// 0x00000108 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass8_0::.ctor()
+// 0x00000131 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass8_0::.ctor()
 extern void U3CU3Ec__DisplayClass8_0__ctor_m3EA70E6C31C26938D38760BCF485C14522C1576C (void);
-// 0x00000109 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass8_0::<EndSession>b__0()
+// 0x00000132 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass8_0::<EndSession>b__0()
 extern void U3CU3Ec__DisplayClass8_0_U3CEndSessionU3Eb__0_m88F4478923867F1276BD6E2F59BE09BD9832689E (void);
-// 0x0000010A System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass9_0::.ctor()
+// 0x00000133 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass9_0::.ctor()
 extern void U3CU3Ec__DisplayClass9_0__ctor_m3AFEFE0027729EF5C237C9B640D1D5480C292FE9 (void);
-// 0x0000010B System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass9_0::<SetCameraView>b__0()
+// 0x00000134 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass9_0::<SetCameraView>b__0()
 extern void U3CU3Ec__DisplayClass9_0_U3CSetCameraViewU3Eb__0_m29308AB81DD3A10BFBE62445B46B2C9328051D6A (void);
-// 0x0000010C System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass10_0::.ctor()
+// 0x00000135 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass10_0::.ctor()
 extern void U3CU3Ec__DisplayClass10_0__ctor_m3179E82C8C9AB3EA4771B22B060266B71ACE128E (void);
-// 0x0000010D System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass10_0::<StartHandLog>b__0()
+// 0x00000136 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass10_0::<StartHandLog>b__0()
 extern void U3CU3Ec__DisplayClass10_0_U3CStartHandLogU3Eb__0_mB81A5971AD4C77CBB5690BDDD405C419A191AEE6 (void);
-// 0x0000010E System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass11_0::.ctor()
+// 0x00000137 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass11_0::.ctor()
 extern void U3CU3Ec__DisplayClass11_0__ctor_m3A73F6DC51BD6ED435EAF247203C0AEF4456073A (void);
-// 0x0000010F System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass11_0::<StopHandLog>b__0()
+// 0x00000138 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass11_0::<StopHandLog>b__0()
 extern void U3CU3Ec__DisplayClass11_0_U3CStopHandLogU3Eb__0_m4FA2B22899A400B157BD910AA2CEBDED94A45E38 (void);
-// 0x00000110 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass12_0::.ctor()
+// 0x00000139 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass12_0::.ctor()
 extern void U3CU3Ec__DisplayClass12_0__ctor_m86D68FE4F8DEC3B03825C8A0D5D7CE97689A3C4B (void);
-// 0x00000111 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass12_0::<GetSessions>b__0()
+// 0x0000013A System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass12_0::<GetSessions>b__0()
 extern void U3CU3Ec__DisplayClass12_0_U3CGetSessionsU3Eb__0_m57227C62FCDEF059A59943EC972FEF51520C9498 (void);
-// 0x00000112 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass13_0::.ctor()
+// 0x0000013B System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass13_0::.ctor()
 extern void U3CU3Ec__DisplayClass13_0__ctor_m2CAD6BF441BECABC43C68EAB42968C7CECBA2D55 (void);
-// 0x00000113 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass13_0::<DeleteSession>b__0()
+// 0x0000013C System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass13_0::<DeleteSession>b__0()
 extern void U3CU3Ec__DisplayClass13_0_U3CDeleteSessionU3Eb__0_mC7C633880AD2C5935CAE1EC51B8C427B61F390A1 (void);
-// 0x00000114 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass14_0::.ctor()
+// 0x0000013D System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass14_0::.ctor()
 extern void U3CU3Ec__DisplayClass14_0__ctor_m7E5D159A01E49D6707106B5C58232B6ACF7FA588 (void);
-// 0x00000115 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass14_0::<DownloadSessionData>b__0()
+// 0x0000013E System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass14_0::<DownloadSessionData>b__0()
 extern void U3CU3Ec__DisplayClass14_0_U3CDownloadSessionDataU3Eb__0_mAAA482F528C8E2C54A0D407FD67E935DA2569CD4 (void);
-// 0x00000116 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass15_0::.ctor()
+// 0x0000013F System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass15_0::.ctor()
 extern void U3CU3Ec__DisplayClass15_0__ctor_mA2CB10FB231469679202AA8144D55A3EDFA24824 (void);
-// 0x00000117 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass15_0::<MoveCamera>b__0()
+// 0x00000140 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass15_0::<MoveCamera>b__0()
 extern void U3CU3Ec__DisplayClass15_0_U3CMoveCameraU3Eb__0_mB03ABAC057A346939D9D4AC44997C6C4EF011A6E (void);
-// 0x00000118 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass16_0::.ctor()
+// 0x00000141 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass16_0::.ctor()
 extern void U3CU3Ec__DisplayClass16_0__ctor_m84EA829EA5B56BAF37C8EE1211B5E2F18CBEB68F (void);
-// 0x00000119 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass16_0::<SetSampling>b__0()
+// 0x00000142 System.Void RESTfulHTTPServer.src.invoker.ServerInvoke/<>c__DisplayClass16_0::<SetSampling>b__0()
 extern void U3CU3Ec__DisplayClass16_0_U3CSetSamplingU3Eb__0_mC69F6B5ED2582CED5E5F59715DB611635FCF6615 (void);
-// 0x0000011A System.Void RESTfulHTTPServer.src.controller.Logger::Log(System.String,System.String)
+// 0x00000143 System.Void RESTfulHTTPServer.src.controller.Logger::Log(System.String,System.String)
 extern void Logger_Log_mA68EB17F23B2CC49EFE78C55B07C17792FA72037 (void);
-// 0x0000011B System.Void RESTfulHTTPServer.src.controller.RoutingManager::.ctor()
+// 0x00000144 System.Void RESTfulHTTPServer.src.controller.RoutingManager::.ctor()
 extern void RoutingManager__ctor_m7B47D502A9A725783A44D9236474F90084AA97A9 (void);
-// 0x0000011C System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddRoute(RESTfulHTTPServer.src.models.Route)
+// 0x00000145 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddRoute(RESTfulHTTPServer.src.models.Route)
 extern void RoutingManager_AddRoute_m426948A5AF51359763D1CAD749C2F21F360FF425 (void);
-// 0x0000011D System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddGETRoute(RESTfulHTTPServer.src.models.Route)
+// 0x00000146 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddGETRoute(RESTfulHTTPServer.src.models.Route)
 extern void RoutingManager_AddGETRoute_m76A623C52EE2A87356BD21B91D778AEC59AA2573 (void);
-// 0x0000011E System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddPOSTRoute(RESTfulHTTPServer.src.models.Route)
+// 0x00000147 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddPOSTRoute(RESTfulHTTPServer.src.models.Route)
 extern void RoutingManager_AddPOSTRoute_m86B34B07BEAF8883C3B9F442DC7690FBCA8CCC03 (void);
-// 0x0000011F System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddPUTRoute(RESTfulHTTPServer.src.models.Route)
+// 0x00000148 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddPUTRoute(RESTfulHTTPServer.src.models.Route)
 extern void RoutingManager_AddPUTRoute_mB4899848D2D37B52FA420722A911C94EFE101D8B (void);
-// 0x00000120 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddDELETERoute(RESTfulHTTPServer.src.models.Route)
+// 0x00000149 System.Void RESTfulHTTPServer.src.controller.RoutingManager::AddDELETERoute(RESTfulHTTPServer.src.models.Route)
 extern void RoutingManager_AddDELETERoute_mB8EEECF9F9429C7BDD662FE625057E9D30AEC4A3 (void);
-// 0x00000121 System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetGETRoutes()
+// 0x0000014A System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetGETRoutes()
 extern void RoutingManager_GetGETRoutes_m97D8FF0CBE45ED1668D84535532D6DA9DD20DB64 (void);
-// 0x00000122 System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetPOSTRoutes()
+// 0x0000014B System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetPOSTRoutes()
 extern void RoutingManager_GetPOSTRoutes_m4D12D23C3FF7158EFBBF0FDE2A66F21F56F445B2 (void);
-// 0x00000123 System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetPUTRoutes()
+// 0x0000014C System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetPUTRoutes()
 extern void RoutingManager_GetPUTRoutes_m9C5993F37B7F8C891847923A0F060D0BCED9151C (void);
-// 0x00000124 System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetDELETERoutes()
+// 0x0000014D System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route> RESTfulHTTPServer.src.controller.RoutingManager::GetDELETERoutes()
 extern void RoutingManager_GetDELETERoutes_m70EDF577C87F6188AB6EDB011785D8B70ACB5FBE (void);
-// 0x00000125 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.String,System.String)
+// 0x0000014E RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.String,System.String)
 extern void RoutingManager_DoesRouteExists_mD1A1FA5F95BF06E2226223029767D3989168C70C (void);
-// 0x00000126 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.String,RESTfulHTTPServer.src.models.Route/Type)
+// 0x0000014F RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.String,RESTfulHTTPServer.src.models.Route/Type)
 extern void RoutingManager_DoesRouteExists_m91B66195119CC11966A3D256583AD052341D9A91 (void);
-// 0x00000127 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.controller.RoutingManager::CallDelegater(RESTfulHTTPServer.src.models.Request)
+// 0x00000150 RESTfulHTTPServer.src.models.Response RESTfulHTTPServer.src.controller.RoutingManager::CallDelegater(RESTfulHTTPServer.src.models.Request)
 extern void RoutingManager_CallDelegater_mA4B71E3AB82D509BB214AE14A0E8E9AD2C271A39 (void);
-// 0x00000128 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route>,System.String)
+// 0x00000151 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DoesRouteExists(System.Collections.Generic.List`1<RESTfulHTTPServer.src.models.Route>,System.String)
 extern void RoutingManager_DoesRouteExists_mC3681FD692312E09B60B08CF7E59B1343BE5D323 (void);
-// 0x00000129 System.Boolean RESTfulHTTPServer.src.controller.RoutingManager::IsUrlArgumentParameter(System.String)
+// 0x00000152 System.Boolean RESTfulHTTPServer.src.controller.RoutingManager::IsUrlArgumentParameter(System.String)
 extern void RoutingManager_IsUrlArgumentParameter_m5B13A0D2E280864913A6C478658A92413779DC4A (void);
-// 0x0000012A System.String RESTfulHTTPServer.src.controller.RoutingManager::RemoveStartingSlash(System.String)
+// 0x00000153 System.String RESTfulHTTPServer.src.controller.RoutingManager::RemoveStartingSlash(System.String)
 extern void RoutingManager_RemoveStartingSlash_m7E23B11797552AEA687CBD27E81FFC6BDB40E99A (void);
-// 0x0000012B RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DetermineURLQuery(System.Net.HttpListenerContext,RESTfulHTTPServer.src.models.Request)
+// 0x00000154 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.RoutingManager::DetermineURLQuery(System.Net.HttpListenerContext,RESTfulHTTPServer.src.models.Request)
 extern void RoutingManager_DetermineURLQuery_mAEF95D59BAA0B1DB955279CC6FAF6911A6D2AB65 (void);
-// 0x0000012C System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(System.Int32,RESTfulHTTPServer.src.controller.RoutingManager)
+// 0x00000155 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(System.Int32,RESTfulHTTPServer.src.controller.RoutingManager)
 extern void SimpleRESTServer__ctor_m8A9E627205A3B6C56B92FCED2E07C070A554BE05 (void);
-// 0x0000012D System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(System.Int32,RESTfulHTTPServer.src.controller.RoutingManager,RESTfulHTTPServer.src.models.BasicAuth)
+// 0x00000156 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(System.Int32,RESTfulHTTPServer.src.controller.RoutingManager,RESTfulHTTPServer.src.models.BasicAuth)
 extern void SimpleRESTServer__ctor_mEEC1B32CEDAA095D439B8A839022DA8CDB34E6FF (void);
-// 0x0000012E System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(RESTfulHTTPServer.src.controller.RoutingManager)
+// 0x00000157 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::.ctor(RESTfulHTTPServer.src.controller.RoutingManager)
 extern void SimpleRESTServer__ctor_m5A4F01848220057F59951AE57864CC430B48A16B (void);
-// 0x0000012F System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Initialize(System.Int32)
+// 0x00000158 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Initialize(System.Int32)
 extern void SimpleRESTServer_Initialize_m3143F99DF93E5464920678F7ECE4A71CC97B65D9 (void);
-// 0x00000130 System.Int32 RESTfulHTTPServer.src.controller.SimpleRESTServer::get_Port()
+// 0x00000159 System.Int32 RESTfulHTTPServer.src.controller.SimpleRESTServer::get_Port()
 extern void SimpleRESTServer_get_Port_m8E8169C3B36FFA49202E89CE9637FE46836835CF (void);
-// 0x00000131 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::set_Port(System.Int32)
+// 0x0000015A System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::set_Port(System.Int32)
 extern void SimpleRESTServer_set_Port_mF2CB43C3CC78E1AF149983FD144BC698A75A44CB (void);
-// 0x00000132 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Stop()
+// 0x0000015B System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Stop()
 extern void SimpleRESTServer_Stop_m39D0A681B7C9639C9ACA7C783603394D6FA9784C (void);
-// 0x00000133 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Listen()
+// 0x0000015C System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Listen()
 extern void SimpleRESTServer_Listen_mE2DA3AFE3DC398B69A19D4A212E8A1079ABAB09F (void);
-// 0x00000134 System.IO.Stream RESTfulHTTPServer.src.controller.SimpleRESTServer::GenerateStreamFromString(System.String)
+// 0x0000015D System.IO.Stream RESTfulHTTPServer.src.controller.SimpleRESTServer::GenerateStreamFromString(System.String)
 extern void SimpleRESTServer_GenerateStreamFromString_mDFF154343A3539ED983570E2AAC7D16F0D1D102A (void);
-// 0x00000135 RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.SimpleRESTServer::ReceivePostData(RESTfulHTTPServer.src.models.Request,System.Net.HttpListenerRequest)
+// 0x0000015E RESTfulHTTPServer.src.models.Request RESTfulHTTPServer.src.controller.SimpleRESTServer::ReceivePostData(RESTfulHTTPServer.src.models.Request,System.Net.HttpListenerRequest)
 extern void SimpleRESTServer_ReceivePostData_m0F445A1C21683D3A1B44BEEA75E2D5C22DF88714 (void);
-// 0x00000136 System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Process(System.Net.HttpListenerContext)
+// 0x0000015F System.Void RESTfulHTTPServer.src.controller.SimpleRESTServer::Process(System.Net.HttpListenerContext)
 extern void SimpleRESTServer_Process_m42587813206B4F8A02D22CA59577301F09BAF628 (void);
-static Il2CppMethodPointer s_methodPointers[310] = 
+static Il2CppMethodPointer s_methodPointers[351] = 
 {
+	EmbeddedAttribute__ctor_m68CAD82666F0FF415043D7DC217986AA2D3133D1,
+	NullableAttribute__ctor_m771BA0E8EFE1DD8AAAE9E2B867CCF4D3AE8834C7,
+	NullableAttribute__ctor_mA329224BEC75C65B8E9B5D81D7F5E769E22790E2,
+	NullableContextAttribute__ctor_m3F94BA00FB614574AC19D78E61DC0CA0AE15FCAC,
 	ButtonVR_Start_mC55A0FD15F5729D0674500BBD7BEF1248DD9117F,
 	ButtonVR_OnTriggerEnter_m892AAAFD8F55FCBA7E3DDE257A726C380FC16E22,
 	ButtonVR_OnTriggerExit_m61C76A03D8D4A8F152AF44336653588A20F293FC,
@@ -714,6 +800,8 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	U3CReadInputValueCRU3Ed__40_System_Collections_IEnumerator_get_Current_m97330F8F093BC210962BB646664A25DE99DD0260,
 	MenuController_Start_m88A8FAF8DB4765830F6CA0D4508D5E565B2F68D0,
 	MenuController_Update_m15DD6714D46E0384A1F59B62B8A6323C108058D6,
+	MenuController_OnTriggerEnter_mF818B3C45F52926B6175ECCD42BEA95532BD84CE,
+	MenuController_OnTriggerExit_m5D91F69778B5C636FEA394513D2B5448269FE6FF,
 	MenuController_ManageMenu_m8BB27770B9C8F44FB803052A1C84A635C3B529F2,
 	MenuController_OpenMenu_mEC1AB0591BE85B6D7BF67E2A66A1D371AD2F6839,
 	MenuController_CloseMenu_m089A781F70D2752CE259B8E97C444EF9F22999DE,
@@ -751,11 +839,11 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	SessionLogger_GenerateRecordinEndLog_m237D398F875132A7C8D18FAE504EBD7CC7C81602,
 	SessionLogger_CreateSessionJsonFile_mE723DDD477E8FC2354361555687F1EFB2CAD0F7A,
 	SessionLogger_CreateSessionFolder_m9BD9BA1D59EA6554E9DB1E02FCD0ADC139ABE933,
-	SessionLogger_GenerateWorldParamsLog_m0496F8EED180D8485A8A851A6D429E28C622AB39,
+	SessionLogger_GenerateWorldParamsLog_mC00EB8633F3EE819BD3B22DE653A0BD93E57F1E2,
 	SessionLogger_GenerateHandLog_m74C4C5EE098276A909F1E875793382AABFCA455E,
 	SessionLogger_LogInitSession_mD25A73BCA5A39AD73229DA8BFD2AF0C40CE63175,
 	SessionLogger_LogEndSession_m129B83FE1125F77A08A17FA0796A89D2C46D39F3,
-	SessionLogger_LogWorldUpdate_mDAA7D14C1FAE44C310682065A84778489FFB3F88,
+	SessionLogger_LogWorldUpdate_m5C2CFAE111E2B448E41244730761499F1449FD10,
 	SessionLogger_LogHandRecordingStartEnd_m864B6B6C3028DF08492FBE62B58371240813CAFC,
 	SessionLogger_StartHandLog_m93910CD2F3E01802952997CAE3E7857B3E5A4BFA,
 	SessionLogger_StopHandLog_m35CBCE1405CCC2FC676DE85B1585FC3376867A36,
@@ -790,6 +878,17 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	WorldData_OnEnable_mB8476DE4BAEBFB5A13017B62DCC0F64E5DECA21D,
 	WorldData_Log_mDBE3E870E0A9A6C040A3729904EBEA830BB2FA6F,
 	WorldData__ctor_m0D781988C57AEBAD893DDBF314396848901E8C15,
+	SessionBlock_get_EqualityContract_m7C579E1EFDC33F6024363393820AA176301A992B,
+	SessionBlock_ToString_m7754FFAD9A498738FD7BE29A657386696E144523,
+	SessionBlock_PrintMembers_m76D7C4322CE8AA1E6CCFCF70DB9757C0C86C726D,
+	SessionBlock_op_Inequality_mE429C5F89F673ABA8A0164D002D65BB8520FA015,
+	SessionBlock_op_Equality_m482A821EA755D1D4B9D1342AC40EFE1320D76390,
+	SessionBlock_GetHashCode_mF5C324491227F9051F04F84073521F8DCBD70921,
+	SessionBlock_Equals_mF03F54A6D76B22669B88CAAA023811EDAD9CE522,
+	SessionBlock_Equals_mA1A610CB56EE0364837A6FE0524F0066DB91C9DA,
+	SessionBlock_U3CCloneU3EU24_mF2FFAE7C8A9C6ADFECDE655D347BFF9E82300C72,
+	SessionBlock__ctor_mB1DB654E3A55C66F3B77AA3FF1FBDDCAE0D7E3D2,
+	SessionBlock__ctor_m83FD4170BB2A9609E6F0055955FD5469AC52A5DB,
 	SessionInfo_get_Name_m8BFF9A183CB9D691C1292F687096BAE6CE6376FE,
 	SessionInfo_set_Name_m0DD57CFF614121C43B5F1A80DE843912802BD850,
 	SessionInfo_get_Description_m9FB6442256D7DA5823B1E7528886FDBDAA1DF004,
@@ -800,6 +899,28 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	SessionInfo_set_CreatedAt_m715E48D269F9F4551D266AC796A3BBBAB83DBB57,
 	SessionInfo__ctor_mDAFF5F90DAB205667CE34735A0B4791169F994FA,
 	SessionInfo_ToString_mB9815D9D56FD549827BE369A52D8A7F3903F65B3,
+	SessionManager_get_Instance_m11F91560085478E23C387FE35F30DFED26DF0028,
+	SessionManager_set_Instance_m651CB90C5466A876B1E53BF9D4095D196C702B1C,
+	SessionManager__ctor_m5ADED50506995345E4CF0495C3A5739272127417,
+	SessionManager_Awake_m91C487F9B777B73054F2721CCFD2E178860CBB2F,
+	SessionManager_set_SessionBlocks_m507A9F3B29884F38D38155B7E78295E726628873,
+	SessionManager_get_SessionBlocks_mD98269FF1290174D8B9A06031A269F058DAB268A,
+	SessionManager_get_BlockIndexInProgress_m2562426FD2E818605D779587D87A62014D95C00A,
+	SessionManager_get_TryInProgress_m93338DF13DDA9447199D4972C01D5A059D121313,
+	SessionManager_Start_m5F59BF4A78C3F124B62E54ABCE4866D95A314A7F,
+	SessionManager_StartWait_m40385007B5CFD6BE178F2C2CAA887B5690135AED,
+	SessionManager_NextTry_m21D32B646B9E355645568B01F8A7BC90FCDD97CB,
+	SessionManager_NextBlock_m83819F2A7C1CE376D01AE3D3B622B97F74519F29,
+	SessionManager_ButtonPress_mC6394218C58167DCC8130EBEB63C5A4B9FED2043,
+	SessionManager_ButtonRelease_m63B829C647473C24C5EB0DBBCBF2E8BE68A9BA76,
+	SessionManager_TargetReached_m2BF9D416FE7188A1E9CDF9CD8F49030319F0BC46,
+	SessionManager_WaitRestTime_mA16E3EF5515066D73101F3106CB72F72477BFF42,
+	U3CWaitRestTimeU3Ed__28__ctor_mF27A1602CF0C32CAC650CB2A80D863ECF029B185,
+	U3CWaitRestTimeU3Ed__28_System_IDisposable_Dispose_m996E17C27D7DF0D713C8AFE0E10BB31EF3C32C69,
+	U3CWaitRestTimeU3Ed__28_MoveNext_m0821AB0CC31D6CA76D5469B9C33CD464C64E3381,
+	U3CWaitRestTimeU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7121D6CEE69DF3D3D52201D0BFA0E0C9BD8FBED0,
+	U3CWaitRestTimeU3Ed__28_System_Collections_IEnumerator_Reset_m7A8BA89748B7960F3E8240CC1C1C9114ABEE3353,
+	U3CWaitRestTimeU3Ed__28_System_Collections_IEnumerator_get_Current_m459072D373DA1C933261DA9F3725BBCEAFD3B4EC,
 	TableController_Start_m8C48DB8F70AC2E491C0645524D418C93E4D2AC41,
 	TableController_Update_m133576BCCB2E3896AC1F6BEFC4C24D0AFFB31AC8,
 	TableController_SetHeight_mA66EC1FE5DDE99F99F8586D766DED9AF9B08BE92,
@@ -831,6 +952,8 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	U3CDiscreteBufferManagerU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5BC4FBF4717C560F464506410B942383ADFC0653,
 	U3CDiscreteBufferManagerU3Ed__11_System_Collections_IEnumerator_Reset_mBD13186B3E93FC653A5DF08050B6F285C0B5769A,
 	U3CDiscreteBufferManagerU3Ed__11_System_Collections_IEnumerator_get_Current_m22ED2A393E7C9108FEF810B85A9A2D5FAA4AD66B,
+	TargeController_OnTriggerEnter_m597E005B198869FD66D71BAA2190F2336F4BAD23,
+	TargeController__ctor_m9F1E42E71BCFD76A14AE56F3A2CD032251E138BE,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	BasicAuth__ctor_m9B694EE0A6B67D310CD820E0A8A6502D61124B76,
@@ -945,8 +1068,12 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	SimpleRESTServer_ReceivePostData_m0F445A1C21683D3A1B44BEEA75E2D5C22DF88714,
 	SimpleRESTServer_Process_m42587813206B4F8A02D22CA59577301F09BAF628,
 };
-static const int32_t s_InvokerIndices[310] = 
+static const int32_t s_InvokerIndices[351] = 
 {
+	8772,
+	6829,
+	6957,
+	6829,
 	8772,
 	6957,
 	6957,
@@ -1027,6 +1154,8 @@ static const int32_t s_InvokerIndices[310] =
 	8604,
 	8772,
 	8772,
+	6957,
+	6957,
 	8772,
 	8772,
 	8772,
@@ -1064,11 +1193,11 @@ static const int32_t s_InvokerIndices[310] =
 	8604,
 	6957,
 	8604,
-	8604,
+	6174,
 	1792,
 	8772,
 	8772,
-	8772,
+	6915,
 	6829,
 	8772,
 	8772,
@@ -1104,6 +1233,17 @@ static const int32_t s_InvokerIndices[310] =
 	8604,
 	8772,
 	8604,
+	8604,
+	4940,
+	11945,
+	11945,
+	8564,
+	4940,
+	4940,
+	8604,
+	6957,
+	8772,
+	8604,
 	6957,
 	8604,
 	6957,
@@ -1111,6 +1251,28 @@ static const int32_t s_InvokerIndices[310] =
 	6957,
 	8499,
 	6853,
+	8772,
+	8604,
+	15240,
+	14382,
+	8772,
+	8772,
+	6957,
+	8604,
+	8564,
+	8564,
+	8772,
+	8772,
+	8772,
+	8772,
+	8772,
+	8772,
+	8772,
+	6174,
+	6915,
+	8772,
+	8482,
+	8604,
 	8772,
 	8604,
 	8772,
@@ -1144,6 +1306,8 @@ static const int32_t s_InvokerIndices[310] =
 	8604,
 	8772,
 	8604,
+	6957,
+	8772,
 	8772,
 	8772,
 	3925,
@@ -1262,7 +1426,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	310,
+	351,
 	s_methodPointers,
 	0,
 	NULL,

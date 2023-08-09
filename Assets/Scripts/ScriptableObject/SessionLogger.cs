@@ -14,7 +14,7 @@ public class SessionLogger
 {
     const string GENERAL_LOG_HEADER = "delta [ms] - action";
     const string GENERAL_LOG_FILE = "general.log";
-    const string WORLD_LOG_HEADER = "delta [ms] - action - localMirror - characterMirror - rotationMirror - delay - camera";
+    const string WORLD_LOG_HEADER = "delta [ms] - action - blockIndex - try";
     const string WORLD_LOG_FILE = "world.log";
 
     const string HAND_LOG_HEADER = "delta [ms] - realPosition (x,y,z) - userPosition (x,y,z)";
@@ -85,11 +85,14 @@ public class SessionLogger
 
 
     //WORDL PARAMS
-    private string GenerateWorldParamsLog()
+    private string GenerateWorldParamsLog(SessionAction action)
     {
-        WorldData world = GameManager.Instance.WorldData;
+        //WorldData world = GameManager.Instance.WorldData;
 
-        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, SessionAction.WORLD_UPDATE, LOG_DELIMITER, world.LocalMirror, LOG_DELIMITER, world.CharacterMirror, LOG_DELIMITER,world.RotationMirror, LOG_DELIMITER, world.Delay, LOG_DELIMITER, world.CameraView);
+        var blockInProgress = SessionManager.Instance.BlockIndexInProgress;
+        var tryInProgress = SessionManager.Instance.TryInProgress;
+
+        return string.Concat((DateTime.Now - _referenceTime).TotalMilliseconds.ToString(), LOG_DELIMITER, action, LOG_DELIMITER, blockInProgress, LOG_DELIMITER, tryInProgress);
     }
 
     private string GenerateHandLog(DateTime time, Vector3 real, Vector3 user)
@@ -157,7 +160,7 @@ public class SessionLogger
 
 
 
-    public void LogWorldUpdate()
+    public void LogWorldUpdate(SessionAction action)
     {
         string sessionId = GameManager.Instance.SessionInProgress.Identifier;
 
@@ -176,14 +179,14 @@ public class SessionLogger
             using (StreamWriter outputFile = new StreamWriter(filePath, true))
             {
                 outputFile.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) + "\n", "## SESSION ID: " + sessionId + "\n\n", WORLD_LOG_HEADER));
-                outputFile.WriteLine(GenerateWorldParamsLog());
+                outputFile.WriteLine(GenerateWorldParamsLog(action));
             }
         }
         else
         {
             using (StreamWriter outputFile = new StreamWriter(filePath, true))
             {
-                outputFile.WriteLine(GenerateWorldParamsLog());
+                outputFile.WriteLine(GenerateWorldParamsLog(action));
             }
         }
 
@@ -406,7 +409,7 @@ public class SessionLogger
     #endregion
 
 
-    enum SessionAction
+    public enum SessionAction
     {
         SESSION_START,
         SESSION_END,
@@ -414,6 +417,10 @@ public class SessionLogger
         SESSION_STOP_RECORDING,
 
         WORLD_UPDATE,
-        WORLD_CAMERA_UPDATE
+        WORLD_CAMERA_UPDATE,
+
+        BUTTON_RELEASED,
+        BUTTON_PRESSED,
+        TARGET_REACHED
     }
 }

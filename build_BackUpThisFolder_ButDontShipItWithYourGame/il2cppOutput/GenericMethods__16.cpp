@@ -283,6 +283,8 @@ struct List_1_tF542FB9F97D34CC06B085D6872645B0DC0AA5E43;
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 // System.Collections.Generic.List`1<UnityEngine.RectTransform>
 struct List_1_t5ED555E220A2C0CA4F1CC393401AF0D7BA5B456B;
+// System.Collections.Generic.List`1<SessionBlock>
+struct List_1_t74086F9A80880FD328124C41FD69B316B97A8F7A;
 // System.Collections.Generic.List`1<UnityEngine.UIElements.StyleSheets.StyleValue>
 struct List_1_t686B3253BF1ECA33C528F281967CD2DA263C252E;
 // System.Collections.Generic.List`1<UnityEngine.UIElements.StyleSheets.StyleValueManaged>
@@ -3443,6 +3445,8 @@ struct StartSessionData_t1D7EA0A2E6A2D10D164420553D8C87F0DA7B5751
 	String_t* ___Identifier_2;
 	// System.String StartSessionData::CreatedAt
 	String_t* ___CreatedAt_3;
+	// System.Collections.Generic.List`1<SessionBlock> StartSessionData::Blocks
+	List_1_t74086F9A80880FD328124C41FD69B316B97A8F7A* ___Blocks_4;
 };
 // Native definition for P/Invoke marshalling of StartSessionData
 struct StartSessionData_t1D7EA0A2E6A2D10D164420553D8C87F0DA7B5751_marshaled_pinvoke
@@ -3451,6 +3455,7 @@ struct StartSessionData_t1D7EA0A2E6A2D10D164420553D8C87F0DA7B5751_marshaled_pinv
 	char* ___Description_1;
 	char* ___Identifier_2;
 	char* ___CreatedAt_3;
+	List_1_t74086F9A80880FD328124C41FD69B316B97A8F7A* ___Blocks_4;
 };
 // Native definition for COM marshalling of StartSessionData
 struct StartSessionData_t1D7EA0A2E6A2D10D164420553D8C87F0DA7B5751_marshaled_com
@@ -3459,6 +3464,7 @@ struct StartSessionData_t1D7EA0A2E6A2D10D164420553D8C87F0DA7B5751_marshaled_com
 	Il2CppChar* ___Description_1;
 	Il2CppChar* ___Identifier_2;
 	Il2CppChar* ___CreatedAt_3;
+	List_1_t74086F9A80880FD328124C41FD69B316B97A8F7A* ___Blocks_4;
 };
 
 // System.Runtime.Serialization.StreamingContext

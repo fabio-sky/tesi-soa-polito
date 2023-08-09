@@ -20,6 +20,16 @@ public class MenuController : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        OpenMenu();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        CloseMenu();
+    }
+
     public void ManageMenu()
     {
         if(_menuIsOpen)
@@ -42,4 +52,5 @@ public class MenuController : MonoBehaviour
         _menuIsOpen = false;
         Debug.Log("CLOSE MENU");
     }
+
 }

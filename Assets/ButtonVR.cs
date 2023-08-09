@@ -6,11 +6,6 @@ using UnityEngine.Events;
 public class ButtonVR : MonoBehaviour
 {
     [SerializeField] GameObject button;
-    [SerializeField] UnityEvent onPress;
-    [SerializeField] UnityEvent onRelease;
-
-    [SerializeField] AudioClip buttonPress;
-    [SerializeField] AudioClip buttonRelease;
 
     GameObject presser;
     bool isPressed;
@@ -30,10 +25,9 @@ public class ButtonVR : MonoBehaviour
 
         if (!isPressed)
         {
+            HandleOnPress();
             button.transform.localPosition = new Vector3(0, -0.005f, 0);
             presser = other.gameObject;
-            onPress.Invoke();
-
             isPressed = true;
         }
     }
@@ -43,23 +37,23 @@ public class ButtonVR : MonoBehaviour
 
         Debug.Log("OnTriggerExit");
 
-        if (isPressed)
+        if (isPressed && other.gameObject.name == presser.name)
         {
+            HandleOnRelease();
             button.transform.localPosition = new Vector3(0, 0, 0);
-            onRelease.Invoke();
             isPressed = false;
         }
     }
 
     public void HandleOnPress()
     {
-        _audio.clip = buttonPress;
         _audio.Play();
+        SessionManager.Instance.ButtonPress();
     }
     public void HandleOnRelease()
     {
-        _audio.clip = buttonRelease;
-        _audio.Play();
+        SessionManager.Instance.ButtonRelease();
+        
     }
 
 }
