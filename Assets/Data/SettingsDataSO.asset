@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SettingsDataSO
   m_EditorClassIdentifier: 
   _positionSampleMilliseconds: 30
-  _logHandSampleMilliseconds: 500
+  _logHandSampleMilliseconds: 200
   _logHands: 0

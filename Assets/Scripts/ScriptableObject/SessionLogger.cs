@@ -80,6 +80,8 @@ public class SessionLogger
 
         Directory.CreateDirectory(sessionDirPath);
 
+        Debug.Log("FOLDER: " + mainDirPath);
+
         return sessionDirPath;
     }
 

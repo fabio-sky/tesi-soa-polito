@@ -4876,7 +4876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Stream_tF844051B786E8F7F4244DBD218D74E8617B9A
 		StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_2 = V_0;
 		NullCheck(L_2);
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3;
-		L_3 = VirtualFuncInvoker0< Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* >::Invoke(27 /* System.IO.Stream System.IO.StreamWriter::get_BaseStream() */, L_2);
+		L_3 = VirtualFuncInvoker0< Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* >::Invoke(26 /* System.IO.Stream System.IO.StreamWriter::get_BaseStream() */, L_2);
 		return L_3;
 	}
 
@@ -8129,7 +8129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlTextWriter_Indent_m8FDE99DA08161BAF95
 	{
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_1 = __this->___textWriter_1;
 		NullCheck(L_1);
-		VirtualActionInvoker0::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine() */, L_1);
+		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine() */, L_1);
 		return;
 	}
 
@@ -8147,7 +8147,7 @@ IL_0014:
 	{
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_5 = __this->___textWriter_1;
 		NullCheck(L_5);
-		VirtualActionInvoker0::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine() */, L_5);
+		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine() */, L_5);
 		bool L_6 = ___0_beforeEndElement;
 		if (L_6)
 		{

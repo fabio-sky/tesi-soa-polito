@@ -31,7 +31,7 @@ public class SessionManager : MonoBehaviour
 
     SessionBlock[] _sessionBlocks;
     public SessionBlock[] SessionBlocks { set { _sessionBlocks = value; } get { return _sessionBlocks; } }
-    
+
     SessionBlock _blockInProgress;
     //public SessionBlock BlockInProgress { get { return _blockInProgress; } }
 
@@ -41,6 +41,7 @@ public class SessionManager : MonoBehaviour
     public int TryInProgress { get { return _tryCounter; } }
 
     bool _isWaiting;
+    bool _tagetAlreadyReached = false;
 
     Coroutine _lastCoroutine;
 
@@ -48,11 +49,13 @@ public class SessionManager : MonoBehaviour
     void Start()
     {
         _blockCounter = 0;
+        _tryCounter = 0;
 
         _sessionBlocks = GameManager.Instance.SessionInProgress.SessionBlocksList.ToArray();
 
         if(_sessionBlocks.Length > 0)
         {
+            Debug.Log("SessionManager start logging");
             _blockInProgress = _sessionBlocks[0];
             GameManager.Instance.StartHandLogging();
         }
@@ -74,7 +77,7 @@ public class SessionManager : MonoBehaviour
     void NextTry()
     {
         int spawnPoint = 0;
-        _tryCounter++;
+        //_tryCounter++;
 
 
 
@@ -88,35 +91,46 @@ public class SessionManager : MonoBehaviour
         _isWaiting = false;
     }
 
-    void NextBlock()
-    {
-        _blockCounter++;
-        
-        if(_blockCounter >= _sessionBlocks.Length)
-        {
-            GameManager.Instance.EndSession();
-        }
-        else
-        {
-            _blockInProgress = _sessionBlocks[_blockCounter];
-            StartWait();
-        }
-    }
-
 
     //PUBLIC METHODS
 
     public void ButtonPress()
     {
-        if (!_isWaiting)
-            GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.BUTTON_PRESSED);
 
-        if (_tryCounter >= _blockInProgress.numberOfTry)
+        Debug.Log("SessionManager: BUTTON PRESSED");
+        bool ended = false;
+
+        _tagetAlreadyReached = false;
+
+        if (_isWaiting) { return; }
+
+        _tryCounter++;
+
+        if (_tryCounter > _blockInProgress.numberOfTry)
         {
-            NextBlock();
+            _blockCounter++;
+            _tryCounter = 1;
+
+            if (_blockCounter >= _sessionBlocks.Length)
+            {
+                ended = true;
+                GameManager.Instance.EndSession();
+            }
+            else
+            {
+                _blockInProgress = _sessionBlocks[_blockCounter];
+            }
+
+            //NextBlock();
+
         }
-        else
+
+        if(!ended)
+        {
+            GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.BUTTON_PRESSED);
             StartWait();
+        }
+        
     }
     public void ButtonRelease() 
     {
@@ -133,7 +147,12 @@ public class SessionManager : MonoBehaviour
 
     public void TargetReached()
     {
-        GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.TARGET_REACHED);
+        if (!_tagetAlreadyReached)
+        {
+            _tagetAlreadyReached = true;
+            GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.TARGET_REACHED);
+        }
+        
     }
 
 

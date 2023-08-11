@@ -6555,8 +6555,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RuntimeHelpers_get_OffsetToStringData
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_SetName_icall_m67024A189510E99CD379DECB913738A6FBFF89F7 (InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* ___0_thread, Il2CppChar* ___1_name, int32_t ___2_nameLength, const RuntimeMethod* method) ;
 // System.Void System.Threading.Thread::SetName_internal(System.Threading.InternalThread,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_SetName_internal_mC4DA51938CE8CAEC5159259E50967F6684A15421 (InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* ___0_thread, String_t* ___1_name, const RuntimeMethod* method) ;
-// System.Void System.Threading.Thread::Abort_internal(System.Threading.InternalThread,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_internal_m93B438F3CEE3958A436FBCFE14B84FECB4B34497 (InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* ___0_thread, RuntimeObject* ___1_stateInfo, const RuntimeMethod* method) ;
 // System.Void System.Threading.Thread::SpinWait_nop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_SpinWait_nop_mA8821B4842451AE095AAB49DFDD1558DDD702780 (const RuntimeMethod* method) ;
 // System.Boolean System.Threading.Thread::Thread_internal(System.MulticastDelegate)
@@ -29811,23 +29809,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_set_Name_m53E2BA6E84C04A6393EA5E4
 		L_0 = Thread_get_Internal_m13061AAE3B1BBD66F44EE8A254C6C0824371A2FB(__this, NULL);
 		String_t* L_1 = ___0_value;
 		Thread_SetName_internal_mC4DA51938CE8CAEC5159259E50967F6684A15421(L_0, L_1, NULL);
-		return;
-	}
-}
-// System.Void System.Threading.Thread::Abort_internal(System.Threading.InternalThread,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_internal_m93B438F3CEE3958A436FBCFE14B84FECB4B34497 (InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* ___0_thread, RuntimeObject* ___1_stateInfo, const RuntimeMethod* method) 
-{
-	typedef void (*Thread_Abort_internal_m93B438F3CEE3958A436FBCFE14B84FECB4B34497_ftn) (InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687*, RuntimeObject*);
-	using namespace il2cpp::icalls;
-	((Thread_Abort_internal_m93B438F3CEE3958A436FBCFE14B84FECB4B34497_ftn)mscorlib::System::Threading::Thread::Abort_internal) (___0_thread, ___1_stateInfo);
-}
-// System.Void System.Threading.Thread::Abort()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_mB956BACF405EFC38C6A3D0B93142E4CEDD64D941 (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* __this, const RuntimeMethod* method) 
-{
-	{
-		InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* L_0;
-		L_0 = Thread_get_Internal_m13061AAE3B1BBD66F44EE8A254C6C0824371A2FB(__this, NULL);
-		Thread_Abort_internal_m93B438F3CEE3958A436FBCFE14B84FECB4B34497(L_0, NULL, NULL);
 		return;
 	}
 }
