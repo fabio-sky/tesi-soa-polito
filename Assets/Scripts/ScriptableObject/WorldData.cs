@@ -92,8 +92,74 @@ public class WorldData : ScriptableObject
         }
         set
         {
-            if(value < 0 || value > 100) _tableHeight = 100;
+            if(value < 0) _tableHeight = 100;
             else _tableHeight = value;
+        }
+    }
+
+    /// <summary>
+    /// Width of the table in centimeters
+    /// </summary>
+    [SerializeField] private int _tableWidth;
+    public int TableWidth
+    {
+        get
+        {
+            return _tableWidth;
+        }
+        set
+        {
+            if (value < 0) _tableWidth = 100;
+            else _tableWidth = value;
+        }
+    }
+
+    /// <summary>
+    /// Depth of the table in centimeters
+    /// </summary>
+    [SerializeField] private int _tableDepth;
+    public int TableDepth
+    {
+        get
+        {
+            return _tableDepth;
+        }
+        set
+        {
+            if (value < 0) _tableDepth = 100;
+            else _tableDepth = value;
+        }
+    }
+
+    /// <summary>
+    /// Horizontal Position of the button
+    /// </summary>
+    [SerializeField] private int _buttonHorizontal;
+    public int ButtonHorizontal
+    {
+        get
+        {
+            return _buttonHorizontal;
+        }
+        set
+        {
+            _buttonHorizontal = value;
+        }
+    }
+
+    /// <summary>
+    /// Vertical Position of the button
+    /// </summary>
+    [SerializeField] private int _buttonVertical;
+    public int ButtonVertical
+    {
+        get
+        {
+            return _buttonVertical;
+        }
+        set
+        {
+            _buttonVertical = value;
         }
     }
 

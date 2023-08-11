@@ -171,21 +171,38 @@ public class GameManager : MonoBehaviour
 
     public void LogChangeParams()
     {
-        _sessionLogger.LogWorldUpdate();
+        //_sessionLogger.LogWorldUpdate();
     }
 
-    public void StartNewSession(StartSessionData data) 
+    public void StartNewSession(StartSessionData data)
     {
-            _sessionInProgress = new() { Description = data.Description, Identifier = data.Identifier, Name = data.Name, CreatedAt = DateTime.Parse(data.CreatedAt) };
-            _sessionLogger.LogInitSession();
-            StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
+
+        if(data.Blocks == null)
+        {
+            return;
+        }
+
+        _sessionInProgress = new()
+        {
+            Description = data.Description,
+            Identifier = data.Identifier,
+            Name = data.Name,
+            CreatedAt = DateTime.Parse(data.CreatedAt),
+            SessionBlocksList = new(data.Blocks),
+        };
+        _sessionLogger.LogInitSession();
+        StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
     }
 
     public void EndSession()
     {
-        _sessionLogger.StopHandLog();
-        _sessionLogger.LogEndSession();
-        _sessionInProgress = null;
+        if(_sessionInProgress != null )
+        {
+            _sessionLogger.StopHandLog();
+            _sessionLogger.LogEndSession();
+            _sessionInProgress = null;
+        }
+
 
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
@@ -205,27 +222,27 @@ public class GameManager : MonoBehaviour
         _sessionLogger.StopHandLog();
     }
 
-    public void MoveCamera(string movement)
+    public void MoveCamera(CameraMovement movement)
     {
-        if(movement == "UP")
+        if(movement == CameraMovement.UP)
         {
             _fpCamera.transform.Translate(new Vector3(0, 0.01f, 0));
             return;
         }
 
-        if (movement == "DOWN")
+        if (movement == CameraMovement.DOWN)
         {
             _fpCamera.transform.Translate(new Vector3(0, -0.01f, 0));
             return;
         }
 
-        if (movement == "RIGHT")
+        if (movement == CameraMovement.RIGHT)
         {
             _fpCamera.transform.Translate(new Vector3(0.01f, 0, 0));
             return;
         }
 
-        if (movement == "LEFT")
+        if (movement == CameraMovement.LEFT)
         {
             _fpCamera.transform.Translate(new Vector3(-0.01f, 0, 0));
             return;
