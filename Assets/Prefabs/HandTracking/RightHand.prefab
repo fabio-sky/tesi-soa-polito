@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 8478499157384239037}
   m_Layer: 0
   m_Name: R_Wrist
-  m_TagString: Untagged
+  m_TagString: RightOriginalLog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 3942068896453088605}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: RightHandOriginal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -136,10 +136,16 @@ public class NetworkConnectionManager : MonoBehaviour
                 case ActionCode.BUTTON_POSITION:
                     return JsonConvert.SerializeObject(HandleButtonPosition(JsonConvert.DeserializeObject<UpdateButtonPositionData>(data[1])));
 
+                case ActionCode.MOVE_BUTTON:
+                    return JsonConvert.SerializeObject(HandleMoveButtonPosition(JsonConvert.DeserializeObject<UpdateCameraPositionData>(data[1])));
+
 
                 case ActionCode.TABLE_DIMENSIONS:
                     return JsonConvert.SerializeObject(HandleTableDimensions(JsonConvert.DeserializeObject<UpdateTableDimensionData>(data[1])));
-                    
+
+                case ActionCode.TABLE_POSITION:
+                    return JsonConvert.SerializeObject(HandleTablePosition(JsonConvert.DeserializeObject<UpdateTablePositionData>(data[1])));
+
                 case ActionCode.CAMERA_USER_POSITION:
                     return JsonConvert.SerializeObject(HandleUserCameraPosition(JsonConvert.DeserializeObject<UpdateCameraPositionData>(data[1])));
 
@@ -234,6 +240,17 @@ public class NetworkConnectionManager : MonoBehaviour
         return respData;
     }
 
+    ResponseData HandleTablePosition(UpdateTablePositionData data)
+    {
+        ResponseData respData = new();
+
+        GameManager.Instance.MoveTable(data.direction);
+        respData.result = true;
+        respData.message = "Table position updated";
+
+        return respData;
+    }
+
     ResponseData HandleStartSession(StartSessionData data)
     {
         ResponseData respData = new();
@@ -281,6 +298,17 @@ public class NetworkConnectionManager : MonoBehaviour
         GameManager.Instance.MoveCamera(data.direction);
         respData.result = true;
         respData.message = "Camera position updated";
+
+        return respData;
+    }
+
+    ResponseData HandleMoveButtonPosition(UpdateCameraPositionData data)
+    {
+        ResponseData respData = new();
+
+        GameManager.Instance.MoveButton(data.direction);
+        respData.result = true;
+        respData.message = "Button position updated";
 
         return respData;
     }
@@ -346,7 +374,9 @@ public class NetworkConnectionManager : MonoBehaviour
         GET_SESSIONS_LIST,
 
         BUTTON_POSITION,
+        MOVE_BUTTON,
         TABLE_DIMENSIONS,
+        TABLE_POSITION,
         CAMERA_USER_POSITION,
 
         DELETE_SESSION,

@@ -42,6 +42,7 @@ public class SessionManager : MonoBehaviour
 
     bool _isWaiting;
     bool _tagetAlreadyReached = false;
+    bool _fakePress = false;
 
     Coroutine _lastCoroutine;
 
@@ -57,6 +58,8 @@ public class SessionManager : MonoBehaviour
         {
             Debug.Log("SessionManager start logging");
             _blockInProgress = _sessionBlocks[0];
+            GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
+            GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
             GameManager.Instance.StartHandLogging();
         }
         else
@@ -104,7 +107,11 @@ public class SessionManager : MonoBehaviour
 
         if (_isWaiting) { return; }
 
-        _tryCounter++;
+        if (!_fakePress)
+        {
+            _tryCounter++;
+        }
+            
 
         if (_tryCounter > _blockInProgress.numberOfTry)
         {
@@ -119,6 +126,8 @@ public class SessionManager : MonoBehaviour
             else
             {
                 _blockInProgress = _sessionBlocks[_blockCounter];
+                GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
+                GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
             }
 
             //NextBlock();
@@ -127,7 +136,10 @@ public class SessionManager : MonoBehaviour
 
         if(!ended)
         {
-            GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.BUTTON_PRESSED);
+            if (!_fakePress)
+                GameManager.Instance.SessionLogger.LogWorldUpdate(SessionLogger.SessionAction.BUTTON_PRESSED);
+
+            _fakePress = false;
             StartWait();
         }
         
@@ -138,6 +150,8 @@ public class SessionManager : MonoBehaviour
         if (_isWaiting)
         {
             StopCoroutine(_lastCoroutine);
+            _isWaiting = false;
+            _fakePress = true;
             return;
         }
 

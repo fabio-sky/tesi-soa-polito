@@ -38,13 +38,13 @@ static Il2CppMethodPointer s_methodPointers[7] =
 };
 static const int32_t s_InvokerIndices[7] = 
 {
-	11087,
-	10583,
-	9973,
-	9708,
-	12693,
-	13699,
-	10427,
+	11088,
+	10584,
+	9974,
+	9709,
+	12695,
+	13701,
+	10428,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_IO_Compression_FileSystem_CodeGenModule;
 const Il2CppCodeGenModule g_System_IO_Compression_FileSystem_CodeGenModule = 

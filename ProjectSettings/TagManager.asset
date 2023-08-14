@@ -7,6 +7,14 @@ TagManager:
   - Server
   - LeftHandFollow
   - RightHandFollow
+  - Table
+  - Button
+  - RightHandOriginal
+  - LeftHandOriginal
+  - RightFollowLog
+  - LeftFollowLog
+  - RightOriginalLog
+  - LeftOriginalLog
   layers:
   - Default
   - TransparentFX
