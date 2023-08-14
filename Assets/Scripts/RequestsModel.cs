@@ -104,6 +104,11 @@ public struct UpdateTableDimensionData
     public int depth;
 }
 
+public struct UpdateTablePositionData
+{
+    public TableMovement direction;
+}
+
 public struct UpdateCameraPositionData
 {
     public CameraMovement direction;
@@ -119,4 +124,10 @@ public struct DownloadSessionProp
 public enum CameraMovement
 {
     UP, DOWN, LEFT, RIGHT
+}
+
+public enum TableMovement
+{
+    FORWARD,
+    BACKWARD
 }

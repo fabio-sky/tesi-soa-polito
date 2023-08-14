@@ -13,6 +13,10 @@ public class WorldData : ScriptableObject
     public const int FPS = 71;
 
     [SerializeField] private int _delay;
+
+    /// <summary>
+    /// Number of frames to delay.
+    /// </summary>
     public int Delay
     {
         get
@@ -21,7 +25,7 @@ public class WorldData : ScriptableObject
         }
         set
         {
-            if (value >= 0) _delay = value * FPS;
+            if (value >= 0) _delay = Mathf.RoundToInt((value / 1000.0f) * FPS);
             else _delay = 0;
         }
     }

@@ -65,7 +65,7 @@ public class SettingsData : ScriptableObject
 
     private void OnEnable()
     {
-        _logHandSampleMilliseconds = 200;
+        _logHandSampleMilliseconds = 100;
         _positionSampleMilliseconds = 30;
     }
 }

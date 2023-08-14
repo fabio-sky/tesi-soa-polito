@@ -45,11 +45,11 @@ public class GameManager : MonoBehaviour
     }
 
     [Header("Real tracked hand and follow hand needed to log positions")]
-    [SerializeField] Transform _rightHandReal;
-    [SerializeField] Transform _rightHandFollow;
+    Transform _rightHandReal;
+    Transform _rightHandFollow;
 
-    [SerializeField] Transform _leftHandReal;
-    [SerializeField] Transform _leftHandFollow;
+    Transform _leftHandReal;
+    Transform _leftHandFollow;
 
     //[SerializeField] GameObject _leftHandController;
     //[SerializeField] GameObject _rightHandController;
@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
     private void InitApplication()
     {
         _sessionLogger = new();
+
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
 
@@ -203,6 +204,8 @@ public class GameManager : MonoBehaviour
             _sessionInProgress = null;
         }
 
+        _worldData.Delay = 0;
+
 
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
@@ -211,6 +214,17 @@ public class GameManager : MonoBehaviour
     {
         //Check if already logging data
         if (_settingsData.LogsHand) return;
+
+        _rightHandFollow = GameObject.FindGameObjectWithTag("RightFollowLog").transform;
+        _rightHandReal = GameObject.FindGameObjectWithTag("RightOriginalLog").transform;
+
+        _leftHandFollow = GameObject.FindGameObjectWithTag("LeftFollowLog").transform;
+        _leftHandReal = GameObject.FindGameObjectWithTag("LeftOriginalLog").transform;
+
+        if (_rightHandFollow != null && _rightHandReal != null && _leftHandFollow != null && _leftHandReal != null)
+            DEBUG_AddToLog("TUTTO A POSTO!!");
+        else DEBUG_AddToLog("QUALCHE MANO NULLLLLL");
+
         _settingsData.LogsHand = true;
         _sessionLogger.StartHandLog();
         StartCoroutine(ReadInputValueCR());
@@ -248,6 +262,56 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+    }
+
+    public void MoveButton(CameraMovement movement)
+    {
+
+        GameObject button = GameObject.FindGameObjectWithTag("Button");
+
+        if (movement == CameraMovement.UP)
+        {
+            button.transform.Translate(new Vector3(0,0, 0.01f));
+            return;
+        }
+
+        if (movement == CameraMovement.DOWN)
+        {
+            button.transform.Translate(new Vector3(0, 0, -0.01f));
+            return;
+        }
+
+        if (movement == CameraMovement.RIGHT)
+        {
+            button.transform.Translate(new Vector3(0.01f, 0, 0));
+            return;
+        }
+
+        if (movement == CameraMovement.LEFT)
+        {
+            button.transform.Translate(new Vector3(-0.01f, 0, 0));
+            return;
+        }
+
+    }
+
+    public void MoveTable(TableMovement movement)
+    {
+        GameObject table = GameObject.FindGameObjectWithTag("Table");
+
+        if(table == null) return;
+
+        if (movement == TableMovement.FORWARD)
+        {
+            table.transform.Translate(new Vector3(0, 0, 0.01f));
+            return;
+        }
+
+        if (movement == TableMovement.BACKWARD)
+        {
+            table.transform.Translate(new Vector3(0, 0, -0.01f));
+            return;
+        }
     }
 
     //CO-ROUTINES

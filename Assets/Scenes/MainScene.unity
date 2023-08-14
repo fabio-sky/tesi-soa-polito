@@ -354,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5852537687208530711, guid: 340b99aff47a3904788ed95ae9be7a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: RightFollowLog
+      objectReference: {fileID: 0}
     - target: {fileID: 5874760987163146140, guid: 340b99aff47a3904788ed95ae9be7a0f,
         type: 3}
       propertyPath: m_Layer
@@ -1666,7 +1671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1228942204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,6 +2250,12 @@ MonoBehaviour:
   m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b,
     type: 3}
   m_VelocityType: 2
+--- !u!4 &1612389400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8478499157384239037, guid: 340b99aff47a3904788ed95ae9be7a0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 235122744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1643984497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2291,6 +2302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174549589265263132, guid: 877a6e46e63538e46b1d5aae429ace27,
+        type: 3}
+      propertyPath: m_TagString
+      value: LeftFollowLog
       objectReference: {fileID: 0}
     - target: {fileID: 2282709453601640885, guid: 877a6e46e63538e46b1d5aae429ace27,
         type: 3}
@@ -2467,6 +2483,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8918888706766512237, guid: 877a6e46e63538e46b1d5aae429ace27,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 877a6e46e63538e46b1d5aae429ace27, type: 3}
 --- !u!4 &1643984499 stripped
@@ -2599,6 +2620,12 @@ CapsuleCollider:
   m_Height: 0.04
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.006}
+--- !u!4 &1836211495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3642975294634759163, guid: 877a6e46e63538e46b1d5aae429ace27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1643984497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1859573907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,7 +3367,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _leftHandFollow
       value: 
-      objectReference: {fileID: 1006444755}
+      objectReference: {fileID: 1836211495}
     - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
         type: 3}
       propertyPath: _rightHandBuffer
@@ -3351,7 +3378,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _rightHandFollow
       value: 
-      objectReference: {fileID: 1782654381}
+      objectReference: {fileID: 1612389400}
     - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
         type: 3}
       propertyPath: _handMovementData
