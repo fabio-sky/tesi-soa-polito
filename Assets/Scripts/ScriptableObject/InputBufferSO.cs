@@ -90,7 +90,7 @@ public class InputBufferSO : ScriptableObject
         if (_buffer.Count > delay)
         {
             Clear();
-            return _emptyValue;
+            return _lastInputValue;
         }
 
 
