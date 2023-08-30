@@ -43,31 +43,31 @@ public class SessionManager : MonoBehaviour
     bool _isWaiting;
     bool _tagetAlreadyReached = false;
     bool _fakePress = false;
-
     Coroutine _lastCoroutine;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void InitializeSession()
     {
         _blockCounter = 0;
         _tryCounter = 0;
 
         _sessionBlocks = GameManager.Instance.SessionInProgress.SessionBlocksList.ToArray();
 
-        if(_sessionBlocks.Length > 0)
+        if (_sessionBlocks.Length > 0)
         {
             Debug.Log("SessionManager start logging");
             _blockInProgress = _sessionBlocks[0];
             GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
             GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
-            GameManager.Instance.StartHandLogging();
+            //GameManager.Instance.StartHandLogging();
+            //GameManager.Instance.SettingsData.SessionEnable = true;
         }
         else
         {
+            StopCoroutine(_lastCoroutine);
             GameManager.Instance.EndSession();
         }
     }
-
 
     void StartWait() 
     {
@@ -123,6 +123,7 @@ public class SessionManager : MonoBehaviour
             if (_blockCounter >= _sessionBlocks.Length)
             {
                 ended = true;
+                StopCoroutine(_lastCoroutine);
                 GameManager.Instance.EndSession();
             }
             else
@@ -150,6 +151,7 @@ public class SessionManager : MonoBehaviour
     {
 
         if (!GameManager.Instance.SettingsData.SessionEnable) return;
+        Debug.Log("SessionManager: BUTTON RELEASED");
 
         if (_isWaiting)
         {

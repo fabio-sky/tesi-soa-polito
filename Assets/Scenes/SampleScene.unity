@@ -373,6 +373,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1604806158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3154119233684448611, guid: 1b60ea315c7cf8e469f0dc531ba020d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5220683273416602410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725075238
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,20 +768,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1979622596, guid: 25463a51895a0044fa35220b2bdde37d, type: 3}
+      propertyPath: referencePoint
+      value: 
+      objectReference: {fileID: 698298079}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
@@ -795,22 +795,22 @@ PrefabInstance:
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.44474423
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.89565766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.7763568e-15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -127.186
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302170728641911192, guid: 25463a51895a0044fa35220b2bdde37d,
         type: 3}
@@ -834,53 +834,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25463a51895a0044fa35220b2bdde37d, type: 3}
---- !u!1 &1979622595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7934591827355927330, guid: 25463a51895a0044fa35220b2bdde37d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1979622594}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1979622596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979622595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44cb001fa323a274db226f0f35d26ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referencePoint: {fileID: 698298079}
---- !u!114 &1979622597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979622595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9372a4f01d9ce3743b97f129823ad2c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: fda15bed0853bff41845421c33e4e080, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1979622596}
-        m_TargetAssemblyTypeName: ButtonPositionController, Assembly-CSharp
-        m_MethodName: UpdatePosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2094829944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1283,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4418494121404229430, guid: 1b60ea315c7cf8e469f0dc531ba020d2,
+        type: 3}
+      propertyPath: _referencePoint
+      value: 
+      objectReference: {fileID: 1604806158}
     - target: {fileID: 5353492697064157633, guid: 1b60ea315c7cf8e469f0dc531ba020d2,
         type: 3}
       propertyPath: m_StaticEditorFlags
