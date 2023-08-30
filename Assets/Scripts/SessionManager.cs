@@ -100,6 +100,8 @@ public class SessionManager : MonoBehaviour
     public void ButtonPress()
     {
 
+        if (!GameManager.Instance.SettingsData.SessionEnable) return;
+
         Debug.Log("SessionManager: BUTTON PRESSED");
         bool ended = false;
 
@@ -146,7 +148,9 @@ public class SessionManager : MonoBehaviour
     }
     public void ButtonRelease() 
     {
-        
+
+        if (!GameManager.Instance.SettingsData.SessionEnable) return;
+
         if (_isWaiting)
         {
             StopCoroutine(_lastCoroutine);

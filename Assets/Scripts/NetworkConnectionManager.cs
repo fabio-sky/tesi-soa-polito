@@ -156,6 +156,9 @@ public class NetworkConnectionManager : MonoBehaviour
                 case ActionCode.GET_SESSIONS_LIST:
                     return JsonConvert.SerializeObject(HandleGetSessionsList());
 
+                case ActionCode.ENABLE_SESSION:
+                    return JsonConvert.SerializeObject(HandleEnableSession());
+
                 case ActionCode.FORCE_END_SESSION:
                     return JsonConvert.SerializeObject(HandleEndSession());
 
@@ -271,6 +274,8 @@ public class NetworkConnectionManager : MonoBehaviour
        
     }
 
+
+
     ResponseData HandleEndSession()
     {
         ResponseData respData = new();
@@ -280,6 +285,26 @@ public class NetworkConnectionManager : MonoBehaviour
             GameManager.Instance.EndSession();
             respData.result = true;
             respData.message = "Session ended";
+        }
+        catch (Exception e)
+        {
+            respData.result = false;
+            respData.message = e.Message;
+        }
+
+        return respData;
+
+    }
+
+    ResponseData HandleEnableSession()
+    {
+        ResponseData respData = new();
+
+        try
+        {
+            GameManager.Instance.EnableSession();
+            respData.result = true;
+            respData.message = "Session enabled";
         }
         catch (Exception e)
         {
@@ -371,6 +396,7 @@ public class NetworkConnectionManager : MonoBehaviour
         TEST_CONNECTION,
         START_SESSION,
         FORCE_END_SESSION,
+        ENABLE_SESSION,
         GET_SESSIONS_LIST,
 
         BUTTON_POSITION,

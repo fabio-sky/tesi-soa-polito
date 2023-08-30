@@ -191,7 +191,9 @@ public class GameManager : MonoBehaviour
             CreatedAt = DateTime.Parse(data.CreatedAt),
             SessionBlocksList = new(data.Blocks),
         };
-        _sessionLogger.LogInitSession();
+
+        _settingsData.SessionEnable = false;
+        
         StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
     }
 
@@ -205,9 +207,16 @@ public class GameManager : MonoBehaviour
         }
 
         _worldData.Delay = 0;
+        _settingsData.SessionEnable = false;
 
 
         StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
+    }
+
+    public void EnableSession()
+    {
+        _settingsData.SessionEnable = true;
+        _sessionLogger.LogInitSession();
     }
 
     public void StartHandLogging()

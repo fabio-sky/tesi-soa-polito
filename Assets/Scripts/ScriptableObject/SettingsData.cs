@@ -63,9 +63,25 @@ public class SettingsData : ScriptableObject
         }
     }
 
+    [SerializeField] private bool _sessionEnable;
+    public bool SessionEnable
+    {
+        get
+        {
+            return _sessionEnable;
+        }
+        set
+        {
+            _sessionEnable = value;
+
+        }
+    }
+
     private void OnEnable()
     {
         _logHandSampleMilliseconds = 100;
         _positionSampleMilliseconds = 30;
+        _sessionEnable = false;
     }
+
 }
