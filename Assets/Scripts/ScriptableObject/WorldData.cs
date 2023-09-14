@@ -25,7 +25,7 @@ public class WorldData : ScriptableObject
         }
         set
         {
-            if (value >= 0) _delay = Mathf.RoundToInt((value / 1000.0f) * FPS);
+            if (value >= 50) _delay = Mathf.RoundToInt(((value - 45) / 1000.0f) * FPS);
             else _delay = 0;
         }
     }

@@ -13,6 +13,6 @@ public class ButtonPositionController : MonoBehaviour
 
     public void UpdatePosition()
     {
-        transform.position = new Vector3(referencePoint.position.x - GameManager.Instance.WorldData.ButtonHorizontal / 100.0f, referencePoint.position.y, referencePoint.position.z + GameManager.Instance.WorldData.ButtonVertical / 100.0f);
+        transform.position = new Vector3(referencePoint.position.x - (GameManager.Instance.WorldData.ButtonVertical / 100.0f), referencePoint.position.y, referencePoint.position.z + (GameManager.Instance.WorldData.ButtonHorizontal / 100.0f));
     }
 }

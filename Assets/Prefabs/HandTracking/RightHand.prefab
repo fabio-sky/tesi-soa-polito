@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 3942068896453088605}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: RightHandOriginal
+  m_TagString: LeftHandOriginal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

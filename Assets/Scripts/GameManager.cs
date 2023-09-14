@@ -115,7 +115,8 @@ public class GameManager : MonoBehaviour
     {
         _sessionLogger = new();
 
-        StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
+        StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
+        //StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
 
     private void ResetCamerView()
@@ -191,32 +192,34 @@ public class GameManager : MonoBehaviour
             CreatedAt = DateTime.Parse(data.CreatedAt),
             SessionBlocksList = new(data.Blocks),
         };
-
-        _settingsData.SessionEnable = false;
+        _sessionLogger.LogInitSession();
+        SessionManager.Instance.InitializeSession();
         
-        StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
+        //StartCoroutine(LoadAsyncScene(GameScene.ROOM_SCENE));
     }
 
     public void EndSession()
     {
-        if(_sessionInProgress != null )
+
+        _settingsData.SessionEnable = false;
+        _worldData.Delay = 0;
+
+        if (_sessionInProgress != null )
         {
             _sessionLogger.StopHandLog();
             _sessionLogger.LogEndSession();
             _sessionInProgress = null;
         }
 
-        _worldData.Delay = 0;
-        _settingsData.SessionEnable = false;
-
-
-        StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
+       
+        
+        //StartCoroutine(LoadAsyncScene(GameScene.WAIT_SCENE));
     }
 
     public void EnableSession()
     {
         _settingsData.SessionEnable = true;
-        _sessionLogger.LogInitSession();
+        
     }
 
     public void StartHandLogging()
@@ -225,14 +228,18 @@ public class GameManager : MonoBehaviour
         if (_settingsData.LogsHand) return;
 
         _rightHandFollow = GameObject.FindGameObjectWithTag("RightFollowLog").transform;
-        _rightHandReal = GameObject.FindGameObjectWithTag("RightOriginalLog").transform;
-
+        Debug.Log("StartHandLogging - 1");
         _leftHandFollow = GameObject.FindGameObjectWithTag("LeftFollowLog").transform;
+        Debug.Log("StartHandLogging - 2");
+
+        _rightHandReal = GameObject.FindGameObjectWithTag("RightOriginalLog").transform;
+        Debug.Log("StartHandLogging - 3");
         _leftHandReal = GameObject.FindGameObjectWithTag("LeftOriginalLog").transform;
+        Debug.Log("StartHandLogging - 4");
 
         if (_rightHandFollow != null && _rightHandReal != null && _leftHandFollow != null && _leftHandReal != null)
-            DEBUG_AddToLog("TUTTO A POSTO!!");
-        else DEBUG_AddToLog("QUALCHE MANO NULLLLLL");
+            Debug.Log("TUTTO A POSTO!!");
+        else Debug.Log("QUALCHE MANO NULLLLLL");
 
         _settingsData.LogsHand = true;
         _sessionLogger.StartHandLog();
@@ -280,25 +287,25 @@ public class GameManager : MonoBehaviour
 
         if (movement == CameraMovement.UP)
         {
-            button.transform.Translate(new Vector3(0,0, 0.01f));
+            button.transform.Translate(new Vector3(-0.01f, 0, 0));
             return;
         }
 
         if (movement == CameraMovement.DOWN)
         {
-            button.transform.Translate(new Vector3(0, 0, -0.01f));
+            button.transform.Translate(new Vector3(0.01f, 0, 0));
             return;
         }
 
         if (movement == CameraMovement.RIGHT)
         {
-            button.transform.Translate(new Vector3(0.01f, 0, 0));
+            button.transform.Translate(new Vector3(0, 0, 0.01f));
             return;
         }
 
         if (movement == CameraMovement.LEFT)
         {
-            button.transform.Translate(new Vector3(-0.01f, 0, 0));
+            button.transform.Translate(new Vector3(0, 0, -0.01f));
             return;
         }
 
@@ -322,6 +329,7 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
+
 
     //CO-ROUTINES
 
@@ -389,7 +397,6 @@ public class GameManager : MonoBehaviour
     //DEBUG
     public void DEBUG_AddToLog(string message)
     {
-
         _textLogger.text += "\n" + message;
     }
 
