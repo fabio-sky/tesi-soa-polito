@@ -3379,6 +3379,12 @@ PrefabInstance:
       objectReference: {fileID: 653884498}
     - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
         type: 3}
+      propertyPath: _leftBuffer
+      value: 
+      objectReference: {fileID: 11400000, guid: 348f7db3136c1ba439eea67a8e8739c7,
+        type: 2}
+    - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
+        type: 3}
       propertyPath: _textLogger
       value: 
       objectReference: {fileID: 756976573}
@@ -3387,6 +3393,12 @@ PrefabInstance:
       propertyPath: _frontCamera
       value: 
       objectReference: {fileID: 6325444}
+    - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
+        type: 3}
+      propertyPath: _rightBuffer
+      value: 
+      objectReference: {fileID: 11400000, guid: 32dd1c68c7705c94cb9bd73aab5051e0,
+        type: 2}
     - target: {fileID: 7916062570167961953, guid: e7202a9a2e63635429651295a6bc87bb,
         type: 3}
       propertyPath: _sceneLoader

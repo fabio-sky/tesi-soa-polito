@@ -27,8 +27,8 @@ public class NetworkConnectionManager : MonoBehaviour
     {
         IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
         Debug.Log(Dns.GetHostName() +" | " + JsonUtility.ToJson(ipHost.AddressList[0]));
-        IPAddress ipAddr = ipHost.AddressList[0];
-        //IPAddress ipAddr = IPAddress.Parse("192.168.4.174");
+        //IPAddress ipAddr = ipHost.AddressList[0];
+        IPAddress ipAddr = IPAddress.Parse("192.168.4.191");
         _endPoint = new IPEndPoint(ipAddr, PORT);
 
         _socketListener = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
@@ -48,9 +48,9 @@ public class NetworkConnectionManager : MonoBehaviour
         {
             while (true)
             {
-                Debug.Log("waiting for connections");
+                //Debug.Log("waiting for connections");
                 Socket clientSocket = await _socketListener.AcceptAsync();
-                Debug.Log("connection accepted: " + clientSocket.RemoteEndPoint);
+                //Debug.Log("connection accepted: " + clientSocket.RemoteEndPoint);
 
                 byte[] bytes = new byte[1024];
                 string data = null;
@@ -60,12 +60,10 @@ public class NetworkConnectionManager : MonoBehaviour
 
                     int numByte = clientSocket.Receive(bytes);
 
-                    Debug.Log("numByte: " + numByte);
-
                     data += Encoding.ASCII.GetString(bytes,
                                                    0, numByte);
 
-                    Debug.Log("data: " + data);
+                    //Debug.Log("data: " + data);
 
                     if (data.IndexOf("<EOF>") > -1)
                         break;
@@ -94,10 +92,6 @@ public class NetworkConnectionManager : MonoBehaviour
 
     string HandleClient(string request)
     {
-
-        Debug.Log("REQUEST: " + request);
-
-        
 
         if (GameManager.Instance == null)
         {
@@ -132,6 +126,12 @@ public class NetworkConnectionManager : MonoBehaviour
 
                 case ActionCode.TEST_CONNECTION:
                     return JsonConvert.SerializeObject(HandleTestConnection());
+
+                case ActionCode.BUTTON_PRESSED:
+                    return JsonConvert.SerializeObject(HandleButtonPressed());
+
+                case ActionCode.BUTTON_RELEASED:
+                    return JsonConvert.SerializeObject(HandleButtonReleased());
 
                 case ActionCode.BUTTON_POSITION:
                     return JsonConvert.SerializeObject(HandleButtonPosition(JsonConvert.DeserializeObject<UpdateButtonPositionData>(data[1])));
@@ -187,6 +187,44 @@ public class NetworkConnectionManager : MonoBehaviour
         {
             result = true,
             message = "Server is up and running"
+        };
+    }
+
+    ResponseData HandleButtonPressed()
+    {
+        if (SessionManager.Instance != null)
+        {
+            SessionManager.Instance.ButtonPress();
+            return new()
+            {
+                result = true,
+                message = ""
+            };
+        }
+
+        return new()
+        {
+            result = false,
+            message = "Session manager not active"
+        };
+    }
+
+    ResponseData HandleButtonReleased()
+    {
+        if(SessionManager.Instance != null)
+        {
+            SessionManager.Instance.ButtonRelease();
+            return new()
+            {
+                result = true,
+                message = ""
+            };
+        }
+
+        return new()
+        {
+            result = false,
+            message = "Session manager not active"
         };
     }
 
@@ -407,6 +445,9 @@ public class NetworkConnectionManager : MonoBehaviour
 
         DELETE_SESSION,
         DOWNLOAD_SESSION,
+
+        BUTTON_PRESSED,
+        BUTTON_RELEASED,
 
 
         INVALID_CODE,

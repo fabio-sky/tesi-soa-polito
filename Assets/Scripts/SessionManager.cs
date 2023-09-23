@@ -57,8 +57,8 @@ public class SessionManager : MonoBehaviour
         {
             Debug.Log("SessionManager start logging");
             _blockInProgress = _sessionBlocks[0];
-            GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
-            GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
+            //GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
+            //GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
             //GameManager.Instance.StartHandLogging();
             //GameManager.Instance.SettingsData.SessionEnable = true;
         }
@@ -101,13 +101,19 @@ public class SessionManager : MonoBehaviour
     {
 
         if (!GameManager.Instance.SettingsData.SessionEnable) return;
-
+        
         Debug.Log("SessionManager: BUTTON PRESSED");
         bool ended = false;
 
         _tagetAlreadyReached = false;
 
         if (_isWaiting) { return; }
+
+        if(_tryCounter == 0) {
+
+            GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
+
+        }
 
         if (!_fakePress)
         {
@@ -149,7 +155,7 @@ public class SessionManager : MonoBehaviour
     }
     public void ButtonRelease() 
     {
-
+        
         if (!GameManager.Instance.SettingsData.SessionEnable) return;
         Debug.Log("SessionManager: BUTTON RELEASED");
 

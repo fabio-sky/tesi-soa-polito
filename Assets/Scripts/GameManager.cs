@@ -44,12 +44,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [Header("Real tracked hand and follow hand needed to log positions")]
-    Transform _rightHandReal;
-    Transform _rightHandFollow;
+    //[Header("Real tracked hand and follow hand needed to log positions")]
+    //Transform _rightHandReal;
+    //Transform _rightHandFollow;
 
-    Transform _leftHandReal;
-    Transform _leftHandFollow;
+    //Transform _leftHandReal;
+    //Transform _leftHandFollow;
 
     //[SerializeField] GameObject _leftHandController;
     //[SerializeField] GameObject _rightHandController;
@@ -78,6 +78,10 @@ public class GameManager : MonoBehaviour
 
     [Header("GameObject that manage loading between scenes")]
     [SerializeField] SceneLoaderController _sceneLoader;
+
+    [Header("Hand buffers")]
+    [SerializeField] InputBufferSO _leftBuffer;
+    [SerializeField] InputBufferSO _rightBuffer;
 
 
     private SessionInfo _sessionInProgress;
@@ -206,7 +210,7 @@ public class GameManager : MonoBehaviour
 
         if (_sessionInProgress != null )
         {
-            _sessionLogger.StopHandLog();
+            StopHandLogging();
             _sessionLogger.LogEndSession();
             _sessionInProgress = null;
         }
@@ -219,6 +223,7 @@ public class GameManager : MonoBehaviour
     public void EnableSession()
     {
         _settingsData.SessionEnable = true;
+        StartHandLogging();
         
     }
 
@@ -226,7 +231,7 @@ public class GameManager : MonoBehaviour
     {
         //Check if already logging data
         if (_settingsData.LogsHand) return;
-
+        /*
         _rightHandFollow = GameObject.FindGameObjectWithTag("RightFollowLog").transform;
         Debug.Log("StartHandLogging - 1");
         _leftHandFollow = GameObject.FindGameObjectWithTag("LeftFollowLog").transform;
@@ -240,6 +245,7 @@ public class GameManager : MonoBehaviour
         if (_rightHandFollow != null && _rightHandReal != null && _leftHandFollow != null && _leftHandReal != null)
             Debug.Log("TUTTO A POSTO!!");
         else Debug.Log("QUALCHE MANO NULLLLLL");
+        */
 
         _settingsData.LogsHand = true;
         _sessionLogger.StartHandLog();
@@ -248,7 +254,7 @@ public class GameManager : MonoBehaviour
 
     public void StopHandLogging()
     {
-        //_settingsData.LogsHand = false;
+        _settingsData.LogsHand = false;
         _sessionLogger.StopHandLog();
     }
 
@@ -389,7 +395,8 @@ public class GameManager : MonoBehaviour
 
         while (_settingsData.LogsHand)
         {
-            _sessionLogger.LogHandPosition(_leftHandReal.position, _leftHandFollow.position, _rightHandReal.position, _rightHandFollow.position);
+            //_sessionLogger.LogHandPosition(_leftHandReal.position, _leftHandFollow.position, _rightHandReal.position, _rightHandFollow.position);
+            _sessionLogger.LogHandPosition(_leftBuffer.LastInputValue.position, _leftBuffer.LastReadedValue.position, _rightBuffer.LastInputValue.position, _rightBuffer.LastReadedValue.position);
             yield return new WaitForSeconds(_settingsData.LogHandSamplSeconds);
         }
     }
