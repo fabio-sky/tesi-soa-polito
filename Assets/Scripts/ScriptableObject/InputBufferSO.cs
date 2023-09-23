@@ -80,10 +80,10 @@ public class InputBufferSO : ScriptableObject
 
         int delay = _worldData.Delay;
         _lastInputValue = input;
+        _lastReadedValue = input;
 
-        if(delay == 0)
+        if (delay == 0)
         {
-            _lastReadedValue = input;
             return input;
         }
 
@@ -97,7 +97,7 @@ public class InputBufferSO : ScriptableObject
         if (_buffer.Count < delay)
         {
             _buffer.Add(input);
-            return _emptyValue;
+            return _lastInputValue;
         }
 
         _readCounter++;
