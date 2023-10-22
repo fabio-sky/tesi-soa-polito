@@ -224,7 +224,12 @@ public class GameManager : MonoBehaviour
     {
         _settingsData.SessionEnable = true;
         StartHandLogging();
-        
+    }
+
+    public void PauseSession()
+    {
+        StopHandLogging();
+        _settingsData.SessionEnable = false;
     }
 
     public void StartHandLogging()
