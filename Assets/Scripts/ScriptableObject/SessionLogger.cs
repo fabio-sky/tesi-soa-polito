@@ -209,15 +209,14 @@ public class SessionLogger
 
         if (File.Exists(filePath))
         {
-            using (StreamWriter outputFile = new StreamWriter(filePath, true))
+            using StreamWriter outputFile = new(filePath, true);
+            if (isStart)
             {
-                if (isStart)
-                {
-                    outputFile.WriteLine(GenerateRecordinStartLog());
-                }
-                else {
-                    outputFile.WriteLine(GenerateRecordinEndLog());
-                } 
+                outputFile.WriteLine(GenerateRecordinStartLog());
+            }
+            else
+            {
+                outputFile.WriteLine(GenerateRecordinEndLog());
             }
         }
 

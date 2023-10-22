@@ -25,7 +25,7 @@ public class ButtonVR : MonoBehaviour
 
         if (!isPressed)
         {
-            //HandleOnPress();
+            HandleOnPress();
             button.transform.localPosition = new Vector3(0, -0.005f, 0);
             presser = other.gameObject;
             isPressed = true;
@@ -39,7 +39,7 @@ public class ButtonVR : MonoBehaviour
 
         if (isPressed && other.gameObject.name == presser.name)
         {
-            //HandleOnRelease();
+            HandleOnRelease();
             button.transform.localPosition = new Vector3(0, 0, 0);
             isPressed = false;
         }

@@ -27,8 +27,8 @@ public class NetworkConnectionManager : MonoBehaviour
     {
         IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
         Debug.Log(Dns.GetHostName() +" | " + JsonUtility.ToJson(ipHost.AddressList[0]));
-        //IPAddress ipAddr = ipHost.AddressList[0];
-        IPAddress ipAddr = IPAddress.Parse("192.168.4.191");
+        IPAddress ipAddr = ipHost.AddressList[0];
+        //IPAddress ipAddr = IPAddress.Parse("192.168.4.191");
         _endPoint = new IPEndPoint(ipAddr, PORT);
 
         _socketListener = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
@@ -127,11 +127,11 @@ public class NetworkConnectionManager : MonoBehaviour
                 case ActionCode.TEST_CONNECTION:
                     return JsonConvert.SerializeObject(HandleTestConnection());
 
-                case ActionCode.BUTTON_PRESSED:
-                    return JsonConvert.SerializeObject(HandleButtonPressed());
+                //case ActionCode.BUTTON_PRESSED:
+                  //  return JsonConvert.SerializeObject(HandleButtonPressed());
 
-                case ActionCode.BUTTON_RELEASED:
-                    return JsonConvert.SerializeObject(HandleButtonReleased());
+                //case ActionCode.BUTTON_RELEASED:
+                  //  return JsonConvert.SerializeObject(HandleButtonReleased());
 
                 case ActionCode.BUTTON_POSITION:
                     return JsonConvert.SerializeObject(HandleButtonPosition(JsonConvert.DeserializeObject<UpdateButtonPositionData>(data[1])));
