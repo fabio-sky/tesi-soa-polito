@@ -10243,12 +10243,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_EnableSession_mEBB6D3E857280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_PauseSession_mF782DD7116B20C7F51438F343F0549BEF8D0C81A (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
+		// StopHandLogging();
+		GameManager_StopHandLogging_mDD428904A966058CEDDFF588276DF88B47190D5A(__this, NULL);
 		// _settingsData.SessionEnable = false;
 		SettingsData_tA35A747E0BA9F00EF9F3EC68007365909324B10E* L_0 = __this->____settingsData_6;
 		NullCheck(L_0);
 		SettingsData_set_SessionEnable_mC1D3B1D9C2F7D18E18EB626C31AB634A9391C2BA_inline(L_0, (bool)0, NULL);
-		// StopHandLogging();
-		GameManager_StopHandLogging_mDD428904A966058CEDDFF588276DF88B47190D5A(__this, NULL);
 		// }
 		return;
 	}

@@ -207,6 +207,10 @@ public class GameManager : MonoBehaviour
 
         _settingsData.SessionEnable = false;
         _worldData.Delay = 0;
+        _worldData.LocalMirror = false;
+        _worldData.CharacterMirror = false;
+        _worldData.CameraView = WorldData.CameraViewType.FIRST;
+        UpdateCameraView();
 
         if (_sessionInProgress != null )
         {
@@ -223,6 +227,7 @@ public class GameManager : MonoBehaviour
     public void EnableSession()
     {
         _settingsData.SessionEnable = true;
+        SessionManager.Instance.SetMirrorParams();
         StartHandLogging();
     }
 

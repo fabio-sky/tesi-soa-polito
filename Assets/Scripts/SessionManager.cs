@@ -57,16 +57,20 @@ public class SessionManager : MonoBehaviour
         {
             Debug.Log("SessionManager start logging");
             _blockInProgress = _sessionBlocks[0];
-            //GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
-            //GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
-            //GameManager.Instance.StartHandLogging();
-            //GameManager.Instance.SettingsData.SessionEnable = true;
         }
         else
         {
             StopCoroutine(_lastCoroutine);
             GameManager.Instance.EndSession();
         }
+    }
+
+    public void SetMirrorParams()
+    {
+        GameManager.Instance.WorldData.LocalMirror = _blockInProgress.localMirror;
+        GameManager.Instance.WorldData.CharacterMirror = _blockInProgress.characterMirror;
+        GameManager.Instance.WorldData.CameraView = _blockInProgress.thirdPersonView ? WorldData.CameraViewType.THIRD : WorldData.CameraViewType.FIRST;
+        GameManager.Instance.UpdateCameraView();
     }
 
     void StartWait() 
@@ -113,7 +117,6 @@ public class SessionManager : MonoBehaviour
         if(_tryCounter == 0) {
 
             GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
-
         }
 
         if (!_fakePress)
@@ -137,12 +140,8 @@ public class SessionManager : MonoBehaviour
             {
                 lastTry = true;
                 _blockInProgress = _sessionBlocks[_blockCounter];
-                //GameManager.Instance.WorldData.Delay = _blockInProgress.delay;
                 GameManager.Instance.DEBUG_AddToLog(GameManager.Instance.WorldData.Delay.ToString() + " | " + _blockInProgress.delay);
             }
-
-            //NextBlock();
-
         }
 
         if(!ended)

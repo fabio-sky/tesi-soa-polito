@@ -108,54 +108,70 @@ public class SessionLogger
 
     public void LogInitSession()
     {
-        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
-
-        if (string.IsNullOrEmpty(sessionId))
+        try
         {
-            Debug.LogError("No SESSION IN PROGRESS found");
-            return;
+            string sessionId = GameManager.Instance.SessionInProgress.Identifier;
+
+            if (string.IsNullOrEmpty(sessionId))
+            {
+                Debug.LogError("No SESSION IN PROGRESS found");
+                return;
+            }
+
+            _referenceTime = DateTime.Now;
+
+
+
+            string dirPath = CreateSessionFolder();
+            CreateSessionJsonFile(dirPath);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(dirPath, GENERAL_LOG_FILE), true))
+            {
+                outputFile.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) + "\n", "## SESSION ID: " + sessionId, "\n\n", GENERAL_LOG_HEADER));
+                outputFile.WriteLine(GenerateSessionStartLog());
+            }
         }
-
-        _referenceTime = DateTime.Now;
-
+        catch (Exception e)
+        {
+            Debug.LogError("ERROR - LogInitSession: " + e.Message);
+        }
         
-
-        string dirPath = CreateSessionFolder();
-        CreateSessionJsonFile(dirPath);
-
-        using (StreamWriter outputFile = new StreamWriter(Path.Combine(dirPath, GENERAL_LOG_FILE), true))
-        {
-            outputFile.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) + "\n", "## SESSION ID: " + sessionId, "\n\n", GENERAL_LOG_HEADER));
-            outputFile.WriteLine(GenerateSessionStartLog());    
-        }
 
 
     }
 
     public void LogEndSession()
     {
-        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
-
-        if (string.IsNullOrEmpty(sessionId))
+        try
         {
-            Debug.LogError("No SESSION IN PROGRESS found");
-            return;
-        }
+            string sessionId = GameManager.Instance.SessionInProgress.Identifier;
 
-        string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, GENERAL_LOG_FILE);
-
-
-        if(File.Exists(filePath))
-        {
-            using (StreamWriter outputFile = new StreamWriter(filePath, true))
+            if (string.IsNullOrEmpty(sessionId))
             {
-                outputFile.WriteLine(GenerateSessionEndLog());
+                Debug.LogError("No SESSION IN PROGRESS found");
+                return;
+            }
+
+            string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, GENERAL_LOG_FILE);
+
+
+            if (File.Exists(filePath))
+            {
+                using (StreamWriter outputFile = new StreamWriter(filePath, true))
+                {
+                    outputFile.WriteLine(GenerateSessionEndLog());
+                }
+            }
+            else
+            {
+                Debug.LogError("General session log file not found");
             }
         }
-        else
+        catch (Exception e)
         {
-            Debug.LogError("General session log file not found");
+            Debug.LogError("ERROR - LogEndSession: " + e.Message);
         }
+        
 
         
     }
@@ -164,61 +180,79 @@ public class SessionLogger
 
     public void LogWorldUpdate(SessionAction action)
     {
-        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
 
-        if (string.IsNullOrEmpty(sessionId))
+        try
         {
-            Debug.LogError("No SESSION IN PROGRESS found");
-            return;
-        }
+            string sessionId = GameManager.Instance.SessionInProgress.Identifier;
 
-        string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, WORLD_LOG_FILE);
-
-
-
-        if (!File.Exists(filePath))
-        {
-            using (StreamWriter outputFile = new StreamWriter(filePath, true))
+            if (string.IsNullOrEmpty(sessionId))
             {
-                outputFile.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) + "\n", "## SESSION ID: " + sessionId + "\n\n", WORLD_LOG_HEADER));
-                outputFile.WriteLine(GenerateWorldParamsLog(action));
+                Debug.LogError("No SESSION IN PROGRESS found");
+                return;
+            }
+
+            string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, WORLD_LOG_FILE);
+
+
+
+            if (!File.Exists(filePath))
+            {
+                using (StreamWriter outputFile = new StreamWriter(filePath, true))
+                {
+                    outputFile.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) + "\n", "## SESSION ID: " + sessionId + "\n\n", WORLD_LOG_HEADER));
+                    outputFile.WriteLine(GenerateWorldParamsLog(action));
+                }
+            }
+            else
+            {
+                using (StreamWriter outputFile = new StreamWriter(filePath, true))
+                {
+                    outputFile.WriteLine(GenerateWorldParamsLog(action));
+                }
             }
         }
-        else
+        catch (Exception e)
         {
-            using (StreamWriter outputFile = new StreamWriter(filePath, true))
-            {
-                outputFile.WriteLine(GenerateWorldParamsLog(action));
-            }
+            Debug.LogError("ERROR - LogWorldUpdate: " + e.Message);
         }
+
+        
 
 
     }
 
     public void LogHandRecordingStartEnd(bool isStart)
     {
-        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
-
-        if (string.IsNullOrEmpty(sessionId))
+        try
         {
-            Debug.LogError("No SESSION IN PROGRESS found");
-            return;
+            string sessionId = GameManager.Instance.SessionInProgress.Identifier;
+
+            if (string.IsNullOrEmpty(sessionId))
+            {
+                Debug.LogError("No SESSION IN PROGRESS found");
+                return;
+            }
+
+            string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, GENERAL_LOG_FILE);
+
+            if (File.Exists(filePath))
+            {
+                using StreamWriter outputFile = new(filePath, true);
+                if (isStart)
+                {
+                    outputFile.WriteLine(GenerateRecordinStartLog());
+                }
+                else
+                {
+                    outputFile.WriteLine(GenerateRecordinEndLog());
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError("ERROR - LogHandRecordingStartEnd: " + e.Message);
         }
 
-        string filePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, GENERAL_LOG_FILE);
-
-        if (File.Exists(filePath))
-        {
-            using StreamWriter outputFile = new(filePath, true);
-            if (isStart)
-            {
-                outputFile.WriteLine(GenerateRecordinStartLog());
-            }
-            else
-            {
-                outputFile.WriteLine(GenerateRecordinEndLog());
-            }
-        }
 
     }
 
@@ -228,31 +262,39 @@ public class SessionLogger
 
     public void StartHandLog()
     {
-        string sessionId = GameManager.Instance.SessionInProgress.Identifier;
-        bool fileExist;
-
-        if (string.IsNullOrEmpty(sessionId))
+        try
         {
-            Debug.LogError("No SESSION IN PROGRESS found");
-            return;
+            string sessionId = GameManager.Instance.SessionInProgress.Identifier;
+            bool fileExist;
+
+            if (string.IsNullOrEmpty(sessionId))
+            {
+                Debug.LogError("No SESSION IN PROGRESS found");
+                return;
+            }
+
+            string rightFilePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, RIGHT_HAND_LOG_FILE);
+            string leftFilePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, LEFT_HAND_LOG_FILE);
+
+            fileExist = File.Exists(rightFilePath);
+
+            _leftHandWriter = new StreamWriter(leftFilePath, true);
+            _rightHandWriter = new StreamWriter(rightFilePath, true);
+
+            if (!fileExist)
+            {
+                _rightHandWriter.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT), "\n", "## SESSION ID: " + sessionId, "\n", "## RIGHT HAND ", "\n\n", HAND_LOG_HEADER));
+
+                _leftHandWriter.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT), "\n", "## SESSION ID: " + sessionId, "\n", "## LEFT HAND ", "\n\n", HAND_LOG_HEADER));
+            }
+
+            LogHandRecordingStartEnd(true);
         }
-
-        string rightFilePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, RIGHT_HAND_LOG_FILE);
-        string leftFilePath = Path.Combine(Application.persistentDataPath, MAIN_FOLDER, sessionId, LEFT_HAND_LOG_FILE);
-
-        fileExist = File.Exists(rightFilePath);
-
-        _leftHandWriter = new StreamWriter(leftFilePath, true);
-        _rightHandWriter= new StreamWriter(rightFilePath, true);
-
-        if(!fileExist)
+        catch (Exception e)
         {
-            _rightHandWriter.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT) , "\n", "## SESSION ID: " + sessionId,"\n", "## RIGHT HAND ", "\n\n", HAND_LOG_HEADER));
-
-            _leftHandWriter.WriteLine(string.Concat("## Reference DATE and TIME: " + _referenceTime.ToString(TIMESTAMP_FORMAT), "\n", "## SESSION ID: " + sessionId, "\n", "## LEFT HAND ", "\n\n", HAND_LOG_HEADER));
+            Debug.LogError("ERROR - LogHandRecordingStartEnd: " + e.Message);
         }
-
-        LogHandRecordingStartEnd(true);
+       
 
     }
 

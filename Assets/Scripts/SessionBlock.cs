@@ -12,6 +12,9 @@ public record SessionBlock
     public int restTime;
     public int delay;
     public TargetBehaviour target;
+    public bool localMirror;
+    public bool characterMirror;
+    public bool thirdPersonView;
 
 
     public enum TargetBehaviour

@@ -19,6 +19,9 @@ public class HandTrackedController : MonoBehaviour
     [SerializeField]
     InputBufferSO _inputHandBuffer;
 
+    [SerializeField]
+    InputBufferSO _otherInputHandBuffer;
+
     GameObject _handToForceFollow = null;
     HandChildrenStore _handToForceFollowTransforms = null;
     HandChildrenStore _handTransforms = null;
@@ -39,6 +42,29 @@ public class HandTrackedController : MonoBehaviour
         _handTransforms = gameObject.GetComponent<HandChildrenStore>();
 
         _inputHandBuffer.Init();
+        StartCoroutine(DiscreteBufferManager());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ManageBuffer();
+        CloneTransform();
+    }
+
+
+    /// <summary>
+    /// Calcolate the position and rotation (with mirror if RotationMirror is enabled) based on the input value reade from the buffer (_readedBufferData)
+    /// </summary>
+    /// <returns>Position and Rotation to apply at the gameObj</returns>
+    private InputData CalculatePosRot(bool rotationMirror)
+    {
+
+        return new()
+        {
+            position = new Vector3(_readedBufferData.position.x, _readedBufferData.position.y, _readedBufferData.position.z),
+            rotation = rotationMirror ? Quaternion.Inverse(_readedBufferData.rotation) : _readedBufferData.rotation
+        };
     }
 
     private void ManageBuffer()
@@ -52,17 +78,37 @@ public class HandTrackedController : MonoBehaviour
         _readedBufferData = _inputHandBuffer.ReadThenAddValue(actualInputData);
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void HandleWristMovement()
     {
-        ManageBuffer();
-        CloneTransform();
-        /*  if(_handToForceFollow == null)
-          {
-              if (handType == WhatHand.RIGHT) _handToForceFollow = GameObject.FindGameObjectWithTag(righthandTag);
-              else _handToForceFollow = GameObject.FindGameObjectWithTag(lefthandTag);
-          }
-        */
+        bool localMirror = GameManager.Instance.WorldData.LocalMirror;
+        bool characterMirror = GameManager.Instance.WorldData.CharacterMirror;
+        bool rotationMirror = GameManager.Instance.WorldData.RotationMirror;
+
+        float timeDelta = GameManager.Instance.SettingsData.PositionSampleSeconds;
+
+        if (localMirror || characterMirror)
+        {
+            float localMirroMultiplier = localMirror ? -1.0f : 1.0f;
+
+            if (characterMirror)
+            {
+                _handToForceFollowTransforms.wrist.transform.localRotation = rotationMirror ? Quaternion.Inverse(_otherInputHandBuffer.LastRotation) : _otherInputHandBuffer.LastRotation;
+                _handToForceFollowTransforms.wrist.transform.Translate(_otherInputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_otherInputHandBuffer.LastMovement.magnitude / timeDelta)) * localMirroMultiplier, Space.World);
+            }
+            else
+            {
+                _handToForceFollowTransforms.wrist.transform.localRotation = rotationMirror ? Quaternion.Inverse(_inputHandBuffer.LastRotation) : _inputHandBuffer.LastRotation;
+                _handToForceFollowTransforms.wrist.transform.Translate(_inputHandBuffer.LastMovement.normalized * (Time.deltaTime * (_inputHandBuffer.LastMovement.magnitude / timeDelta)) * localMirroMultiplier, Space.World);
+            }
+
+        }
+        else
+        {
+            InputData calculatedPosRot = CalculatePosRot(rotationMirror);
+            _handToForceFollowTransforms.wrist.transform.SetPositionAndRotation(calculatedPosRot.position, calculatedPosRot.rotation);
+        }
     }
 
     void CloneTransform()
@@ -70,9 +116,8 @@ public class HandTrackedController : MonoBehaviour
         if (_handToForceFollow == null || _handToForceFollowTransforms == null) return;
 
         //wrist
-        //_handToForceFollowTransforms.wrist.transform.localPosition = _handTransforms.wrist.transform.localPosition;
-        //_handToForceFollowTransforms.wrist.transform.localRotation = _handTransforms.wrist.transform.localRotation;
-        _handToForceFollowTransforms.wrist.transform.SetLocalPositionAndRotation(_readedBufferData.position, _readedBufferData.rotation);
+        HandleWristMovement();
+        //_handToForceFollowTransforms.wrist.transform.SetLocalPositionAndRotation(_readedBufferData.position, _readedBufferData.rotation);
 
         //indexMetacarpal
         _handToForceFollowTransforms.indexMetacarpal.transform.localPosition = _handTransforms.indexMetacarpal.transform.localPosition;
@@ -174,5 +219,34 @@ public class HandTrackedController : MonoBehaviour
         _handToForceFollowTransforms.thumbTip.transform.localPosition = _handTransforms.thumbTip.transform.localPosition;
         _handToForceFollowTransforms.thumbTip.transform.localRotation = _handTransforms.thumbTip.transform.localRotation;
 
+    }
+
+
+    /// <summary>
+    /// Coruoutine that read the input data and calculate the movement vector between the last two points. 
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator DiscreteBufferManager()
+    {
+        InputData newPosition;
+        InputData oldPosition = new()
+        {
+            isEmpty = true,
+        };
+
+        while (true)
+        {
+            newPosition = new() { isEmpty = false, position = new Vector3(_readedBufferData.position.x, _readedBufferData.position.y, _readedBufferData.position.z), rotation = _readedBufferData.rotation };
+
+            if (!oldPosition.isEmpty)
+            {
+                _inputHandBuffer.LastMovement = newPosition.position - oldPosition.position;
+                _inputHandBuffer.LastRotation = newPosition.rotation;
+            }
+
+            oldPosition = new() { isEmpty = false, position = new Vector3(newPosition.position.x, newPosition.position.y, newPosition.position.z), rotation = newPosition.rotation };
+
+            yield return new WaitForSeconds(GameManager.Instance.SettingsData.PositionSampleSeconds);
+        }
     }
 }

@@ -28,7 +28,7 @@ public class NetworkConnectionManager : MonoBehaviour
         IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
         Debug.Log(Dns.GetHostName() +" | " + JsonUtility.ToJson(ipHost.AddressList[0]));
         IPAddress ipAddr = ipHost.AddressList[0];
-        //IPAddress ipAddr = IPAddress.Parse("192.168.4.191");
+        //IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
         _endPoint = new IPEndPoint(ipAddr, PORT);
 
         _socketListener = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
