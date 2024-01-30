@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9813c68d7d6f44282ace8bd2d1fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UseOptimizedControls: 0
+  m_UseOptimizedControls: 1
   m_LeftHandMesh: {fileID: 7619474178529988860, guid: 877a6e46e63538e46b1d5aae429ace27,
     type: 3}
   m_RightHandMesh: {fileID: 8977045353737035735, guid: 340b99aff47a3904788ed95ae9be7a0f,
