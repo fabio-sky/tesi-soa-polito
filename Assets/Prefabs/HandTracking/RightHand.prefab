@@ -1005,6 +1005,8 @@ MonoBehaviour:
   righthandTag: RightHandFollow
   lefthandTag: LeftHandFollow
   _inputHandBuffer: {fileID: 11400000, guid: 32dd1c68c7705c94cb9bd73aab5051e0, type: 2}
+  _otherInputHandBuffer: {fileID: 11400000, guid: 348f7db3136c1ba439eea67a8e8739c7,
+    type: 2}
 --- !u!114 &3942068896453088605
 MonoBehaviour:
   m_ObjectHideFlags: 0
